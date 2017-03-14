@@ -1,0 +1,759 @@
+{
+  "genes": [],
+  "id": "Contador 2009",
+  "metabolites": [
+    {
+      "compartment": "",
+      "id": "2PG",
+      "name": "2-Phosphoglycerate"
+    },
+    {
+      "compartment": "",
+      "id": "3PG",
+      "name": "3-Phosphoglycerate"
+    },
+    {
+      "compartment": "",
+      "id": "A4P",
+      "name": "l-aspartyl-4-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "ACCOA",
+      "name": "Acetyl-CoA"
+    },
+    {
+      "compartment": "",
+      "id": "ADP",
+      "name": "Adenosine diphosphate"
+    },
+    {
+      "compartment": "",
+      "id": "ASA",
+      "name": "l-aspartate-semialdehyde"
+    },
+    {
+      "compartment": "",
+      "id": "ASP",
+      "name": "l-aspartate"
+    },
+    {
+      "compartment": "",
+      "id": "ATP",
+      "name": "Adenosine triphosphate"
+    },
+    {
+      "compartment": "",
+      "id": "CIT",
+      "name": "Citrate"
+    },
+    {
+      "compartment": "",
+      "id": "DAPM",
+      "name": "l<comma>l-diaminopimelate"
+    },
+    {
+      "compartment": "",
+      "id": "DHAP",
+      "name": "dihydroxyacetone phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "DHDP",
+      "name": "l-2<comma>3-dihydrodipicolinate"
+    },
+    {
+      "compartment": "",
+      "id": "DPG",
+      "name": "1<comma>3-Biphosphoglycerate"
+    },
+    {
+      "compartment": "",
+      "id": "E4P",
+      "name": "Erythrose-4-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "F6P",
+      "name": "Fructose-6-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "FBP",
+      "name": "Fructose-1<comma>6-biphosphate"
+    },
+    {
+      "compartment": "",
+      "id": "FUM",
+      "name": "Fumarate"
+    },
+    {
+      "compartment": "",
+      "id": "G6P",
+      "name": "Glucose-6-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "GAP",
+      "name": "Glyceraldehyde-3-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "GLU",
+      "name": "l-glutamate"
+    },
+    {
+      "compartment": "",
+      "id": "GLUCOSE",
+      "name": "b-d-glucose"
+    },
+    {
+      "compartment": "",
+      "id": "ICT",
+      "name": "d-isocitrate"
+    },
+    {
+      "compartment": "",
+      "id": "KG",
+      "name": "2-Ketoglutarate"
+    },
+    {
+      "compartment": "",
+      "id": "LYS",
+      "name": "l-lysine"
+    },
+    {
+      "compartment": "",
+      "id": "MAL",
+      "name": "Malate"
+    },
+    {
+      "compartment": "",
+      "id": "MDAPM",
+      "name": "Meso-diaminopimelate"
+    },
+    {
+      "compartment": "",
+      "id": "NAD",
+      "name": "Nicotinamide adenine dinucleotide"
+    },
+    {
+      "compartment": "",
+      "id": "NADH",
+      "name": "Nicotinamide adenine dinucleotide reduce"
+    },
+    {
+      "compartment": "",
+      "id": "NADP",
+      "name": "Nicotinamide adenine dinucleotide phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "NADPH",
+      "name": "Nicotinamide adenine dinucleotide phosphate reduced"
+    },
+    {
+      "compartment": "",
+      "id": "OAA",
+      "name": "Oxaloacetate"
+    },
+    {
+      "compartment": "",
+      "id": "PEP",
+      "name": "Phosphoenolpyruvate"
+    },
+    {
+      "compartment": "",
+      "id": "PGL",
+      "name": "6-Phosphogluconolactone"
+    },
+    {
+      "compartment": "",
+      "id": "PGT",
+      "name": "6-Phosphogluconate"
+    },
+    {
+      "compartment": "",
+      "id": "PYR",
+      "name": "Pyruvate"
+    },
+    {
+      "compartment": "",
+      "id": "R5P",
+      "name": "Ribose-5-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "Ru5P",
+      "name": "Ribulose-5-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "S7P",
+      "name": "Sedoheptulose-7-phosphate"
+    },
+    {
+      "compartment": "",
+      "id": "SAKP",
+      "name": "N-succinyl-2-amino-6-ketopimelate"
+    },
+    {
+      "compartment": "",
+      "id": "SDAP",
+      "name": "N-succinyl-l<comma>l-2<comma>6-diaminopimelate"
+    },
+    {
+      "compartment": "",
+      "id": "SUC",
+      "name": "Succinate"
+    },
+    {
+      "compartment": "",
+      "id": "SUCCOA",
+      "name": "Succinyl-CoA"
+    },
+    {
+      "compartment": "",
+      "id": "THDP",
+      "name": "Tetrahydrodipicolinate"
+    },
+    {
+      "compartment": "",
+      "id": "X5P",
+      "name": "Xylose-5-phosphate"
+    }
+  ],
+  "reactions": [
+    {
+      "gene_reaction_rule": "",
+      "id": "acn",
+      "lower_bound": 0,
+      "metabolites": {
+        "CIT": -1,
+        "ICT": 1
+      },
+      "name": "Aconitase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "argD",
+      "lower_bound": 0,
+      "metabolites": {
+        "GLU": -1,
+        "KG": 1,
+        "SAKP": -1,
+        "SDAP": 1
+      },
+      "name": "N-succinyldiaminopimelate-aminotransferase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "asd",
+      "lower_bound": 0,
+      "metabolites": {
+        "A4P": -1,
+        "ASA": 1,
+        "NADP": 1,
+        "NADPH": -1
+      },
+      "name": "Aspartate semialdehyde dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "aspC",
+      "lower_bound": 0,
+      "metabolites": {
+        "ASP": 1,
+        "GLU": -1,
+        "KG": 1,
+        "OAA": -1
+      },
+      "name": "Aspartate aminotransferase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "dapA",
+      "lower_bound": 0,
+      "metabolites": {
+        "ASA": -1,
+        "DHDP": 1,
+        "PYR": -1
+      },
+      "name": "Dihydrodipicolinate synthase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "dapB",
+      "lower_bound": 0,
+      "metabolites": {
+        "DHDP": -1,
+        "NAD": 1,
+        "NADH": -1,
+        "THDP": 1
+      },
+      "name": "Dihydrodipicolinate reductase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "dapD",
+      "lower_bound": 0,
+      "metabolites": {
+        "SAKP": 1,
+        "SUCCOA": -1,
+        "THDP": -1
+      },
+      "name": "Tetrahydrodipicolinate succinylase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "dapE",
+      "lower_bound": 0,
+      "metabolites": {
+        "DAPM": 1,
+        "SDAP": -1,
+        "SUC": 1
+      },
+      "name": "N-succinyl-l-diaminopimelate desuccinylase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "dapF",
+      "lower_bound": 0,
+      "metabolites": {
+        "DAPM": -1,
+        "MDAPM": 1
+      },
+      "name": "Diaminopimelate epimerase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pts",
+      "lower_bound": 0,
+      "metabolites": {
+        "G6P": 1,
+        "GLUCOSE": -1,
+        "PEP": -1,
+        "PYR": 1
+      },
+      "name": "Phosphotransferase system",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "eno",
+      "lower_bound": 0,
+      "metabolites": {
+        "2PG": -1,
+        "PEP": 1
+      },
+      "name": "Enolase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "fba",
+      "lower_bound": 0,
+      "metabolites": {
+        "DHAP": 1,
+        "FBP": -1,
+        "GAP": 1
+      },
+      "name": "Fructose biphosphate aldolase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "fum",
+      "lower_bound": 0,
+      "metabolites": {
+        "FUM": -1,
+        "MAL": 1
+      },
+      "name": "Fumarase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "gap",
+      "lower_bound": 0,
+      "metabolites": {
+        "DPG": 1,
+        "GAP": -1,
+        "NAD": -1,
+        "NADH": 1
+      },
+      "name": "Glyceraldehyde 3-phosphate dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "gdhA",
+      "lower_bound": 0,
+      "metabolites": {
+        "GLU": 1,
+        "KG": -1,
+        "NADP": 1,
+        "NADPH": -1
+      },
+      "name": "Glutamate dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "gltA",
+      "lower_bound": 0,
+      "metabolites": {
+        "ACCOA": -1,
+        "CIT": 1,
+        "OAA": -1
+      },
+      "name": "Citrate synthase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "gnd",
+      "lower_bound": 0,
+      "metabolites": {
+        "NADP": -1,
+        "NADPH": 1,
+        "PGT": -1,
+        "Ru5P": 1
+      },
+      "name": "6-Phosphogluconate dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "gpm",
+      "lower_bound": 0,
+      "metabolites": {
+        "2PG": 1,
+        "3PG": -1
+      },
+      "name": "Phosphoglycerate mutase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "icd",
+      "lower_bound": 0,
+      "metabolites": {
+        "ICT": -1,
+        "KG": 1,
+        "NADP": -1,
+        "NADPH": 1
+      },
+      "name": "Isocitrate dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "lysA",
+      "lower_bound": 0,
+      "metabolites": {
+        "LYS": 1,
+        "MDAPM": -1
+      },
+      "name": "Diaminopimelate decarboxylase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "lysC",
+      "lower_bound": 0,
+      "metabolites": {
+        "A4P": 1,
+        "ADP": 1,
+        "ASP": -1,
+        "ATP": -1
+      },
+      "name": "Aspartate kinase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_lys",
+      "lower_bound": 0,
+      "metabolites": {
+        "LYS": -1
+      },
+      "name": "",
+      "objective_coefficient": 1,
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_glc",
+      "lower_bound": -1000,
+      "metabolites": {
+        "GLUCOSE": -1
+      },
+      "name": "",
+      "upper_bound": 0
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "mdh",
+      "lower_bound": 0,
+      "metabolites": {
+        "MAL": -1,
+        "NAD": -1,
+        "NADH": 1,
+        "OAA": 1
+      },
+      "name": "Malate dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pdh",
+      "lower_bound": 0,
+      "metabolites": {
+        "ACCOA": 1,
+        "NAD": -1,
+        "NADH": 1,
+        "PYR": -1
+      },
+      "name": "Pyruvate dehydrogenase complex",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pfk",
+      "lower_bound": 0,
+      "metabolites": {
+        "ADP": 1,
+        "ATP": -1,
+        "F6P": -1,
+        "FBP": 1
+      },
+      "name": "Phosphofructokinase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pgi",
+      "lower_bound": 0,
+      "metabolites": {
+        "F6P": 1,
+        "G6P": -1
+      },
+      "name": "Phosphogluco isomerase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pgk",
+      "lower_bound": 0,
+      "metabolites": {
+        "3PG": 1,
+        "ADP": -1,
+        "ATP": 1,
+        "DPG": -1
+      },
+      "name": "Phosphoglycerate kinase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pgl",
+      "lower_bound": 0,
+      "metabolites": {
+        "PGL": -1,
+        "PGT": 1
+      },
+      "name": "6-Phosphogluconolactonase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ppc",
+      "lower_bound": 0,
+      "metabolites": {
+        "OAA": 1,
+        "PEP": -1
+      },
+      "name": "Phosphoenolpyruvate carboxylase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "pyk",
+      "lower_bound": 0,
+      "metabolites": {
+        "ADP": -1,
+        "ATP": 1,
+        "PEP": -1,
+        "PYR": 1
+      },
+      "name": "Pyruvate kinase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "recATP",
+      "lower_bound": 0,
+      "metabolites": {
+        "ADP": 1,
+        "ATP": -1
+      },
+      "name": "ATP recycle",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "recNADH",
+      "lower_bound": 0,
+      "metabolites": {
+        "NAD": 1,
+        "NADH": -1
+      },
+      "name": "NADH recycle",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "recNADPH",
+      "lower_bound": 0,
+      "metabolites": {
+        "NADP": 1,
+        "NADPH": -1
+      },
+      "name": "NADPH recycle",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "rpe",
+      "lower_bound": 0,
+      "metabolites": {
+        "Ru5P": -1,
+        "X5P": 1
+      },
+      "name": "Ribulose-5-phosphate 3-epimerase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "rpi",
+      "lower_bound": 0,
+      "metabolites": {
+        "R5P": 1,
+        "Ru5P": -1
+      },
+      "name": "Ribulose-5-phosphate isomerase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "sdh",
+      "lower_bound": 0,
+      "metabolites": {
+        "FUM": 1,
+        "SUC": -1
+      },
+      "name": "Succinate dehydrogenase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "sucAB",
+      "lower_bound": 0,
+      "metabolites": {
+        "KG": -1,
+        "NAD": -1,
+        "NADH": 1,
+        "SUCCOA": 1
+      },
+      "name": "2-Oxoglutarate dehydrogenase complex",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "sucCD",
+      "lower_bound": 0,
+      "metabolites": {
+        "ADP": -1,
+        "ATP": 1,
+        "SUC": 1,
+        "SUCCOA": -1
+      },
+      "name": "Succinyl-CoA synthetase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "tal",
+      "lower_bound": 0,
+      "metabolites": {
+        "E4P": 1,
+        "F6P": 1,
+        "GAP": -1,
+        "S7P": -1
+      },
+      "name": "Transaldolase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "tka1",
+      "lower_bound": 0,
+      "metabolites": {
+        "GAP": 1,
+        "R5P": -1,
+        "S7P": 1,
+        "X5P": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "tka2",
+      "lower_bound": 0,
+      "metabolites": {
+        "E4P": -1,
+        "F6P": 1,
+        "GAP": 1,
+        "X5P": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "tpi",
+      "lower_bound": 0,
+      "metabolites": {
+        "DHAP": -1,
+        "GAP": 1
+      },
+      "name": "Triose phosphate isomerase",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "zwf",
+      "lower_bound": 0,
+      "metabolites": {
+        "G6P": -1,
+        "NADP": -1,
+        "NADPH": 1,
+        "PGL": 1
+      },
+      "name": "Glucose-6-phosphate dehydrogenase",
+      "upper_bound": 1000
+    }
+  ],
+  "version": 1
+}
