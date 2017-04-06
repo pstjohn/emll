@@ -139,9 +139,10 @@ class LinLogModel(object):
         N_hat = (np.diag(1 / self.z_star) @
                  self.Nr @ np.diag(self.v_star * e_hat))
 
-        chi = np.linalg.solve(N_hat @ self.Ex @ self.L,
-                              -N_hat @ (np.ones(self.nr) +
-                                        self.Ey @ np.log(y_hat)))
+        A = N_hat @ self.Ex @ self.L
+        b = -N_hat @ (np.ones(self.nr) + self.Ey @ np.log(y_hat))
+
+        chi = np.linalg.solve(A, b)
 
         return chi
 
@@ -387,3 +388,38 @@ class LinLogModel(object):
                                v_ss.reshape((self.nr, 1)))
 
         return theano.function([Ex_theano, e_hat], rel_v_grad)
+
+    def calc_metabolite_control_coeff(self, e_hat, y_hat, full_return=False):
+        """Calculate the metabolite control coefficient matrix, 
+        Cx = d(ln x)/d(ln e).
+
+        full_return: bool
+            Whether or not to return v_ss, Ex_ss as well as Cx. Used for
+            flux_control_coeff calculation.
+
+        """
+        # Calculate the steady-state flux
+        v_ss = self.calc_steady_state_fluxes(e_hat, y_hat)
+
+        # Calculate the elasticity matrix at the new steady-state
+        Ex_ss = np.diag(self.v_star * e_hat / v_ss) @ self.Ex
+
+        Cx = (-self.L @ 
+              np.linalg.inv(self.Nr @ np.diag(v_ss) @ Ex_ss @ self.L) @
+              self.Nr @ np.diag(v_ss))
+        
+        if not full_return:
+            return Cx
+
+        else:
+            return Cx, Ex_ss, v_ss
+
+    def calc_flux_control_coeff(self, e_hat, y_hat):
+        """Calculate the flux control coefficient matrix, 
+        Cv = d(ln v)/d(ln e).
+
+        """
+
+        Cx_ss, Ex_ss, v_ss = self.calc_metabolite_control_coeff(
+            e_hat, y_hat, full_return=True)
+        return Ex_ss @ Cx_ss + np.eye(self.nr)

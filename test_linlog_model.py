@@ -15,6 +15,8 @@ def test_linlog():
 
         model, N, v_star = model_loader()
 
+        zero_flux = np.any(np.isclose(v_star, 0.))
+
         # Create perturbation matricies
         Ex = -N.T
 
@@ -67,7 +69,7 @@ def test_linlog():
         assert np.all(np.isfinite(z_ss_mat))
 
         # Test jacovian method equivalence
-        pjac_full = ll.calc_jacobian_full_ode(x_ss_mat, e_hat, y_hat)
+        ll.calc_jacobian_full_ode(x_ss_mat, e_hat, y_hat)
         pjac_red = ll.calc_jacobian_reduced_ode(z_ss_mat, e_hat, y_hat)
         pjac_mat = ll.calc_jacobian_mat(z_ss_mat, e_hat, y_hat)
 
@@ -89,6 +91,11 @@ def test_linlog():
             ll.calc_fluxes_from_z(z_ss_mat, e_hat, y_hat),
             ll.calc_steady_state_fluxes(e_hat, y_hat))
 
+        # Test metabolite control coeff
+        if not zero_flux:
+            assert np.allclose(
+                ll.calc_metabolite_control_coeff(e_hat, y_hat).sum(1), 0.)
+
         # Test flux control coefficients
         v_grad_test = ll.construct_control_coeff_fn(debug=True)
         theano_grad = v_grad_test(ll.Ex, np.ones(ll.nr))
@@ -105,12 +112,17 @@ def test_linlog():
         for i in range(ll.nr):
             e_test = np.ones(ll.nr)
             e_test[i] += fd_size
-            fd_grad[:, i] = (ll.calc_steady_state_fluxes(e_test, np.ones(ll.ny))
-                            - ll.v_star) / (fd_size * ll.v_star)
+            fd_grad[:, i] = (ll.calc_steady_state_fluxes(e_test, np.ones(ll.ny)) -
+                             ll.v_star) / (fd_size * ll.v_star)
             
         # Make sure fd results are close
         elems = np.where(np.isfinite(fd_grad))
         assert np.allclose(fd_grad[elems], theano_grad[elems], rtol=1e-2, atol=1E-4)
+
+        if not zero_flux:
+            mat_grad = ll.calc_flux_control_coeff(np.ones(ll.nr), np.ones(ll.ny))
+            assert np.allclose(theano_grad[elems], mat_grad[elems])
+
 
         # Test the flux control coefficients at a perturbed steady state
         theano_grad = v_grad_test(ll.Ex, e_hat)
@@ -129,11 +141,22 @@ def test_linlog():
         # Scale by e_hat and v_ss
         fd_grad = (fd_grad * e_hat) / (np.atleast_2d(v_ss).T)
 
+        # assert np.isfinite(fd_grad).all()
+
         # Make sure fd results are close
         elems = np.where(np.isfinite(fd_grad))
         assert np.allclose(fd_grad[elems], theano_grad[elems], rtol=1e-2, atol=1E-4)
-    
 
+        if not zero_flux:
+            mat_grad = ll.calc_flux_control_coeff(e_hat, np.ones(ll.ny))
+            assert np.allclose(theano_grad[elems], mat_grad[elems])
+
+            # Test methods with perturned y
+            control_coeffs = ll.construct_control_coeff_fn(y_hat=y_hat)
+            theano_mat = control_coeffs(ll.Ex, e_hat)
+            assert np.allclose(
+                theano_mat, ll.calc_flux_control_coeff(e_hat, y_hat))
+    
 
         # ODE dynamic system tests
         if ll.is_stable(ojac_mat):

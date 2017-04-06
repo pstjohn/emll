@@ -19,6 +19,10 @@ def load_teusink():
                  todense())
 
     model.reactions.vGLT.bounds = (-88.1, 88.1)
+
+    for rxn in model.reactions:
+        rxn.lower_bound = 0.1
+
     model.objective = model.reactions.vATP
     model.optimize()
     v_star = np.array(list(model.solution.x))
@@ -102,7 +106,7 @@ def load_greene_large():
 
 def construct_model_from_mat(N, rxn_names, met_names):
 
-    model = cobra.Model()
+    model = cobra.Model('test_model')
 
     model.add_metabolites([cobra.Metabolite(id=met_name) for met_name in met_names])
             
@@ -110,7 +114,7 @@ def construct_model_from_mat(N, rxn_names, met_names):
         reaction = cobra.Reaction(id=rxn_name)
         model.add_reaction(reaction)
         reaction.add_metabolites({
-            met_id: stoich for met_id, stoich in zip(met_names, row)
+            met_id: float(stoich) for met_id, stoich in zip(met_names, row)
             if abs(stoich) > 1E-6})
 
     return model
