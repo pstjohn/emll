@@ -76,11 +76,15 @@ class LinLogModel(object):
         self.L = (np.diag(1/self.x_star) @ self.N @ np.linalg.pinv(Nr) @
                   np.diag(self.z_star))
 
+        # Reduced elasticity matrix
+        self.Ez = self.Ex @ self.L
+
         # Sanity checks
         assert np.linalg.matrix_rank(Nr) == self.rank
         assert np.allclose(self.Nr @ v_star, 0)
         assert np.allclose(self.N  @ v_star, 0)
-        assert np.allclose(self.L[:self.rank], np.eye(self.rank))
+        assert np.allclose(self.L[:self.rank], np.eye(self.rank),
+                           atol=1E-7 * self.rank)
 
         # Labeling
         if metabolite_labels:
@@ -131,39 +135,47 @@ class LinLogModel(object):
 
         self.Ex = Ex_new_perm
 
-    def calc_chi_mat(self, e_hat, y_hat):
+    def calc_chi_mat(self, e_hat=None, y_hat=None):
         """Calculate a the steady-state transformed independent metabolite
         concentrations using a matrix solve method.
         """
 
-        N_hat = (np.diag(1 / self.z_star) @
-                 self.Nr @ np.diag(self.v_star * e_hat))
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
-        A = N_hat @ self.Ex @ self.L
+        N_hat = self.Nr @ np.diag(self.v_star * e_hat)
+
+        A = N_hat @ self.Ez
         b = -N_hat @ (np.ones(self.nr) + self.Ey @ np.log(y_hat))
 
         chi = np.linalg.solve(A, b)
 
         return chi
 
-    def calc_zs_mat(self, e_hat, y_hat):
+    def calc_zs_mat(self, e_hat=None, y_hat=None):
         """Calculate a the steady-state independent metabolite concentrations
         using a matrix solve method
         """
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         chi = self.calc_chi_mat(e_hat, y_hat)
         zs = self.z_star * np.exp(chi)
         return zs
 
-    def calc_xs_mat(self, e_hat, y_hat):
+    def calc_xs_mat(self, e_hat=None, y_hat=None):
         """Calculate the complete steady-state metabolite concentrations using
         a matrix solve
         """
 
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
         zs = self.calc_zs_mat(e_hat, y_hat)
         return self.z_to_x(zs)
 
-    def _construct_full_ode(self, e_hat, y_hat):
+    def _construct_full_ode(self, e_hat=None, y_hat=None):
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
         t = cs.SX.sym('t', 1)
         x_sym = cs.SX.sym('x', self.nm)
 
@@ -175,10 +187,12 @@ class LinLogModel(object):
 
         return t, x_sym, ode
 
-    def calc_xs_full_ode(self, e_hat, y_hat):
+    def calc_xs_full_ode(self, e_hat=None, y_hat=None):
         """Calculate the complete steady-state metabolite concentrations by
         integrating the complete ODE matrix (without a link matrix)
         """
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         t, x_sym, ode = self._construct_full_ode(e_hat, y_hat)
 
@@ -198,13 +212,15 @@ class LinLogModel(object):
 
         return xs
 
-    def _construct_reduced_ode(self, e_hat, y_hat):
+    def _construct_reduced_ode(self, e_hat=None, y_hat=None):
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         t = cs.SX.sym('t', 1)
         z_sym = cs.SX.sym('z', self.rank)
 
         v = e_hat * self.v_star * (
-            1 + self.Ex @ self.L @ cs.log(z_sym/self.z_star) +
+            1 + self.Ez @ cs.log(z_sym/self.z_star) +
             self.Ey @ np.log(y_hat))
 
         v_fun = cs.Function('v', [z_sym], [v])
@@ -213,10 +229,12 @@ class LinLogModel(object):
 
         return t, z_sym, ode
 
-    def calc_xs_reduced_ode(self, e_hat, y_hat):
+    def calc_xs_reduced_ode(self, e_hat=None, y_hat=None):
         """Calculate the complete steady-state metabolite concentrations by
         integrating the stoichiometrically reduced ODE system
         """
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         t, z_sym, ode = self._construct_reduced_ode(e_hat, y_hat)
 
@@ -237,17 +255,19 @@ class LinLogModel(object):
 
         return xs
 
-    def calc_xs_transformed_ode(self, e_hat, y_hat):
+    def calc_xs_transformed_ode(self, e_hat=None, y_hat=None):
         """Calculate the complete steady-state metabolite concentrations by
         integrating the exp-transformed ODE system
         """
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         t = cs.SX.sym('t', 1)
         chi_sym = cs.SX.sym('z', self.rank)
 
         n_hat = np.diag(1/self.z_star) @ self.Nr @ np.diag(self.v_star)
         ode = cs.diag(cs.exp(-chi_sym)) @ n_hat @ np.diag(e_hat) @ (
-            np.ones(self.nr) + self.Ex @ self.L @ chi_sym +
+            np.ones(self.nr) + self.Ez @ chi_sym +
             self.Ey @ np.log(y_hat))
 
         integrator = cs.integrator(
@@ -269,17 +289,21 @@ class LinLogModel(object):
 
         return xs
 
-    def calc_jacobian_reduced_ode(self, z, e_hat, y_hat):
+    def calc_jacobian_reduced_ode(self, z, e_hat=None, y_hat=None):
         """Calculate the jacobian matrix of the reduced system using casadi at
         the given perturbated point"""
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         t, z_sym, ode = self._construct_reduced_ode(e_hat, y_hat)
         ode_f = cs.Function('v', [z_sym], [ode])
         return np.array(ode_f.jacobian(0)(z)[0])
 
-    def calc_jacobian_full_ode(self, x, e_hat, y_hat):
+    def calc_jacobian_full_ode(self, x, e_hat=None, y_hat=None):
         """Calculate the jacobian matrix of the full system using casadi at
         the given perturbated point"""
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         t, x_sym, ode = self._construct_full_ode(e_hat, y_hat)
         ode_f = cs.Function('v', [x_sym], [ode])
@@ -292,38 +316,49 @@ class LinLogModel(object):
         eigs = np.linalg.eigvals(jac)
         return np.all(np.real(eigs) <= tol)
 
-    def calc_fluxes_from_z(self, z, e_hat, y_hat):
+    def calc_fluxes_from_z(self, z, e_hat=None, y_hat=None):
         """Calculate fluxes for a given steady-state and parameters"""
 
-        v = e_hat * self.v_star * (1 + self.Ex @ self.L @
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
+        v = e_hat * self.v_star * (1 + self.Ez @
                                    np.log(z / self.z_star) +
                                    self.Ey @ np.log(y_hat))
 
         return v
 
-    def calc_fluxes_from_x(self, x, e_hat, y_hat):
+    def calc_fluxes_from_x(self, x, e_hat=None, y_hat=None):
         """Calculate fluxes for a given steady-state and parameters"""
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
         v = e_hat * self.v_star * (1 + self.Ex @ np.log(x/self.x_star) +
                                    self.Ey @ np.log(y_hat))
 
         return v
 
-    def calc_steady_state_fluxes(self, e_hat, y_hat):
+    def calc_steady_state_fluxes(self, e_hat=None, y_hat=None):
         """Calculate the steady-state fluxes directly"""
 
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
         chi = self.calc_chi_mat(e_hat, y_hat)
-        v = e_hat * self.v_star * (1 + self.Ex @ self.L @ chi +
+        v = e_hat * self.v_star * (1 + self.Ez @ chi +
                                    self.Ey @ np.log(y_hat))
 
         return v
 
-    def calc_jacobian_mat(self, z, e_hat, y_hat):
+    def calc_jacobian_mat(self, z=None, e_hat=None, y_hat=None):
         """Calculate the jacobian matrix of the reduced system via matrix
         algebra at the given perturbated point"""
 
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
+        if z is None:
+            z = self.calc_zs_mat(e_hat, y_hat)
+
         n_hat = np.diag(1/self.z_star) @ self.Nr @ np.diag(self.v_star * e_hat)
-        n_hat_ex_L = n_hat @ self.Ex @ self.L
+        n_hat_ex_L = n_hat @ self.Ez
         chi = np.log(z/self.z_star)
 
         return (np.diag(np.exp(-chi)) @ n_hat_ex_L @ chi +
@@ -389,7 +424,7 @@ class LinLogModel(object):
 
         return theano.function([Ex_theano, e_hat], rel_v_grad)
 
-    def calc_metabolite_control_coeff(self, e_hat, y_hat, full_return=False):
+    def calc_metabolite_control_coeff(self, e_hat=None, y_hat=None):
         """Calculate the metabolite control coefficient matrix, 
         Cx = d(ln x)/d(ln e).
 
@@ -398,28 +433,48 @@ class LinLogModel(object):
             flux_control_coeff calculation.
 
         """
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
         # Calculate the steady-state flux
         v_ss = self.calc_steady_state_fluxes(e_hat, y_hat)
 
         # Calculate the elasticity matrix at the new steady-state
-        Ex_ss = np.diag(self.v_star * e_hat / v_ss) @ self.Ex
+        Ez_ss = np.diag(self.v_star * e_hat / v_ss) @ self.Ez
 
         Cx = (-self.L @ 
-              np.linalg.inv(self.Nr @ np.diag(v_ss) @ Ex_ss @ self.L) @
+              np.linalg.inv(self.Nr @ np.diag(v_ss) @ Ez_ss) @
               self.Nr @ np.diag(v_ss))
         
-        if not full_return:
-            return Cx
+        return Cx
 
-        else:
-            return Cx, Ex_ss, v_ss
-
-    def calc_flux_control_coeff(self, e_hat, y_hat):
+    def calc_flux_control_coeff(self, e_hat=None, y_hat=None):
         """Calculate the flux control coefficient matrix, 
         Cv = d(ln v)/d(ln e).
 
         """
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
 
-        Cx_ss, Ex_ss, v_ss = self.calc_metabolite_control_coeff(
-            e_hat, y_hat, full_return=True)
-        return Ex_ss @ Cx_ss + np.eye(self.nr)
+        # Calculate the steady-state flux
+        v_ss = self.calc_steady_state_fluxes(e_hat, y_hat)
+
+        # Calculate the elasticity matrix at the new steady-state
+        Ez_ss = np.diag(self.v_star * e_hat / v_ss) @ self.Ez
+
+        Cv = (-Ez_ss @ 
+              np.linalg.inv(self.Nr @ np.diag(v_ss) @ Ez_ss) @
+              self.Nr @ np.diag(v_ss)) + np.eye(self.nr)
+
+        return Cv
+
+
+    def _generate_default_inputs(self, e_hat=None, y_hat=None):
+        """Create matricies of ones if input arguments are None"""
+
+        if e_hat is None:
+            e_hat = np.ones(self.nr)
+
+        if y_hat is None:
+            y_hat = np.ones(self.ny)
+
+        return e_hat, y_hat
+

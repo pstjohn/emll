@@ -75,10 +75,8 @@ def test_linlog():
 
         assert np.allclose(pjac_red, pjac_mat)
 
-        ojac_red = ll.calc_jacobian_reduced_ode(
-            ll.z_star, np.ones(ll.nr), np.ones(ll.ny))
-        ojac_mat = ll.calc_jacobian_mat(
-            ll.z_star, np.ones(ll.nr), np.ones(ll.ny))
+        ojac_red = ll.calc_jacobian_reduced_ode(ll.z_star)
+        ojac_mat = ll.calc_jacobian_mat(ll.z_star)
 
         assert np.allclose(ojac_red, ojac_mat)
 
