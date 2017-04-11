@@ -8,8 +8,8 @@ def load_contador():
     model = cobra.io.load_json_model(currdir + '/contador.json')
     N = np.array(model.to_array_based_model().S.
                  todense())
-    model.optimize()
-    v_star = np.array(list(model.solution.x))
+    solution = model.optimize()
+    v_star = np.array(list(solution.x))
 
     return model, N, v_star
 
@@ -24,8 +24,8 @@ def load_teusink():
         rxn.lower_bound = 0.1
 
     model.objective = model.reactions.vATP
-    model.optimize()
-    v_star = np.array(list(model.solution.x))
+    solution = model.optimize()
+    v_star = np.array(list(solution.x))
 
     return model, N, v_star
     
@@ -43,10 +43,10 @@ def load_textbook():
     # model.reactions.Biomass_Ecoli_core.remove_from_model()
     # model.objective = model.reactions.ATPM
     
-    model.optimize()
+    solution = model.optimize()
     
     N = np.array(model.to_array_based_model().S.todense())
-    v_star = np.array(list(model.solution.x))
+    v_star = np.array(list(solution.x))
 
     return model, N, v_star
 
@@ -89,15 +89,15 @@ def load_greene_large():
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, -1, -1, 1, 0, 0]])
 
     v_star = np.array([1, 0, 1, 0, 1, 0, 0.5, 0, 0.5, 0, 0.5, 0, 1.5, 0, 1.5,
-        0, 1.5, 0, 1, 0, 1, 0, 1, 0, 1.5, 0.5])
+                       0, 1.5, 0, 1, 0, 1, 0, 1, 0, 1.5, 0.5])
 
     rxn_names = ['v1,1', 'v1,2', 'v1,3', 'v1,4', 'v1,5', 'v1,6', 'v2,1',
-            'v2,2', 'v2,3', 'v2,4', 'v2,5', 'v2,6', 'v3,1', 'v3,2', 'v3,3',
-            'v3,4', 'v3,5', 'v3,6', 'vin,1', 'vin,2', 'vin,3', 'vin,4',
-            'vin,5', 'vin,6', 'vout', 'voutx3']
+                 'v2,2', 'v2,3', 'v2,4', 'v2,5', 'v2,6', 'v3,1', 'v3,2', 'v3,3',
+                 'v3,4', 'v3,5', 'v3,6', 'vin,1', 'vin,2', 'vin,3', 'vin,4',
+                 'vin,5', 'vin,6', 'vout', 'voutx3']
 
     met_names = ['x1', 'x2', 'x3', 'x4', 'E1', 'E2', 'E3', 'Ein', 'x1E1',
-            'x3E1', 'x3E2', 'x2E2', 'x2E3', 'x4E3', 'xoutEin', 'xinEin']
+                 'x3E1', 'x3E2', 'x2E2', 'x2E3', 'x4E3', 'xoutEin', 'xinEin']
 
     assert np.allclose(N @ v_star, 0)
 
