@@ -497,13 +497,9 @@ class LinLogModel(object):
         chi_ss_left = T.dot(N_hat, Ez)
         inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr)
         chi_ss_right = T.squeeze(T.batched_dot(-N_hat, inner_v[:, :, np.newaxis]))
-        # chi_ss_left_inv, _ = theano.scan(
-        #     lambda n: T.nlinalg.matrix_inverse(n), chi_ss_left, strict=True)
         chi_ss, _ = theano.scan(
             lambda n_left, n_right: solve(n_left, n_right),
             sequences=[chi_ss_left, chi_ss_right], strict=True)
-
-        # chi_ss = T.batched_dot(chi_ss_left_inv, chi_ss_right)
 
         v_ss = self.v_star * (e_hat) * (
             np.ones(self.nr) +
