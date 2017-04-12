@@ -494,7 +494,7 @@ class LinLogModel(object):
         e_diag = e_hat[:, np.newaxis] * np.diag(self.v_star)
     
         # Calculate the steady-state log(x/x_star) with some complicated matrix algebra...
-        N_hat = self.Nr @ e_diag
+        N_hat = (self.Nr @ e_diag).astype(floatX)
         chi_ss_left = T.dot(N_hat, Ez)
         inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr, dtype=floatX)
         chi_ss_right =T.batched_dot(-N_hat, inner_v[:, :, np.newaxis])
