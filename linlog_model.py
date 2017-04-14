@@ -490,6 +490,8 @@ class LinLogModel(object):
 
 
     def calculate_steady_state_theano(self, Ez, Ey, e_hat, y_hat):
+        """For a matrix of e_hat, y_hat values, calculate the chi_ss and v_hat_ss
+        resulting from the relevant perturbations (using theano)"""
 
         e_diag = e_hat[:, np.newaxis] * np.diag(self.v_star)
     
@@ -497,15 +499,32 @@ class LinLogModel(object):
         N_hat = (self.Nr @ e_diag).astype(floatX)
         chi_ss_left = T.dot(N_hat, Ez)
         inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr, dtype=floatX)
-        chi_ss_right = T.batched_dot(-N_hat, inner_v[:, :, np.newaxis])
+        chi_ss_right =T.batched_dot(-N_hat, inner_v[:, :, np.newaxis])
         chi_ss, _ = theano.scan(
             lambda n_left, n_right: solve(n_left, n_right),
             sequences=[chi_ss_left, chi_ss_right], strict=True)
 
-        v_ss = self.v_star * (e_hat) * (
+        v_hat_ss = (e_hat) * (
             np.ones(self.nr) +
             T.dot(Ez, chi_ss).squeeze().T + 
             T.dot(Ey, np.log(y_hat)[:, :, np.newaxis]).squeeze().T)
 
 
-        return chi_ss.squeeze(), v_ss
+        return chi_ss.squeeze(), v_hat_ss
+
+
+    def calculate_steady_state_batch_theano(self, Ez, Ey, e_hat, y_hat):
+        """For a single e_hat, y_hat perturbation (as theano variables),
+        calculate the steady state"""
+
+        e_diag = T.diag(e_hat * self.v_star.astype(floatX))   
+        N_hat = T.dot(self.Nr, e_diag)
+        b = -N_hat.dot(Ey.dot(T.log(y_hat.T)).T + 
+                       np.ones(self.nr, dtype=floatX))
+        A = N_hat.dot(Ez)
+        chi_ss = solve(A, b)
+        v_hat_ss = e_hat * (np.ones(self.nr) + T.dot(Ez, chi_ss) + 
+                            T.dot(Ey, np.log(y_hat)))
+
+        return chi_ss, v_hat_ss
+

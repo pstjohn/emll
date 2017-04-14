@@ -278,10 +278,44 @@ def test_theano_steady_state(linlog_model):
     Ey_t = tt.dmatrix('Ey')
     Ey_t.tag.test_value = ll.Ey
 
-    chi_ss, v_ss = ll.calculate_steady_state_theano(Ez_t, Ey_t, e_hat, y_hat)
+    chi_ss, v_hat_ss = ll.calculate_steady_state_theano(Ez_t, Ey_t, e_hat, y_hat)
 
-    io_fun = theano.function([Ez_t, Ey_t], [chi_ss, v_ss])
+    io_fun = theano.function([Ez_t, Ey_t], [chi_ss, ll.v_star * v_hat_ss])
     x_theano_test, v_theano_test = io_fun(ll.Ez, ll.Ey)
 
     assert np.allclose(chi_test, x_theano_test)
     assert np.allclose(v_test, v_theano_test)
+
+
+def test_calculate_steady_state_batch_theano(linlog_model):
+
+    ll, e_hat, y_hat = linlog_model
+
+    # Fake up some experiments
+    e_hat_np = 2**(0.5*np.random.randn(ll.nr))
+    y_hat_np = 2**(0.5*np.random.randn(ll.ny))
+
+    e_hat_t = tt.vector()
+    e_hat_t.tag.test_value = e_hat_np
+
+    y_hat_t = tt.vector()
+    y_hat_t.tag.test_value = y_hat_np
+
+    Ez_t = tt.dmatrix('Ez')
+    Ez_t.tag.test_value = ll.Ez
+
+    Ey_t = tt.dmatrix('Ey')
+    Ey_t.tag.test_value = ll.Ey
+
+    chi_np = ll.calc_chi_mat(e_hat_np, y_hat_np)
+    v_hat_np = ll.calc_steady_state_fluxes(e_hat_np, y_hat_np) / ll.v_star
+
+    chi_ss, v_hat_ss = ll.calculate_steady_state_batch_theano(
+        Ez_t, Ey_t, e_hat_t, y_hat_t)
+    io_fun = theano.function([Ez_t, Ey_t, e_hat_t, y_hat_t], 
+                             [chi_ss, v_hat_ss])
+
+    x_theano_test, v_theano_test = io_fun(ll.Ez, ll.Ey, e_hat_np, y_hat_np)
+
+    assert np.allclose(chi_np, x_theano_test)
+    assert np.allclose(v_hat_np, v_theano_test)
