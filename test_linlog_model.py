@@ -318,4 +318,5 @@ def test_calculate_steady_state_batch_theano(linlog_model):
     x_theano_test, v_theano_test = io_fun(ll.Ez, ll.Ey, e_hat_np, y_hat_np)
 
     assert np.allclose(chi_np, x_theano_test)
-    assert np.allclose(v_hat_np, v_theano_test)
+    assert np.allclose(v_hat_np[np.isfinite(v_hat_np)],
+                       v_theano_test[np.isfinite(v_hat_np)])
