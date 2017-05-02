@@ -48,7 +48,8 @@ class LinLogModel(object):
         assert len(x_star) == self.nm, "x_star is the wrong length"
 
         if smallbone:
-            q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex).T, pivoting=True)
+            # q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex).T, pivoting=True)
+            q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex @ N).T, pivoting=True)
         else:
             q, r, p = sp.linalg.qr((N).T, pivoting=True)
 
@@ -206,6 +207,8 @@ class LinLogModel(object):
                 'ode': ode,
             },
             {
+                'abstol': 1E-9,
+                'reltol': 1E-9,
                 'tf': 2000,
                 'regularity_check': True,
             })
@@ -248,14 +251,15 @@ class LinLogModel(object):
                 'ode': ode,
             },
             {
-                'tf': 2000,
+                'abstol': 1E-9,
+                'reltol': 1E-9,
+                'tf': 10000,
                 'regularity_check': True,
             })
 
         zs = np.array(integrator(x0=self.z_star)['xf']).flatten()
-        xs = self.z_to_x(zs)
 
-        return xs
+        return self.z_to_x(zs)
 
     def calc_xs_transformed_ode(self, e_hat=None, y_hat=None):
         """Calculate the complete steady-state metabolite concentrations by
@@ -280,7 +284,9 @@ class LinLogModel(object):
                 'ode': ode,
             },
             {
-                'tf': 2000,
+                'abstol': 1E-9,
+                'reltol': 1E-9,
+                'tf': 10000,
                 'regularity_check': True,
             })
 

@@ -6,6 +6,15 @@ currdir = os.path.dirname(os.path.abspath(__file__))
 
 def load_contador():
     model = cobra.io.load_json_model(currdir + '/contador.json')
+
+    solution = model.optimize()
+
+    for rxn in model.reactions.query(lambda x: x.x == 0):
+        rxn.remove_from_model()
+        
+    for met in model.metabolites.query(lambda x: len(x.reactions) < 2):
+        met.remove_from_model()
+
     N = np.array(model.to_array_based_model().S.
                  todense())
     solution = model.optimize()
@@ -42,7 +51,18 @@ def load_textbook():
     
     # model.reactions.Biomass_Ecoli_core.remove_from_model()
     # model.objective = model.reactions.ATPM
-    
+
+    solution = model.optimize()
+
+    for rxn in model.reactions.query(lambda x: x.x == 0):
+        rxn.remove_from_model()
+        
+    for met in model.metabolites.query(lambda x: len(x.reactions) < 2):
+        met.remove_from_model()
+        
+        
+    v_star = cobra.flux_analysis.pfba(model).fluxes.values
+
     solution = model.optimize()
     
     N = np.array(model.to_array_based_model().S.todense())
@@ -118,3 +138,13 @@ def construct_model_from_mat(N, rxn_names, met_names):
             if abs(stoich) > 1E-6})
 
     return model
+
+
+models = {
+    'teusink': load_teusink,
+    'mendes': load_mendes,
+    'textbook': load_textbook,
+    'greene_small': load_greene_small,
+    'greene_large': load_greene_large,
+    'contador': load_contador,
+}

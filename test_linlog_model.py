@@ -2,28 +2,43 @@ import numpy as np
 import pytest
 
 from .linlog_model import LinLogModel
+from .util import create_elasticity_matrix
 
-from test_models import (load_teusink, load_mendes, load_textbook,
-                         load_greene_small, load_greene_large, load_contador)
+from test_models import models
 
 import theano
 import theano.tensor as tt
 theano.config.compute_test_value = 'ignore' 
 
-@pytest.fixture(params=[load_teusink, load_mendes, load_textbook,
-                        load_greene_small, load_greene_large, load_contador])
+import os
+os.environ["THEANO_FLAGS"] = "mode=FAST_COMPILE"
+
+try:
+    import casadi
+except ImportError:
+    casadi = None
+
+@pytest.fixture(params=['teusink', 'mendes', 'textbook',
+                        'greene_small', 'greene_large', 'contador'])
 def cobra_model(request):
-    model, N, v_star = request.param()
+    model, N, v_star = models[request.param]()
     return model, N, v_star
 
 
+@pytest.fixture(params=['reversible', 'irreversible'])
+def ex_method(request):
+    return request.param 
+
 @pytest.fixture()
-def linlog_model(cobra_model):
+def linlog_model(cobra_model, ex_method):
 
     model, N, v_star = cobra_model
 
     # Create perturbation matricies
-    Ex = -N.T
+    if ex_method is 'reversible':
+        Ex = -N.T
+    else:
+        Ex = create_elasticity_matrix(model)
 
     boundary_indexes = [model.reactions.index(r) for r in
                         model.reactions.query(lambda x: x.boundary, None)]
@@ -98,9 +113,13 @@ def test_rank_decomposition(linlog_model):
     ll, e_hat, y_hat = linlog_model
 
     # Test rank decomposition (smallbone)
-    assert np.linalg.matrix_rank(
-            (ll.N @ np.diag(ll.v_star) @ ll.Ex), 
-            tol=ll._ranktol) == ll.rank
+    # assert np.linalg.matrix_rank(
+    #         (ll.N @ np.diag(ll.v_star) @ ll.Ex), 
+    #         tol=ll._ranktol) == ll.rank
+
+    assert np.linalg.matrix_rank(ll.Ez) == ll.rank
+
+    assert np.allclose(ll.calc_chi_mat(), 0.)
 
 
 def test_steady_state_methods(linlog_model):
@@ -114,7 +133,7 @@ def test_steady_state_methods(linlog_model):
     assert np.all(np.isfinite(x_ss_mat))
     assert np.all(np.isfinite(z_ss_mat))
 
-    # Test jacovian method equivalence
+    # Test jacovian method equi valence
     ll.calc_jacobian_full_ode(x_ss_mat, e_hat, y_hat)
     pjac_red = ll.calc_jacobian_reduced_ode(z_ss_mat, e_hat, y_hat)
     pjac_mat = ll.calc_jacobian_mat(z_ss_mat, e_hat, y_hat)
@@ -207,12 +226,13 @@ def test_flux_control_coeff(linlog_model):
         assert np.allclose(
             theano_mat, ll.calc_flux_control_coeff(e_hat, y_hat))
 
+@pytest.mark.skipif(casadi is None, reason="casadi not found")
 def test_casadi_methods(linlog_model):
 
     ll, e_hat, y_hat = linlog_model
 
     # ODE dynamic system tests
-    if ll.is_stable(ll.calc_jacobian_mat(ll.z_star)):
+    if ll.is_stable(ll.calc_jacobian_mat(z=None, e_hat=e_hat, y_hat=y_hat)):
 
         # check steady-state method equivalence
         x_ss_mat = ll.calc_xs_mat(e_hat, y_hat)
@@ -225,9 +245,14 @@ def test_casadi_methods(linlog_model):
         assert np.allclose(x_ss_mat, x_ss_xform)
 
         # Make sure fluxes are equal
-        assert np.allclose(
+
+        # This one needs a lower tolerance since x_ss_full != x_ss_mat from
+        # the linlog assumption
+        from scipy.stats import pearsonr
+
+        assert pearsonr(
             ll.calc_fluxes_from_x(x_ss_full, e_hat, y_hat),
-            ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat))
+            ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat))[0] > .99
 
         assert np.allclose(
             ll.calc_fluxes_from_x(x_ss_red, e_hat, y_hat),
@@ -236,10 +261,6 @@ def test_casadi_methods(linlog_model):
         assert np.allclose(
             ll.calc_fluxes_from_x(x_ss_xform, e_hat, y_hat),
             ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat))
-
-        assert np.allclose(
-            ll.calc_fluxes_from_x(x_ss_full, e_hat, y_hat),
-            ll.calc_steady_state_fluxes(e_hat, y_hat))
 
 
 def test_theano_jac(linlog_model):
