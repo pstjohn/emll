@@ -34,3 +34,19 @@ def create_elasticity_matrix(model):
                 array[r_ind(reaction), m_ind(metabolite)] = -np.sign(stoich)
 
     return array
+
+def create_Ey_matrix(model):
+
+    boundary_indexes = [model.reactions.index(r) for r in
+                        model.reactions.query(lambda x: x.boundary, None)]
+    boundary_directions = [1 if r.products else -1 for r in
+                           model.reactions.query(
+                               lambda x: x.boundary, None)]
+    ny = len(boundary_indexes)
+    Ey = np.zeros((len(model.reactions), ny))
+
+    for i, (rid, direction) in enumerate(zip(boundary_indexes,
+                                             boundary_directions)):
+        Ey[rid, i] = direction
+
+    return Ey
