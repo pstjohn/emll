@@ -14,9 +14,9 @@ import os
 os.environ["THEANO_FLAGS"] = "mode=FAST_COMPILE"
 
 try:
-    import casadi
+    import casadi as cs
 except ImportError:
-    casadi = None
+    cs = None
 
 @pytest.fixture(params=['teusink', 'mendes', 'textbook',
                         'greene_small', 'greene_large', 'contador'])
@@ -226,7 +226,7 @@ def test_flux_control_coeff(linlog_model):
         assert np.allclose(
             theano_mat, ll.calc_flux_control_coeff(e_hat, y_hat))
 
-@pytest.mark.skipif(casadi is None, reason="casadi not found")
+@pytest.mark.skipif(cs is None, reason="casadi not found")
 def test_casadi_methods(linlog_model):
 
     ll, e_hat, y_hat = linlog_model
@@ -341,3 +341,41 @@ def test_calculate_steady_state_batch_theano(linlog_model):
     assert np.allclose(chi_np, x_theano_test)
     assert np.allclose(v_hat_np[np.isfinite(v_hat_np)],
                        v_theano_test[np.isfinite(v_hat_np)])
+
+
+@pytest.mark.skipif(cs is None, reason="casadi not found")
+def test_calc_steady_state_casadi(linlog_model):
+
+    ll, e_hat, y_hat = linlog_model
+
+    Ex_cs = cs.SX.sym('Ex', *ll.Ex.shape)
+    Ey_cs = cs.SX.sym('Ey', *ll.Ey.shape)
+    e_cs = cs.SX.sym('e', *e_hat.shape)
+    y_cs = cs.SX.sym('y', *y_hat.shape)
+
+    chi_cs, v_cs = ll.calc_steady_state_casadi(Ex_cs, Ey_cs, e_cs, y_cs)
+    test_chi_fun = cs.Function('test_chi_ss', [Ex_cs, Ey_cs, e_cs, y_cs],
+                               [chi_cs, v_cs])
+
+    # All symbolics
+    chi_casadi, v_hat_casadi = test_chi_fun(ll.Ex, ll.Ey, e_hat, y_hat)
+    v_hat_mat = ll.calc_steady_state_fluxes(e_hat, y_hat) / ll.v_star
+    chi_mat = ll.calc_chi_mat(e_hat, y_hat)
+
+    not_nan_inds = ~np.isnan(v_hat_mat * np.array(v_hat_casadi).squeeze())
+
+    assert np.allclose(np.array(chi_casadi).squeeze(), chi_mat)
+    assert np.allclose(
+        np.array(v_hat_casadi).squeeze()[not_nan_inds],
+        v_hat_mat[not_nan_inds])
+
+    # Try passing numeric values into the function
+    chi_cs_1, v_cs_1 = ll.calc_steady_state_casadi(Ex_cs, Ey_cs, e_hat, y_hat)
+    test_chi_fun_1 = cs.Function(
+        'test_chi_ss', [Ex_cs, Ey_cs], [chi_cs_1, v_cs_1])
+    chi_casadi, v_hat_casadi = test_chi_fun_1(ll.Ex, ll.Ey)
+
+    assert np.allclose(np.array(chi_casadi).squeeze(), chi_mat)
+    assert np.allclose(
+        np.array(v_hat_casadi).squeeze()[not_nan_inds],
+        v_hat_mat[not_nan_inds])

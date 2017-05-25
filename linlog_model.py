@@ -535,3 +535,19 @@ class LinLogModel(object):
 
         return chi_ss, v_hat_ss
 
+    def calc_steady_state_casadi(self, Ex, Ey, e_hat, y_hat):
+        """ For a single e_hat, y_hat (can be either casadi or numpy vectors)
+        and a given Ex, Ey (as casadi matrices), calculate the steady-state
+        concentrations and fluxes.
+        """
+
+        N_hat = self.Nr @ cs.diag(e_hat * self.v_star)
+        
+        A = N_hat @ Ex @ self.L
+        b = -N_hat @ (np.ones(self.nr) + Ey @ cs.log(y_hat))
+        chi = cs.solve(A, b)
+        
+        v_hat = e_hat * (np.ones(self.nr) + Ex @ self.L @ chi + 
+                         Ey @ cs.log(y_hat))
+        
+        return chi, v_hat
