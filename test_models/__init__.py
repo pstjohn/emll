@@ -46,23 +46,8 @@ def load_mendes():
     return model, N, v_star
     
 def load_textbook():
-    import cobra.test
-    model = cobra.test.create_test_model('textbook')
-    
-    # model.reactions.Biomass_Ecoli_core.remove_from_model()
-    # model.objective = model.reactions.ATPM
 
-    solution = model.optimize()
-
-    for rxn in model.reactions.query(lambda x: x.x == 0):
-        rxn.remove_from_model()
-        
-    for met in model.metabolites.query(lambda x: len(x.reactions) < 2):
-        met.remove_from_model()
-        
-        
-    v_star = cobra.flux_analysis.pfba(model).fluxes.values
-
+    model = cobra.io.load_json_model(currdir + '/textbook_reduced.json')
     solution = model.optimize()
     
     N = np.array(model.to_array_based_model().S.todense())
@@ -111,10 +96,10 @@ def load_greene_large():
     v_star = np.array([1, 0, 1, 0, 1, 0, 0.5, 0, 0.5, 0, 0.5, 0, 1.5, 0, 1.5,
                        0, 1.5, 0, 1, 0, 1, 0, 1, 0, 1.5, 0.5])
 
-    rxn_names = ['v1,1', 'v1,2', 'v1,3', 'v1,4', 'v1,5', 'v1,6', 'v2,1',
-                 'v2,2', 'v2,3', 'v2,4', 'v2,5', 'v2,6', 'v3,1', 'v3,2', 'v3,3',
-                 'v3,4', 'v3,5', 'v3,6', 'vin,1', 'vin,2', 'vin,3', 'vin,4',
-                 'vin,5', 'vin,6', 'vout', 'voutx3']
+    rxn_names = ['v1_1', 'v1_2', 'v1_3', 'v1_4', 'v1_5', 'v1_6', 'v2_1',
+                 'v2_2', 'v2_3', 'v2_4', 'v2_5', 'v2_6', 'v3_1', 'v3_2', 'v3_3',
+                 'v3_4', 'v3_5', 'v3_6', 'vin_1', 'vin_2', 'vin_3', 'vin_4',
+                 'vin_5', 'vin_6', 'vout', 'voutx3']
 
     met_names = ['x1', 'x2', 'x3', 'x4', 'E1', 'E2', 'E3', 'Ein', 'x1E1',
                  'x3E1', 'x3E2', 'x2E2', 'x2E3', 'x4E3', 'xoutEin', 'xinEin']
