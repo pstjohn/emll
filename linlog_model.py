@@ -1,3 +1,5 @@
+import copy
+
 import numpy as np
 import scipy as sp
 
@@ -560,3 +562,7 @@ class LinLogModel(object):
                          Ey @ cs.log(y_hat))
         
         return chi, v_hat
+
+    def copy(self):
+        """ Return a deepcopy of the class """
+        return copy.deepcopy(self)
