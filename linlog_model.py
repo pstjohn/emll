@@ -508,7 +508,7 @@ class LinLogModel(object):
         N_hat = (self.Nr @ e_diag).astype(floatX)
         chi_ss_left = T.dot(N_hat, Ez)
         inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr, dtype=floatX)
-        chi_ss_right =T.batched_dot(-N_hat, inner_v[:, :, np.newaxis])
+        chi_ss_right = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
         chi_ss, _ = theano.scan(
             lambda n_left, n_right: solve(n_left, n_right),
             sequences=[chi_ss_left, chi_ss_right], strict=True)

@@ -2,6 +2,8 @@ import os
 import cobra
 import numpy as np
 
+import pandas as pd
+
 currdir = os.path.dirname(os.path.abspath(__file__))
 
 def load_contador():
@@ -109,6 +111,18 @@ def load_greene_large():
     return construct_model_from_mat(N, rxn_names, met_names), N, v_star
 
 
+def load_jol2012_edit():
+
+    model = cobra.io.load_json_model(currdir + '/jol2012_trimmed.json')
+    v_star = pd.read_pickle(currdir + '/jol2012_vstar.p').values
+
+    N = cobra.util.create_stoichiometric_matrix(model)
+
+    assert np.allclose(N @ v_star, 0)
+
+    return model, N, v_star
+
+
 def construct_model_from_mat(N, rxn_names, met_names):
 
     model = cobra.Model('test_model')
@@ -132,4 +146,5 @@ models = {
     'greene_small': load_greene_small,
     'greene_large': load_greene_large,
     'contador': load_contador,
+    'jol2012': load_jol2012_edit,
 }

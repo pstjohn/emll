@@ -1,0 +1,5597 @@
+{
+  "compartments": {
+    "c": "Cytoplasm",
+    "e": "Extracellular",
+    "m": "Mitochondrion"
+  },
+  "genes": [
+    {
+      "id": "YBR011C",
+      "name": ""
+    },
+    {
+      "id": "YMR108W",
+      "name": ""
+    },
+    {
+      "id": "YCL009C",
+      "name": ""
+    },
+    {
+      "id": "YGR244C",
+      "name": ""
+    },
+    {
+      "id": "YOR142W",
+      "name": ""
+    },
+    {
+      "id": "YJR016C",
+      "name": ""
+    },
+    {
+      "id": "YGR124W",
+      "name": ""
+    },
+    {
+      "id": "YML096W",
+      "name": ""
+    },
+    {
+      "id": "YPR145W",
+      "name": ""
+    },
+    {
+      "id": "YKL085W",
+      "name": ""
+    },
+    {
+      "id": "YDR035W",
+      "name": ""
+    },
+    {
+      "id": "YBR249C",
+      "name": ""
+    },
+    {
+      "id": "YER055C",
+      "name": ""
+    },
+    {
+      "id": "YBR115C",
+      "name": ""
+    },
+    {
+      "id": "YGL154C",
+      "name": ""
+    },
+    {
+      "id": "YMR062C",
+      "name": ""
+    },
+    {
+      "id": "YER065C",
+      "name": ""
+    },
+    {
+      "id": "YIL116W",
+      "name": ""
+    },
+    {
+      "id": "YLR377C",
+      "name": ""
+    },
+    {
+      "id": "YGL148W",
+      "name": ""
+    },
+    {
+      "id": "YGR204W",
+      "name": ""
+    },
+    {
+      "id": "YPR167C",
+      "name": ""
+    },
+    {
+      "id": "YER091C",
+      "name": ""
+    },
+    {
+      "id": "YHR018C",
+      "name": ""
+    },
+    {
+      "id": "YBR248C",
+      "name": ""
+    },
+    {
+      "id": "YDR050C",
+      "name": ""
+    },
+    {
+      "id": "YER062C",
+      "name": ""
+    },
+    {
+      "id": "YIL053W",
+      "name": ""
+    },
+    {
+      "id": "YAL012W",
+      "name": ""
+    },
+    {
+      "id": "YNL277W",
+      "name": ""
+    },
+    {
+      "id": "YLR304C",
+      "name": ""
+    },
+    {
+      "id": "YKL120W",
+      "name": ""
+    },
+    {
+      "id": "YDR377W",
+      "name": ""
+    },
+    {
+      "id": "YKL016C",
+      "name": ""
+    },
+    {
+      "id": "YDR322C_A",
+      "name": ""
+    },
+    {
+      "id": "YML081C_A",
+      "name": ""
+    },
+    {
+      "id": "YBR039W",
+      "name": ""
+    },
+    {
+      "id": "YJR121W",
+      "name": ""
+    },
+    {
+      "id": "YBL099W",
+      "name": ""
+    },
+    {
+      "id": "Q0085",
+      "name": ""
+    },
+    {
+      "id": "YDL181W",
+      "name": ""
+    },
+    {
+      "id": "YDR298C",
+      "name": ""
+    },
+    {
+      "id": "YPR020W",
+      "name": ""
+    },
+    {
+      "id": "Q0080",
+      "name": ""
+    },
+    {
+      "id": "YPL078C",
+      "name": ""
+    },
+    {
+      "id": "Q0130",
+      "name": ""
+    },
+    {
+      "id": "YLR295C",
+      "name": ""
+    },
+    {
+      "id": "YOL077W_A",
+      "name": ""
+    },
+    {
+      "id": "YDL004W",
+      "name": ""
+    },
+    {
+      "id": "YPL271W",
+      "name": ""
+    },
+    {
+      "id": "YHL032C",
+      "name": ""
+    },
+    {
+      "id": "YIL125W",
+      "name": ""
+    },
+    {
+      "id": "YDR148C",
+      "name": ""
+    },
+    {
+      "id": "YFL018C",
+      "name": ""
+    },
+    {
+      "id": "YKL211C",
+      "name": ""
+    },
+    {
+      "id": "YDR234W",
+      "name": ""
+    },
+    {
+      "id": "YGL026C",
+      "name": ""
+    },
+    {
+      "id": "YMR145C",
+      "name": ""
+    },
+    {
+      "id": "YDL085W",
+      "name": ""
+    },
+    {
+      "id": "YKL152C",
+      "name": ""
+    },
+    {
+      "id": "YOL056W",
+      "name": ""
+    },
+    {
+      "id": "YDL021W",
+      "name": ""
+    },
+    {
+      "id": "YOR136W",
+      "name": ""
+    },
+    {
+      "id": "YNL037C",
+      "name": ""
+    },
+    {
+      "id": "YDR226W",
+      "name": ""
+    },
+    {
+      "id": "YCR012W",
+      "name": ""
+    },
+    {
+      "id": "YNL241C",
+      "name": ""
+    },
+    {
+      "id": "YGR256W",
+      "name": ""
+    },
+    {
+      "id": "YHR183W",
+      "name": ""
+    },
+    {
+      "id": "YJR148W",
+      "name": ""
+    },
+    {
+      "id": "YBR221C",
+      "name": ""
+    },
+    {
+      "id": "YER178W",
+      "name": ""
+    },
+    {
+      "id": "YNL071W",
+      "name": ""
+    },
+    {
+      "id": "YGR043C",
+      "name": ""
+    },
+    {
+      "id": "YLR354C",
+      "name": ""
+    },
+    {
+      "id": "YOR323C",
+      "name": ""
+    },
+    {
+      "id": "YPR035W",
+      "name": ""
+    },
+    {
+      "id": "YCR032W",
+      "name": ""
+    },
+    {
+      "id": "YJL200C",
+      "name": ""
+    },
+    {
+      "id": "YBR218C",
+      "name": ""
+    },
+    {
+      "id": "YGL062W",
+      "name": ""
+    },
+    {
+      "id": "YCL030C",
+      "name": ""
+    },
+    {
+      "id": "YOR374W",
+      "name": ""
+    },
+    {
+      "id": "YBR291C",
+      "name": ""
+    },
+    {
+      "id": "YFR025C",
+      "name": ""
+    },
+    {
+      "id": "YBR196C",
+      "name": ""
+    },
+    {
+      "id": "YJR095W",
+      "name": ""
+    },
+    {
+      "id": "YCL040W",
+      "name": ""
+    },
+    {
+      "id": "YGL253W",
+      "name": ""
+    },
+    {
+      "id": "YFR053C",
+      "name": ""
+    },
+    {
+      "id": "YER052C",
+      "name": ""
+    },
+    {
+      "id": "YER099C",
+      "name": ""
+    },
+    {
+      "id": "YOL061W",
+      "name": ""
+    },
+    {
+      "id": "YBL068W",
+      "name": ""
+    },
+    {
+      "id": "YKL181W",
+      "name": ""
+    },
+    {
+      "id": "YHL011C",
+      "name": ""
+    },
+    {
+      "id": "YLR089C",
+      "name": ""
+    },
+    {
+      "id": "YAL054C",
+      "name": ""
+    },
+    {
+      "id": "YOR184W",
+      "name": ""
+    },
+    {
+      "id": "YOR303W",
+      "name": ""
+    },
+    {
+      "id": "YJR109C",
+      "name": ""
+    },
+    {
+      "id": "YDR111C",
+      "name": ""
+    },
+    {
+      "id": "YEL046C",
+      "name": ""
+    },
+    {
+      "id": "YDR127W",
+      "name": ""
+    },
+    {
+      "id": "YGR087C",
+      "name": ""
+    },
+    {
+      "id": "YLR134W",
+      "name": ""
+    },
+    {
+      "id": "YLR044C",
+      "name": ""
+    },
+    {
+      "id": "YLR092W",
+      "name": ""
+    },
+    {
+      "id": "YGR125W",
+      "name": ""
+    },
+    {
+      "id": "YBR294W",
+      "name": ""
+    },
+    {
+      "id": "YBR117C",
+      "name": ""
+    },
+    {
+      "id": "YPR074C",
+      "name": ""
+    },
+    {
+      "id": "YLR153C",
+      "name": ""
+    },
+    {
+      "id": "YER081W",
+      "name": ""
+    },
+    {
+      "id": "YIL074C",
+      "name": ""
+    },
+    {
+      "id": "YMR267W",
+      "name": ""
+    },
+    {
+      "id": "YKL001C",
+      "name": ""
+    },
+    {
+      "id": "YER170W",
+      "name": ""
+    },
+    {
+      "id": "YNL316C",
+      "name": ""
+    },
+    {
+      "id": "YOR130C",
+      "name": ""
+    },
+    {
+      "id": "YGR208W",
+      "name": ""
+    },
+    {
+      "id": "YEL017C_A",
+      "name": ""
+    },
+    {
+      "id": "YPL036W",
+      "name": ""
+    },
+    {
+      "id": "YGL008C",
+      "name": ""
+    },
+    {
+      "id": "YCR024C_A",
+      "name": ""
+    },
+    {
+      "id": "YBL015W",
+      "name": ""
+    },
+    {
+      "id": "YGL125W",
+      "name": ""
+    },
+    {
+      "id": "YPL023C",
+      "name": ""
+    },
+    {
+      "id": "YMR118C",
+      "name": ""
+    },
+    {
+      "id": "YKL141W",
+      "name": ""
+    },
+    {
+      "id": "YLL041C",
+      "name": ""
+    },
+    {
+      "id": "YJL045W",
+      "name": ""
+    },
+    {
+      "id": "YLR164W",
+      "name": ""
+    },
+    {
+      "id": "YDR178W",
+      "name": ""
+    },
+    {
+      "id": "YKL148C",
+      "name": ""
+    },
+    {
+      "id": "YER069W",
+      "name": ""
+    },
+    {
+      "id": "YPL262W",
+      "name": ""
+    },
+    {
+      "id": "YLR303W",
+      "name": ""
+    },
+    {
+      "id": "YOL126C",
+      "name": ""
+    },
+    {
+      "id": "YGL009C",
+      "name": ""
+    },
+    {
+      "id": "YML123C",
+      "name": ""
+    },
+    {
+      "id": "YCR098C",
+      "name": ""
+    },
+    {
+      "id": "YNR013C",
+      "name": ""
+    },
+    {
+      "id": "YJL198W",
+      "name": ""
+    },
+    {
+      "id": "YBR296C",
+      "name": ""
+    },
+    {
+      "id": "YCR037C",
+      "name": ""
+    },
+    {
+      "id": "YER086W",
+      "name": ""
+    },
+    {
+      "id": "YDR354W",
+      "name": ""
+    },
+    {
+      "id": "YLR355C",
+      "name": ""
+    },
+    {
+      "id": "YIL094C",
+      "name": ""
+    },
+    {
+      "id": "YLL043W",
+      "name": ""
+    },
+    {
+      "id": "YJR139C",
+      "name": ""
+    },
+    {
+      "id": "YNR050C",
+      "name": ""
+    },
+    {
+      "id": "YPL276W",
+      "name": ""
+    },
+    {
+      "id": "YOR388C",
+      "name": ""
+    },
+    {
+      "id": "YPL275W",
+      "name": ""
+    },
+    {
+      "id": "YKL192C",
+      "name": ""
+    },
+    {
+      "id": "YML120C",
+      "name": ""
+    },
+    {
+      "id": "YLR348C",
+      "name": ""
+    },
+    {
+      "id": "YJL088W",
+      "name": ""
+    },
+    {
+      "id": "YDR007W",
+      "name": ""
+    },
+    {
+      "id": "YPL061W",
+      "name": ""
+    },
+    {
+      "id": "YGR254W",
+      "name": ""
+    },
+    {
+      "id": "YOR393W",
+      "name": ""
+    },
+    {
+      "id": "YPL281C",
+      "name": ""
+    },
+    {
+      "id": "YHR174W",
+      "name": ""
+    },
+    {
+      "id": "YMR323W",
+      "name": ""
+    },
+    {
+      "id": "YER090W",
+      "name": ""
+    },
+    {
+      "id": "YDR300C",
+      "name": ""
+    },
+    {
+      "id": "YNR001C",
+      "name": ""
+    },
+    {
+      "id": "YPR001W",
+      "name": ""
+    },
+    {
+      "id": "YJL121C",
+      "name": ""
+    },
+    {
+      "id": "YKL029C",
+      "name": ""
+    },
+    {
+      "id": "YCL018W",
+      "name": ""
+    },
+    {
+      "id": "YLR058C",
+      "name": ""
+    },
+    {
+      "id": "YOL156W",
+      "name": ""
+    },
+    {
+      "id": "YDR345C",
+      "name": ""
+    },
+    {
+      "id": "YJR158W",
+      "name": ""
+    },
+    {
+      "id": "YJL219W",
+      "name": ""
+    },
+    {
+      "id": "YDR343C",
+      "name": ""
+    },
+    {
+      "id": "YHR092C",
+      "name": ""
+    },
+    {
+      "id": "YDL245C",
+      "name": ""
+    },
+    {
+      "id": "YHR096C",
+      "name": ""
+    },
+    {
+      "id": "YDR342C",
+      "name": ""
+    },
+    {
+      "id": "YDR536W",
+      "name": ""
+    },
+    {
+      "id": "YNR072W",
+      "name": ""
+    },
+    {
+      "id": "YLR081W",
+      "name": ""
+    },
+    {
+      "id": "YJL214W",
+      "name": ""
+    },
+    {
+      "id": "YEL069C",
+      "name": ""
+    },
+    {
+      "id": "YHR094C",
+      "name": ""
+    },
+    {
+      "id": "YFL011W",
+      "name": ""
+    },
+    {
+      "id": "YMR011W",
+      "name": ""
+    },
+    {
+      "id": "YER023W",
+      "name": ""
+    },
+    {
+      "id": "YMR205C",
+      "name": ""
+    },
+    {
+      "id": "YGR240C",
+      "name": ""
+    },
+    {
+      "id": "YHR025W",
+      "name": ""
+    },
+    {
+      "id": "YCL050C",
+      "name": ""
+    },
+    {
+      "id": "YJR077C",
+      "name": ""
+    },
+    {
+      "id": "YNL142W",
+      "name": ""
+    },
+    {
+      "id": "YGR121C",
+      "name": ""
+    },
+    {
+      "id": "YPR138C",
+      "name": ""
+    },
+    {
+      "id": "YOR202W",
+      "name": ""
+    },
+    {
+      "id": "YIR034C",
+      "name": ""
+    },
+    {
+      "id": "YGL256W",
+      "name": ""
+    },
+    {
+      "id": "YDL168W",
+      "name": ""
+    },
+    {
+      "id": "YOL086C",
+      "name": ""
+    },
+    {
+      "id": "YBR145W",
+      "name": ""
+    },
+    {
+      "id": "YMR303C",
+      "name": ""
+    },
+    {
+      "id": "YBR166C",
+      "name": ""
+    },
+    {
+      "id": "YKR097W",
+      "name": ""
+    },
+    {
+      "id": "YDL022W",
+      "name": ""
+    },
+    {
+      "id": "YOR095C",
+      "name": ""
+    },
+    {
+      "id": "YCR053W",
+      "name": ""
+    },
+    {
+      "id": "YNL104C",
+      "name": ""
+    },
+    {
+      "id": "YOR108W",
+      "name": ""
+    },
+    {
+      "id": "YHR137W",
+      "name": ""
+    },
+    {
+      "id": "YLR027C",
+      "name": ""
+    },
+    {
+      "id": "YJR009C",
+      "name": ""
+    },
+    {
+      "id": "YJL052W",
+      "name": ""
+    },
+    {
+      "id": "YGR192C",
+      "name": ""
+    },
+    {
+      "id": "YPR060C",
+      "name": ""
+    },
+    {
+      "id": "YIL020C",
+      "name": ""
+    },
+    {
+      "id": "YJR137C",
+      "name": ""
+    },
+    {
+      "id": "YFR030W",
+      "name": ""
+    },
+    {
+      "id": "YHR163W",
+      "name": ""
+    },
+    {
+      "id": "YGR248W",
+      "name": ""
+    },
+    {
+      "id": "YCR073W_A",
+      "name": ""
+    },
+    {
+      "id": "YNR034W",
+      "name": ""
+    },
+    {
+      "id": "YDR158W",
+      "name": ""
+    },
+    {
+      "id": "YMR083W",
+      "name": ""
+    },
+    {
+      "id": "YOR065W",
+      "name": ""
+    },
+    {
+      "id": "YFR033C",
+      "name": ""
+    },
+    {
+      "id": "YPR191W",
+      "name": ""
+    },
+    {
+      "id": "YDR529C",
+      "name": ""
+    },
+    {
+      "id": "YGR183C",
+      "name": ""
+    },
+    {
+      "id": "YEL024W",
+      "name": ""
+    },
+    {
+      "id": "Q0105",
+      "name": ""
+    },
+    {
+      "id": "YBL045C",
+      "name": ""
+    },
+    {
+      "id": "YHR001W_A",
+      "name": ""
+    },
+    {
+      "id": "YJL166W",
+      "name": ""
+    },
+    {
+      "id": "YOL058W",
+      "name": ""
+    },
+    {
+      "id": "YKL060C",
+      "name": ""
+    },
+    {
+      "id": "YGL187C",
+      "name": ""
+    },
+    {
+      "id": "YGL191W",
+      "name": ""
+    },
+    {
+      "id": "YIL111W",
+      "name": ""
+    },
+    {
+      "id": "YDL067C",
+      "name": ""
+    },
+    {
+      "id": "YLR395C",
+      "name": ""
+    },
+    {
+      "id": "YLR038C",
+      "name": ""
+    },
+    {
+      "id": "YHR051W",
+      "name": ""
+    },
+    {
+      "id": "Q0275",
+      "name": ""
+    },
+    {
+      "id": "Q0045",
+      "name": ""
+    },
+    {
+      "id": "YNL052W",
+      "name": ""
+    },
+    {
+      "id": "Q0250",
+      "name": ""
+    },
+    {
+      "id": "YMR256C",
+      "name": ""
+    },
+    {
+      "id": "YOL140W",
+      "name": ""
+    },
+    {
+      "id": "YKL217W",
+      "name": ""
+    },
+    {
+      "id": "YOL064C",
+      "name": ""
+    },
+    {
+      "id": "YGR155W",
+      "name": ""
+    },
+    {
+      "id": "YOR347C",
+      "name": ""
+    },
+    {
+      "id": "YAL038W",
+      "name": ""
+    },
+    {
+      "id": "YAL062W",
+      "name": ""
+    },
+    {
+      "id": "YOR375C",
+      "name": ""
+    }
+  ],
+  "id": "Jol2012",
+  "metabolites": [
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "10fthf[c]",
+      "id": "10fthf_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "13BDglcn[c]",
+      "id": "13BDglcn_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "13dpg[c]",
+      "id": "13dpg_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "1pyr5c[c]",
+      "id": "1pyr5c_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "23dhmb[m]",
+      "id": "23dhmb_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "23dhmp[m]",
+      "id": "23dhmp_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "2ahbut[m]",
+      "id": "2ahbut_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "2cpr5p[c]",
+      "id": "2cpr5p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "2dda7p[c]",
+      "id": "2dda7p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "2ippm[c]",
+      "id": "2ippm_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "2obut[c]",
+      "id": "2obut_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "2obut[m]",
+      "id": "2obut_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "2oxoadp[c]",
+      "id": "2oxoadp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "2oxoadp[m]",
+      "id": "2oxoadp_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "2pg[c]",
+      "id": "2pg_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "34hpp[c]",
+      "id": "34hpp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3c2hmp[c]",
+      "id": "3c2hmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3c3hmp[c]",
+      "id": "3c3hmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3c4mop[c]",
+      "id": "3c4mop_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3dhq[c]",
+      "id": "3dhq_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3dhsk[c]",
+      "id": "3dhsk_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3ig3p[c]",
+      "id": "3ig3p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3mob[c]",
+      "id": "3mob_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "3mob[m]",
+      "id": "3mob_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3mop[c]",
+      "id": "3mop_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "3mop[m]",
+      "id": "3mop_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3pg[c]",
+      "id": "3pg_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3php[c]",
+      "id": "3php_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "3psme[c]",
+      "id": "3psme_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "4mop[c]",
+      "id": "4mop_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "4pasp[c]",
+      "id": "4pasp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "5mthf[c]",
+      "id": "5mthf_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "6pgc[c]",
+      "id": "6pgc_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "6pgl[c]",
+      "id": "6pgl_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "acald[c]",
+      "id": "acald_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "acald[m]",
+      "id": "acald_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "accoa[c]",
+      "id": "accoa_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "accoa[m]",
+      "id": "accoa_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "acg5p[m]",
+      "id": "acg5p_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "acg5sa[m]",
+      "id": "acg5sa_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "acglu[m]",
+      "id": "acglu_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "achms[c]",
+      "id": "achms_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "acorn[m]",
+      "id": "acorn_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ac[c]",
+      "id": "ac_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "ac[e]",
+      "id": "ac_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "ac[m]",
+      "id": "ac_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "adp[c]",
+      "id": "adp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "adp[m]",
+      "id": "adp_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "aicar[c]",
+      "id": "aicar_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "akg[c]",
+      "id": "akg_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "akg[m]",
+      "id": "akg_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ala-L[c]",
+      "id": "ala__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "ala-L[m]",
+      "id": "ala__L_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "alac-S[m]",
+      "id": "alac__S_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "amp[c]",
+      "id": "amp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "amp[m]",
+      "id": "amp_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "anth[c]",
+      "id": "anth_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "aps[c]",
+      "id": "aps_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "arg-L[c]",
+      "id": "arg__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "argsuc[c]",
+      "id": "argsuc_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "asn-L[c]",
+      "id": "asn__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "asp-L[c]",
+      "id": "asp__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "aspsa[c]",
+      "id": "aspsa_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "atp[c]",
+      "id": "atp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "atp[m]",
+      "id": "atp_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "b124tc[m]",
+      "id": "b124tc_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "cbp[c]",
+      "id": "cbp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "chor[c]",
+      "id": "chor_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "citr-L[c]",
+      "id": "citr__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "cit[c]",
+      "id": "cit_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "cit[m]",
+      "id": "cit_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "cmp[c]",
+      "id": "cmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "co2tot[c]",
+      "id": "co2tot_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "co2tot[e]",
+      "id": "co2tot_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "co2tot[m]",
+      "id": "co2tot_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "coa[c]",
+      "id": "coa_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "coa[m]",
+      "id": "coa_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "cys-L[c]",
+      "id": "cys__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "cyst-L[c]",
+      "id": "cyst__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "damp[c]",
+      "id": "damp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "dcmp[c]",
+      "id": "dcmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "dgmp[c]",
+      "id": "dgmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "dhap[c]",
+      "id": "dhap_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "dtmp[c]",
+      "id": "dtmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "e4p[c]",
+      "id": "e4p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "eig3p[c]",
+      "id": "eig3p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ergst[c]",
+      "id": "ergst_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "etoh[c]",
+      "id": "etoh_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "etoh[e]",
+      "id": "etoh_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "etoh[m]",
+      "id": "etoh_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "f6p[c]",
+      "id": "f6p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "fdp[c]",
+      "id": "fdp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "ficytc[m]",
+      "id": "ficytc_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "focytc[m]",
+      "id": "focytc_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "for[c]",
+      "id": "for_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "fum[c]",
+      "id": "fum_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "fum[m]",
+      "id": "fum_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "g3p[c]",
+      "id": "g3p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "g6p[c]",
+      "id": "g6p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glc-D[c]",
+      "id": "glc__D_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "glc-D[e]",
+      "id": "glc__D_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "gln-L[c]",
+      "id": "gln__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "gln-L[m]",
+      "id": "gln__L_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glu-L[c]",
+      "id": "glu__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "glu-L[m]",
+      "id": "glu__L_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glu5p[c]",
+      "id": "glu5p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glu5sa[c]",
+      "id": "glu5sa_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glx[c]",
+      "id": "glx_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "glx[m]",
+      "id": "glx_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glyc3p[c]",
+      "id": "glyc3p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "glyc[c]",
+      "id": "glyc_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "glyc[e]",
+      "id": "glyc_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "gly[c]",
+      "id": "gly_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "gly[m]",
+      "id": "gly_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "gmp[c]",
+      "id": "gmp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "h2o[c]",
+      "id": "h2o_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "h2o[e]",
+      "id": "h2o_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "h2o[m]",
+      "id": "h2o_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "h2s[c]",
+      "id": "h2s_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "hcit[c]",
+      "id": "hcit_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "hcit[m]",
+      "id": "hcit_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "hcys-L[c]",
+      "id": "hcys__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "hcyt[c]",
+      "id": "hcyt_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "hicit[m]",
+      "id": "hicit_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "his-L[c]",
+      "id": "his__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "hisp[c]",
+      "id": "hisp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "histd[c]",
+      "id": "histd_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "hom-L[c]",
+      "id": "hom__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "h[c]",
+      "id": "h_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "h[e]",
+      "id": "h_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "h[m]",
+      "id": "h_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "icit[c]",
+      "id": "icit_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "icit[m]",
+      "id": "icit_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ile-L[c]",
+      "id": "ile__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "imacp[c]",
+      "id": "imacp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "L2aadp6sa[c]",
+      "id": "L2aadp6sa_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "L2aadp[c]",
+      "id": "L2aadp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "leu-L[c]",
+      "id": "leu__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "lys-L[c]",
+      "id": "lys__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "mal-L[c]",
+      "id": "mal__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "mal-L[m]",
+      "id": "mal__L_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "mannan[c]",
+      "id": "mannan_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "met-L[c]",
+      "id": "met__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "methf[c]",
+      "id": "methf_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "mlthf[c]",
+      "id": "mlthf_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "nadh[c]",
+      "id": "nadh_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "nadh[m]",
+      "id": "nadh_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "nadph[c]",
+      "id": "nadph_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "nadph[m]",
+      "id": "nadph_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "nadp[c]",
+      "id": "nadp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "nadp[m]",
+      "id": "nadp_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "nad[c]",
+      "id": "nad_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "nad[m]",
+      "id": "nad_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "nh4[c]",
+      "id": "nh4_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "nh4[e]",
+      "id": "nh4_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "nh4[m]",
+      "id": "nh4_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "o2[c]",
+      "id": "o2_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "o2[e]",
+      "id": "o2_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "o2[m]",
+      "id": "o2_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "oaa[c]",
+      "id": "oaa_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "oaa[m]",
+      "id": "oaa_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "orn[c]",
+      "id": "orn_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "orn[m]",
+      "id": "orn_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "oxag[m]",
+      "id": "oxag_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "paps[c]",
+      "id": "paps_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pap[c]",
+      "id": "pap_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "SC[c]",
+      "id": "pa_SC_c",
+      "name": "pa"
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "SC[c]",
+      "id": "pc_SC_c",
+      "name": "pc"
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pep[c]",
+      "id": "pep_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "SC[c]",
+      "id": "pe_SC_c",
+      "name": "pe"
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "phe-L[c]",
+      "id": "phe__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "phom[c]",
+      "id": "phom_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "phpyr[c]",
+      "id": "phpyr_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pi[c]",
+      "id": "pi_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "pi[e]",
+      "id": "pi_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "pi[m]",
+      "id": "pi_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pphn[c]",
+      "id": "pphn_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ppi[c]",
+      "id": "ppi_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "ppi[m]",
+      "id": "ppi_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pran[c]",
+      "id": "pran_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "prbamp[c]",
+      "id": "prbamp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "prbatp[c]",
+      "id": "prbatp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "prfp[c]",
+      "id": "prfp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "prlp[c]",
+      "id": "prlp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pro-L[c]",
+      "id": "pro__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "prpp[c]",
+      "id": "prpp_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pser-L[c]",
+      "id": "pser__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "SC[c]",
+      "id": "ps_SC_c",
+      "name": "ps"
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "SC[c]",
+      "id": "ptd1ino_SC_c",
+      "name": "ptd1ino"
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "pyr[c]",
+      "id": "pyr_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "pyr[e]",
+      "id": "pyr_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "pyr[m]",
+      "id": "pyr_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "q6h2[m]",
+      "id": "q6h2_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "q6[m]",
+      "id": "q6_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "r5p[c]",
+      "id": "r5p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ru5p-D[c]",
+      "id": "ru5p__D_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "s7p[c]",
+      "id": "s7p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "saccrp-L[c]",
+      "id": "saccrp__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ser-L[c]",
+      "id": "ser__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "skm5p[c]",
+      "id": "skm5p_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "skm[c]",
+      "id": "skm_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "so3[c]",
+      "id": "so3_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "so4[c]",
+      "id": "so4_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "so4[e]",
+      "id": "so4_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "succoa[m]",
+      "id": "succoa_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "succ[c]",
+      "id": "succ_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "e",
+      "formula": "succ[e]",
+      "id": "succ_e",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "succ[m]",
+      "id": "succ_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "thf[c]",
+      "id": "thf_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "thr-L[c]",
+      "id": "thr__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "m",
+      "formula": "thr-L[m]",
+      "id": "thr__L_m",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "SC[c]",
+      "id": "triglyc_SC_c",
+      "name": "triglyc"
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "trp-L[c]",
+      "id": "trp__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "tyr-L[c]",
+      "id": "tyr__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "ump[c]",
+      "id": "ump_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "val-L[c]",
+      "id": "val__L_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "xu5p-D[c]",
+      "id": "xu5p__D_c",
+      "name": ""
+    },
+    {
+      "charge": 0,
+      "compartment": "c",
+      "formula": "zymst[c]",
+      "id": "zymst_c",
+      "name": ""
+    }
+  ],
+  "reactions": [
+    {
+      "gene_reaction_rule": "YLR027C",
+      "id": "ASPTA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "akg_c": -1,
+        "asp__L_c": -1,
+        "glu__L_c": 1,
+        "oaa_c": 1
+      },
+      "name": "ASPTA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER052C",
+      "id": "ASPK",
+      "lower_bound": 0,
+      "metabolites": {
+        "4pasp_c": 1,
+        "adp_c": 1,
+        "asp__L_c": -1,
+        "atp_c": -1
+      },
+      "name": "ASPKi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YML096W or YGR124W or YPR145W",
+      "id": "ASNS1",
+      "lower_bound": 0,
+      "metabolites": {
+        "amp_c": 1,
+        "asn__L_c": 1,
+        "asp__L_c": -1,
+        "atp_c": -1,
+        "gln__L_c": -1,
+        "glu__L_c": 1,
+        "h2o_c": -1,
+        "h_c": 1,
+        "ppi_c": 1
+      },
+      "name": "ASNS1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR158W",
+      "id": "ASADi",
+      "lower_bound": 0,
+      "metabolites": {
+        "4pasp_c": -1,
+        "aspsa_c": 1,
+        "h_c": -1,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "pi_c": 1
+      },
+      "name": "ASADi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR089C",
+      "id": "ALATA_Lm",
+      "lower_bound": 0,
+      "metabolites": {
+        "akg_m": 1,
+        "ala__L_m": 1,
+        "glu__L_m": -1,
+        "pyr_m": -1
+      },
+      "name": "ALATA_Lm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR111C",
+      "id": "ALATA_L",
+      "lower_bound": 0,
+      "metabolites": {
+        "akg_c": 1,
+        "ala__L_c": 1,
+        "glu__L_c": -1,
+        "pyr_c": -1
+      },
+      "name": "ALATA_L",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKR097W",
+      "id": "PPCK",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "co2tot_c": 1,
+        "h2o_c": -1,
+        "oaa_c": -1,
+        "pep_c": 1
+      },
+      "name": "PPCK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGL062W or YBR218C",
+      "id": "PC",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "co2tot_c": -1,
+        "h_c": 1,
+        "oaa_c": 1,
+        "pi_c": 1,
+        "pyr_c": -1
+      },
+      "name": "PC",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL029C",
+      "id": "ME2m",
+      "lower_bound": 0,
+      "metabolites": {
+        "co2tot_m": 1,
+        "h2o_m": -1,
+        "mal__L_m": -1,
+        "nadp_m": -1,
+        "nadph_m": 1,
+        "pyr_m": 1
+      },
+      "name": "ME2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER065C",
+      "id": "ICL",
+      "lower_bound": 0,
+      "metabolites": {
+        "glx_c": 1,
+        "icit_c": -1,
+        "succ_c": 1
+      },
+      "name": "ICL",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER023W",
+      "id": "P5CR",
+      "lower_bound": 0,
+      "metabolites": {
+        "1pyr5c_c": -1,
+        "h_c": -2,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "pro__L_c": 1
+      },
+      "name": "P5CR",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YMR062C",
+      "id": "ORNTACim",
+      "lower_bound": 0,
+      "metabolites": {
+        "acglu_m": 1,
+        "acorn_m": -1,
+        "glu__L_m": -1,
+        "orn_m": 1
+      },
+      "name": "ORNTACim",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJL088W",
+      "id": "OCBT",
+      "lower_bound": 0,
+      "metabolites": {
+        "cbp_c": -1,
+        "citr__L_c": 1,
+        "h_c": 1,
+        "orn_c": -1,
+        "pi_c": 1
+      },
+      "name": "OCBTi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR300C",
+      "id": "GLU5K",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "glu5p_c": 1,
+        "glu__L_c": -1
+      },
+      "name": "GLU5K",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR323C",
+      "id": "G5SD",
+      "lower_bound": 0,
+      "metabolites": {
+        "glu5p_c": -1,
+        "glu5sa_c": 1,
+        "h_c": -1,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "pi_c": 1
+      },
+      "name": "G5SD",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "G5SADs",
+      "lower_bound": -1000,
+      "metabolites": {
+        "1pyr5c_c": 1,
+        "glu5sa_c": -1,
+        "h2o_c": 1,
+        "h_c": 1
+      },
+      "name": "G5SADr",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR303W and YJR109C",
+      "id": "CBPS",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 2,
+        "atp_c": -2,
+        "cbp_c": 1,
+        "co2tot_c": -1,
+        "gln__L_c": -1,
+        "glu__L_c": 1,
+        "h2o_c": -1,
+        "h_c": 2,
+        "pi_c": 1
+      },
+      "name": "CBPS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOL058W",
+      "id": "ARGSS",
+      "lower_bound": -1000,
+      "metabolites": {
+        "amp_c": 1,
+        "argsuc_c": 1,
+        "asp__L_c": -1,
+        "atp_c": -1,
+        "citr__L_c": -1,
+        "h_c": 1,
+        "ppi_c": 1
+      },
+      "name": "ARGSSr",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YHR018C",
+      "id": "ARGSL",
+      "lower_bound": -1000,
+      "metabolites": {
+        "arg__L_c": 1,
+        "argsuc_c": -1,
+        "fum_c": 1
+      },
+      "name": "ARGSL",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER069W",
+      "id": "AGPRim",
+      "lower_bound": 0,
+      "metabolites": {
+        "acg5p_m": -1,
+        "acg5sa_m": 1,
+        "h_m": -1,
+        "nadp_m": 1,
+        "nadph_m": -1,
+        "pi_m": 1
+      },
+      "name": "AGPRim",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOL140W",
+      "id": "ACOTAim",
+      "lower_bound": 0,
+      "metabolites": {
+        "acg5sa_m": -1,
+        "acorn_m": 1,
+        "akg_m": 1,
+        "glu__L_m": -1
+      },
+      "name": "ACOTAim",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER069W",
+      "id": "ACGKm",
+      "lower_bound": 0,
+      "metabolites": {
+        "acg5p_m": 1,
+        "acglu_m": -1,
+        "adp_m": 1,
+        "atp_m": -1
+      },
+      "name": "ACGKm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR142W and YGR244C",
+      "id": "SUCOASm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "adp_m": 1,
+        "atp_m": -1,
+        "coa_m": -1,
+        "pi_m": 1,
+        "succ_m": -1,
+        "succoa_m": 1
+      },
+      "name": "SUCOAS1m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "(YKL141W and YDR178W and YLL041C and YJL045W) or (YKL141W and YDR178W and YLL041C and YKL148C) or (YDR178W and YLL041C and YMR118C and YKL148C) or (YLR164W and YKL141W and YLL041C and YKL148C)",
+      "id": "SUCD2_u6m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "fum_m": 1,
+        "q6_m": -1,
+        "q6h2_m": 1,
+        "succ_m": -1
+      },
+      "name": "SUCD2_u6m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ICDHy",
+      "lower_bound": 0,
+      "metabolites": {
+        "akg_c": 1,
+        "co2tot_c": 1,
+        "h2o_c": -1,
+        "icit_c": -1,
+        "nadp_c": -1,
+        "nadph_c": 1
+      },
+      "name": "ICDHy",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR136W and YNL037C",
+      "id": "ICDHxm",
+      "lower_bound": 0,
+      "metabolites": {
+        "akg_m": 1,
+        "co2tot_m": 1,
+        "h2o_m": -1,
+        "icit_m": -1,
+        "nad_m": -1,
+        "nadh_m": 1
+      },
+      "name": "ICDHxm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNR001C or YPR001W",
+      "id": "CSm",
+      "lower_bound": 0,
+      "metabolites": {
+        "accoa_m": -1,
+        "cit_m": 1,
+        "coa_m": 1,
+        "h2o_m": -1,
+        "h_m": 1,
+        "oaa_m": -1
+      },
+      "name": "CSm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YIL125W and YFL018C and YDR148C",
+      "id": "AKGDam",
+      "lower_bound": -1000,
+      "metabolites": {
+        "akg_m": -1,
+        "co2tot_m": 1,
+        "coa_m": -1,
+        "h2o_m": -1,
+        "nad_m": -1,
+        "nadh_m": 1,
+        "succoa_m": 1
+      },
+      "name": "AKGDam",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR304C or YJL200C",
+      "id": "ACONTm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "cit_m": -1,
+        "icit_m": 1
+      },
+      "name": "ACONTm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR304C",
+      "id": "ACONT",
+      "lower_bound": -1000,
+      "metabolites": {
+        "cit_c": -1,
+        "icit_c": 1
+      },
+      "name": "ACONT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR137C or YFR030W",
+      "id": "SULR",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h2o_c": -3,
+        "h2s_c": -1,
+        "h_c": 5,
+        "nadp_c": -3,
+        "nadph_c": 3,
+        "so3_c": 1
+      },
+      "name": "SULR",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL050C",
+      "id": "SLFAT",
+      "lower_bound": -1000,
+      "metabolites": {
+        "adp_c": -1,
+        "aps_c": 1,
+        "h_c": -1,
+        "pi_c": 1,
+        "so4_c": -1
+      },
+      "name": "SLFAT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPR167C",
+      "id": "PAPSR",
+      "lower_bound": 0,
+      "metabolites": {
+        "h_c": 2,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "pap_c": 1,
+        "paps_c": -1,
+        "so3_c": 1
+      },
+      "name": "PAPSR",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOL064C",
+      "id": "BPNT",
+      "lower_bound": 0,
+      "metabolites": {
+        "amp_c": 1,
+        "h2o_c": -1,
+        "pap_c": -1,
+        "pi_c": 1
+      },
+      "name": "BPNT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL001C",
+      "id": "ADSK",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "aps_c": -1,
+        "atp_c": -1,
+        "h_c": 1,
+        "paps_c": 1
+      },
+      "name": "ADSK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPL023C or YGL125W",
+      "id": "MTHFR3_1",
+      "lower_bound": 0,
+      "metabolites": {
+        "5mthf_c": 1,
+        "h_c": -1,
+        "mlthf_c": -1,
+        "nadp_c": 1,
+        "nadph_c": -1
+      },
+      "name": "MTHFR3",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGR204W",
+      "id": "MTHFD_1",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": 1,
+        "methf_c": 1,
+        "mlthf_c": -1,
+        "nadp_c": -1,
+        "nadph_c": 1
+      },
+      "name": "MTHFD",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGR204W",
+      "id": "MTHFC_1",
+      "lower_bound": -1000,
+      "metabolites": {
+        "10fthf_c": 1,
+        "h2o_c": -1,
+        "methf_c": -1
+      },
+      "name": "MTHFC",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YAL062W or YOR375C",
+      "id": "GLUDy",
+      "lower_bound": -1000,
+      "metabolites": {
+        "akg_c": 1,
+        "glu__L_c": -1,
+        "h2o_c": -1,
+        "h_c": 1,
+        "nadp_c": -1,
+        "nadph_c": 1,
+        "nh4_c": 1
+      },
+      "name": "GLUDy",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPR035W",
+      "id": "GLNS",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "gln__L_c": 1,
+        "glu__L_c": -1,
+        "h_c": 1,
+        "nh4_c": -1,
+        "pi_c": 1
+      },
+      "name": "GLNS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER090W or YKL211C",
+      "id": "ANS",
+      "lower_bound": 0,
+      "metabolites": {
+        "anth_c": 1,
+        "chor_c": -1,
+        "gln__L_c": -1,
+        "glu__L_c": 1,
+        "h_c": 1,
+        "pyr_c": 1
+      },
+      "name": "ANS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YIL053W or YER062C",
+      "id": "G3PT",
+      "lower_bound": 0,
+      "metabolites": {
+        "glyc3p_c": -1,
+        "glyc_c": 1,
+        "h2o_c": -1,
+        "pi_c": 1
+      },
+      "name": "G3PT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDL022W",
+      "id": "G3PD1ir",
+      "lower_bound": 0,
+      "metabolites": {
+        "dhap_c": -1,
+        "glyc3p_c": 1,
+        "h_c": -1,
+        "nad_c": 1,
+        "nadh_c": -1
+      },
+      "name": "G3PD1ir",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YMR083W",
+      "id": "ALCD2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "acald_m": 1,
+        "etoh_m": -1,
+        "h_m": 1,
+        "nad_m": -1,
+        "nadh_m": 1
+      },
+      "name": "ALCD2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGR208W",
+      "id": "PSP_L",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "pi_c": 1,
+        "pser__L_c": -1,
+        "ser__L_c": 1
+      },
+      "name": "PSP_L",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR184W",
+      "id": "PSERT",
+      "lower_bound": 0,
+      "metabolites": {
+        "3php_c": -1,
+        "akg_c": 1,
+        "glu__L_c": -1,
+        "pser__L_c": 1
+      },
+      "name": "PSERT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER081W or YIL074C",
+      "id": "PGCD",
+      "lower_bound": 0,
+      "metabolites": {
+        "3pg_c": -1,
+        "3php_c": 1,
+        "h_c": 1,
+        "nad_c": -1,
+        "nadh_c": 1
+      },
+      "name": "PGCD",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YHR025W",
+      "id": "HSK",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "h_c": 1,
+        "hom__L_c": -1,
+        "phom_c": 1
+      },
+      "name": "HSK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR139C",
+      "id": "HSDyi",
+      "lower_bound": 0,
+      "metabolites": {
+        "aspsa_c": -1,
+        "h_c": -1,
+        "hom__L_c": 1,
+        "nadp_c": 1,
+        "nadph_c": -1
+      },
+      "name": "HSDyi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR058C",
+      "id": "GHMT2r",
+      "lower_bound": -1000,
+      "metabolites": {
+        "gly_c": 1,
+        "h2o_c": 1,
+        "mlthf_c": 1,
+        "ser__L_c": -1,
+        "thf_c": -1
+      },
+      "name": "GHMT2r",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGR155W",
+      "id": "CYSTS",
+      "lower_bound": 0,
+      "metabolites": {
+        "cyst__L_c": 1,
+        "h2o_c": 1,
+        "hcys__L_c": -1,
+        "ser__L_c": -1
+      },
+      "name": "CYSTS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR050C",
+      "id": "TPI",
+      "lower_bound": -1000,
+      "metabolites": {
+        "dhap_c": -1,
+        "g3p_c": 1
+      },
+      "name": "TPI",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YAL038W or YOR347C",
+      "id": "PYK",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": -1,
+        "atp_c": 1,
+        "h_c": -1,
+        "pep_c": -1,
+        "pyr_c": 1
+      },
+      "name": "PYK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL152C or YOL056W or YDL021W",
+      "id": "PGM",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2pg_c": -1,
+        "3pg_c": 1
+      },
+      "name": "PGM",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCR012W",
+      "id": "PGK",
+      "lower_bound": -1000,
+      "metabolites": {
+        "13dpg_c": 1,
+        "3pg_c": -1,
+        "adp_c": 1,
+        "atp_c": -1
+      },
+      "name": "PGK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR196C",
+      "id": "PGI",
+      "lower_bound": -1000,
+      "metabolites": {
+        "f6p_c": 1,
+        "g6p_c": -1
+      },
+      "name": "PGI",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YMR205C and YGR240C",
+      "id": "PFK",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "f6p_c": -1,
+        "fdp_c": 1,
+        "h_c": 1
+      },
+      "name": "PFK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNL071W and YFL018C and (YBR221C and YER178W)",
+      "id": "PDHm",
+      "lower_bound": 0,
+      "metabolites": {
+        "accoa_m": 1,
+        "co2tot_m": 1,
+        "coa_m": -1,
+        "h2o_m": -1,
+        "nad_m": -1,
+        "nadh_m": 1,
+        "pyr_m": -1
+      },
+      "name": "PDHm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YFR053C or YCL040W or YGL253W",
+      "id": "HEX1",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "g6p_c": 1,
+        "glc__D_c": -1,
+        "h_c": 1
+      },
+      "name": "HEX1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJL052W or YGR192C or YJR009C",
+      "id": "GAPD",
+      "lower_bound": -1000,
+      "metabolites": {
+        "13dpg_c": 1,
+        "g3p_c": -1,
+        "h_c": 1,
+        "nad_c": -1,
+        "nadh_c": 1,
+        "pi_c": -1
+      },
+      "name": "GAPD",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL060C",
+      "id": "FBA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "dhap_c": 1,
+        "fdp_c": -1,
+        "g3p_c": 1
+      },
+      "name": "FBA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR393W or YPL281C or YHR174W or YGR254W or YMR323W",
+      "id": "ENO",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2pg_c": -1,
+        "h2o_c": 1,
+        "pep_c": 1
+      },
+      "name": "ENO",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL181W or YER099C or YHL011C or YBL068W or YOL061W",
+      "id": "PRPPS",
+      "lower_bound": -1000,
+      "metabolites": {
+        "amp_c": 1,
+        "atp_c": -1,
+        "h_c": 1,
+        "prpp_c": 1,
+        "r5p_c": -1
+      },
+      "name": "PRPPS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YIL020C",
+      "id": "PRMICI",
+      "lower_bound": 0,
+      "metabolites": {
+        "prfp_c": -1,
+        "prlp_c": 1
+      },
+      "name": "PRMICIi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL030C",
+      "id": "PRATPP",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "h_c": 1,
+        "ppi_c": 1,
+        "prbamp_c": 1,
+        "prbatp_c": -1
+      },
+      "name": "PRATPP",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL030C",
+      "id": "PRAMPC",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "prbamp_c": -1,
+        "prfp_c": 1
+      },
+      "name": "PRAMPC",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR202W",
+      "id": "IGPDH",
+      "lower_bound": 0,
+      "metabolites": {
+        "eig3p_c": -1,
+        "h2o_c": 1,
+        "imacp_c": 1
+      },
+      "name": "IGPDH",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR248C",
+      "id": "IG3PS",
+      "lower_bound": 0,
+      "metabolites": {
+        "aicar_c": 1,
+        "eig3p_c": 1,
+        "gln__L_c": -1,
+        "glu__L_c": 1,
+        "h_c": 1,
+        "prlp_c": -1
+      },
+      "name": "IG3PS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YIL116W",
+      "id": "HSTPT",
+      "lower_bound": 0,
+      "metabolites": {
+        "akg_c": 1,
+        "glu__L_c": -1,
+        "hisp_c": 1,
+        "imacp_c": -1
+      },
+      "name": "HSTPT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YFR025C",
+      "id": "HISTP",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "hisp_c": -1,
+        "histd_c": 1,
+        "pi_c": 1
+      },
+      "name": "HISTP",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL030C",
+      "id": "HISTD",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "h_c": 3,
+        "his__L_c": 1,
+        "histd_c": -1,
+        "nad_c": -2,
+        "nadh_c": 2
+      },
+      "name": "HISTD",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER055C",
+      "id": "ATPPRT",
+      "lower_bound": 0,
+      "metabolites": {
+        "atp_c": -1,
+        "ppi_c": 1,
+        "prbatp_c": 1,
+        "prpp_c": -1
+      },
+      "name": "ATPPRT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER091C",
+      "id": "METS_1",
+      "lower_bound": 0,
+      "metabolites": {
+        "5mthf_c": -1,
+        "hcys__L_c": -1,
+        "met__L_c": 1,
+        "thf_c": 1
+      },
+      "name": "METS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNL277W",
+      "id": "HSERTA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "accoa_c": -1,
+        "achms_c": 1,
+        "coa_c": 1,
+        "hom__L_c": -1
+      },
+      "name": "HSERTA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YAL012W",
+      "id": "CYSTGL",
+      "lower_bound": 0,
+      "metabolites": {
+        "2obut_c": 1,
+        "cys__L_c": 1,
+        "cyst__L_c": -1,
+        "h2o_c": -1,
+        "nh4_c": 1
+      },
+      "name": "CYSTGL",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR303W",
+      "id": "AHSERL2",
+      "lower_bound": 0,
+      "metabolites": {
+        "ac_c": 1,
+        "achms_c": -1,
+        "h2s_c": -1,
+        "h_c": 1,
+        "hcys__L_c": 1
+      },
+      "name": "AHSERL2",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER170W",
+      "id": "ADK1m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "adp_m": 2,
+        "amp_m": -1,
+        "atp_m": -1
+      },
+      "name": "ADK1m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR226W",
+      "id": "ADK1",
+      "lower_bound": -1000,
+      "metabolites": {
+        "adp_c": 2,
+        "amp_c": -1,
+        "atp_c": -1
+      },
+      "name": "ADK1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YMR267W",
+      "id": "PPAm",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_m": -1,
+        "h_m": 1,
+        "pi_m": 2,
+        "ppi_m": -1
+      },
+      "name": "PPAm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR011C",
+      "id": "PPA",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "h_c": 1,
+        "pi_c": 2,
+        "ppi_c": -1
+      },
+      "name": "PPA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YMR145C or YDL085W",
+      "id": "NADH2_u6cm",
+      "lower_bound": 0,
+      "metabolites": {
+        "h_c": -1,
+        "nad_c": 1,
+        "nadh_c": -1,
+        "q6_m": -1,
+        "q6h2_m": 1
+      },
+      "name": "NADH2-u6cm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL085W",
+      "id": "MDHm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_m": 1,
+        "mal__L_m": -1,
+        "nad_m": -1,
+        "nadh_m": 1,
+        "oaa_m": 1
+      },
+      "name": "MDHm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOL126C",
+      "id": "MDH",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": 1,
+        "mal__L_c": -1,
+        "nad_c": -1,
+        "nadh_c": 1,
+        "oaa_c": 1
+      },
+      "name": "MDH",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPL262W",
+      "id": "FUMm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "fum_m": -1,
+        "h2o_m": -1,
+        "mal__L_m": 1
+      },
+      "name": "FUMm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPL262W",
+      "id": "FUM",
+      "lower_bound": -1000,
+      "metabolites": {
+        "fum_c": -1,
+        "h2o_c": -1,
+        "mal__L_c": 1
+      },
+      "name": "FUM",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YHR001W_A and YJL166W and YGR183C and YBL045C and YFR033C and YEL024W and Q0105 and YDR529C and YOR065W and YPR191W",
+      "id": "CYOR_u6m",
+      "lower_bound": 0,
+      "metabolites": {
+        "ficytc_m": -2,
+        "focytc_m": 2,
+        "h_m": -1.5,
+        "hcyt_c": 1.5,
+        "q6_m": 1,
+        "q6h2_m": -1
+      },
+      "name": "CYOR_u6m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "(YGL191W and YDL067C and Q0275 and YLR038C and YGL187C and Q0250 and Q0045 and YMR256C and YNL052W and YHR051W and YLR395C) or (YGL191W and YDL067C and Q0275 and YLR038C and YGL187C and Q0250 and Q0045 and YMR256C and YHR051W and YIL111W and YLR395C)",
+      "id": "CYOOm",
+      "lower_bound": 0,
+      "metabolites": {
+        "ficytc_m": 4,
+        "focytc_m": -4,
+        "h2o_m": 2,
+        "h_m": -6,
+        "hcyt_c": 6,
+        "o2_m": -1
+      },
+      "name": "CYOOm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "(YDL004W and YKL016C and Q0085 and YPL078C and Q0130 and YDR377W and YPL271W and YML081C_A and YLR295C and YBR039W and YJR121W and YDR298C and Q0080 and YDL181W and YBL099W) or (YDL004W and YML081C_A and YLR295C and YJR121W and YOL077W_A and YPR020W and YDR298C and YDR322C_A and YKL016C and Q0085 and YPL271W and YDR377W and Q0130 and YPL078C and YBR039W and YDL181W and Q0080 and YBL099W)",
+      "id": "ATPS3m",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_m": -1,
+        "atp_m": 1,
+        "h2o_m": 1,
+        "h_m": 3,
+        "hcyt_c": -3,
+        "pi_m": -1
+      },
+      "name": "ATPS3m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPR074C or YBR117C",
+      "id": "TKT2",
+      "lower_bound": -1000,
+      "metabolites": {
+        "e4p_c": -1,
+        "f6p_c": 1,
+        "g3p_c": 1,
+        "xu5p__D_c": -1
+      },
+      "name": "TKT2",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR117C or YPR074C",
+      "id": "TKT1",
+      "lower_bound": -1000,
+      "metabolites": {
+        "g3p_c": 1,
+        "r5p_c": -1,
+        "s7p_c": 1,
+        "xu5p__D_c": -1
+      },
+      "name": "TKT1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR354C or YGR043C",
+      "id": "TALA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "e4p_c": 1,
+        "f6p_c": 1,
+        "g3p_c": -1,
+        "s7p_c": -1
+      },
+      "name": "TALA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR095C",
+      "id": "RPI",
+      "lower_bound": -1000,
+      "metabolites": {
+        "r5p_c": -1,
+        "ru5p__D_c": 1
+      },
+      "name": "RPI",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJL121C",
+      "id": "RPE",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ru5p__D_c": -1,
+        "xu5p__D_c": 1
+      },
+      "name": "RPE",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCR073W_A or YNR034W or YGR248W or YHR163W",
+      "id": "PGL",
+      "lower_bound": 0,
+      "metabolites": {
+        "6pgc_c": 1,
+        "6pgl_c": -1,
+        "h2o_c": -1,
+        "h_c": 1
+      },
+      "name": "PGL",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGR256W or YHR183W",
+      "id": "GND",
+      "lower_bound": 0,
+      "metabolites": {
+        "6pgc_c": -1,
+        "co2tot_c": 1,
+        "h2o_c": -1,
+        "nadp_c": -1,
+        "nadph_c": 1,
+        "ru5p__D_c": 1
+      },
+      "name": "GND",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNL241C",
+      "id": "G6PDH2r",
+      "lower_bound": 0,
+      "metabolites": {
+        "6pgl_c": 1,
+        "g6p_c": -1,
+        "h_c": 1,
+        "nadp_c": -1,
+        "nadph_c": 1
+      },
+      "name": "G6PDH2",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR134W or YGR087C or YLR044C",
+      "id": "PYRDC",
+      "lower_bound": 0,
+      "metabolites": {
+        "acald_c": 1,
+        "co2tot_c": 1,
+        "h2o_c": -1,
+        "h_c": -1,
+        "pyr_c": -1
+      },
+      "name": "PYRDC",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDL168W or YBR145W or YMR303C or YOL086C or YGL256W",
+      "id": "ALCD2x",
+      "lower_bound": -1000,
+      "metabolites": {
+        "acald_c": 1,
+        "etoh_c": -1,
+        "h_c": 1,
+        "nad_c": -1,
+        "nadh_c": 1
+      },
+      "name": "ALCD2x",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YAL054C",
+      "id": "ACSm",
+      "lower_bound": 0,
+      "metabolites": {
+        "ac_m": -1,
+        "accoa_m": 1,
+        "amp_m": 1,
+        "atp_m": -1,
+        "coa_m": -1,
+        "ppi_m": 1
+      },
+      "name": "ACSm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR153C",
+      "id": "ACS",
+      "lower_bound": 0,
+      "metabolites": {
+        "ac_c": -1,
+        "accoa_c": 1,
+        "amp_c": 1,
+        "atp_c": -1,
+        "coa_c": -1,
+        "ppi_c": 1
+      },
+      "name": "ACS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBL015W",
+      "id": "ACOAH",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ac_c": -1,
+        "accoa_c": 1,
+        "coa_c": -1,
+        "h2o_c": 1,
+        "h_c": -1
+      },
+      "name": "ACOAH",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCR053W",
+      "id": "THRS",
+      "lower_bound": 0,
+      "metabolites": {
+        "h2o_c": -1,
+        "phom_c": -1,
+        "pi_c": 1,
+        "thr__L_c": 1
+      },
+      "name": "THRS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YER086W",
+      "id": "THRD_Lm",
+      "lower_bound": 0,
+      "metabolites": {
+        "2obut_m": 1,
+        "nh4_m": 1,
+        "thr__L_m": -1
+      },
+      "name": "THRD_Lm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YEL046C",
+      "id": "THRA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "acald_c": -1,
+        "gly_c": -1,
+        "thr__L_c": 1
+      },
+      "name": "THRA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YIR034C",
+      "id": "SACCD2",
+      "lower_bound": -1000,
+      "metabolites": {
+        "akg_c": 1,
+        "h2o_c": -1,
+        "h_c": 1,
+        "lys__L_c": 1,
+        "nad_c": -1,
+        "nadh_c": 1,
+        "saccrp__L_c": -1
+      },
+      "name": "SACCD2",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNR050C",
+      "id": "SACCD1",
+      "lower_bound": -1000,
+      "metabolites": {
+        "L2aadp6sa_c": -1,
+        "glu__L_c": -1,
+        "h2o_c": 1,
+        "h_c": -1,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "saccrp__L_c": 1
+      },
+      "name": "SACCD1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "OXAGm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2oxoadp_m": 1,
+        "co2tot_m": 1,
+        "h2o_m": -1,
+        "h_m": -1,
+        "oxag_m": -1
+      },
+      "name": "OXAGm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "MCITDm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "b124tc_m": 1,
+        "h2o_m": 1,
+        "hcit_m": -1
+      },
+      "name": "MCITDm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YIL094C",
+      "id": "HICITDm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_m": 1,
+        "hicit_m": -1,
+        "nad_m": -1,
+        "nadh_m": 1,
+        "oxag_m": 1
+      },
+      "name": "HICITDm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR234W",
+      "id": "HACNHm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "b124tc_m": -1,
+        "h2o_m": -1,
+        "hicit_m": 1
+      },
+      "name": "HACNHm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "AATA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2oxoadp_c": -1,
+        "L2aadp_c": 1,
+        "akg_c": 1,
+        "glu__L_c": -1
+      },
+      "name": "AATA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR115C and YGL154C",
+      "id": "AASAD1",
+      "lower_bound": 0,
+      "metabolites": {
+        "L2aadp6sa_c": 1,
+        "L2aadp_c": -1,
+        "amp_c": 1,
+        "atp_c": -1,
+        "h_c": -1,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "ppi_c": 1
+      },
+      "name": "AASAD1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR027C",
+      "id": "TYRTA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "34hpp_c": 1,
+        "akg_c": -1,
+        "glu__L_c": 1,
+        "tyr__L_c": -1
+      },
+      "name": "TYRTA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGL026C",
+      "id": "TRPS1",
+      "lower_bound": 0,
+      "metabolites": {
+        "3ig3p_c": -1,
+        "g3p_c": 1,
+        "h2o_c": 1,
+        "ser__L_c": -1,
+        "trp__L_c": 1
+      },
+      "name": "TRPS1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR127W",
+      "id": "SHKK",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "h_c": 1,
+        "skm5p_c": 1,
+        "skm_c": -1
+      },
+      "name": "SHKK",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR127W",
+      "id": "SHK3Dr",
+      "lower_bound": 0,
+      "metabolites": {
+        "3dhsk_c": -1,
+        "h_c": -1,
+        "nadp_c": 1,
+        "nadph_c": -1,
+        "skm_c": 1
+      },
+      "name": "SHK3D",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR127W",
+      "id": "PSCVT",
+      "lower_bound": 0,
+      "metabolites": {
+        "3psme_c": 1,
+        "pep_c": -1,
+        "pi_c": 1,
+        "skm5p_c": -1
+      },
+      "name": "PSCVTi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR007W",
+      "id": "PRAIi",
+      "lower_bound": 0,
+      "metabolites": {
+        "2cpr5p_c": 1,
+        "pran_c": -1
+      },
+      "name": "PRAIi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNL316C",
+      "id": "PPNDH",
+      "lower_bound": 0,
+      "metabolites": {
+        "co2tot_c": 1,
+        "h_c": -1,
+        "phpyr_c": 1,
+        "pphn_c": -1
+      },
+      "name": "PPNDH",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR166C",
+      "id": "PPND2",
+      "lower_bound": 0,
+      "metabolites": {
+        "34hpp_c": 1,
+        "co2tot_c": 1,
+        "h2o_c": -1,
+        "nadp_c": -1,
+        "nadph_c": 1,
+        "pphn_c": -1
+      },
+      "name": "PPND2",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YHR137W",
+      "id": "PHETA1",
+      "lower_bound": -1000,
+      "metabolites": {
+        "akg_c": -1,
+        "glu__L_c": 1,
+        "phe__L_c": -1,
+        "phpyr_c": 1
+      },
+      "name": "PHETA1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL211C",
+      "id": "IGPS",
+      "lower_bound": 0,
+      "metabolites": {
+        "2cpr5p_c": -1,
+        "3ig3p_c": 1,
+        "co2tot_c": 1,
+        "h_c": -1
+      },
+      "name": "IGPS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR127W",
+      "id": "DHQTi",
+      "lower_bound": 0,
+      "metabolites": {
+        "3dhq_c": -1,
+        "3dhsk_c": 1,
+        "h2o_c": 1
+      },
+      "name": "DHQTi",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR127W",
+      "id": "DHQS",
+      "lower_bound": 0,
+      "metabolites": {
+        "2dda7p_c": -1,
+        "3dhq_c": 1,
+        "pi_c": 1
+      },
+      "name": "DHQS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR249C or YDR035W",
+      "id": "DDPA",
+      "lower_bound": 0,
+      "metabolites": {
+        "2dda7p_c": 1,
+        "e4p_c": -1,
+        "h2o_c": -1,
+        "pep_c": -1,
+        "pi_c": 1
+      },
+      "name": "DDPA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGL148W",
+      "id": "CHORS",
+      "lower_bound": 0,
+      "metabolites": {
+        "3psme_c": -1,
+        "chor_c": 1,
+        "pi_c": 1
+      },
+      "name": "CHORS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPR060C",
+      "id": "CHORM",
+      "lower_bound": 0,
+      "metabolites": {
+        "chor_c": -1,
+        "pphn_c": 1
+      },
+      "name": "CHORM",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YDR354W",
+      "id": "ANPRT",
+      "lower_bound": 0,
+      "metabolites": {
+        "anth_c": -1,
+        "ppi_c": 1,
+        "pran_c": 1,
+        "prpp_c": -1
+      },
+      "name": "ANPRT",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR374W",
+      "id": "ALDD2ym",
+      "lower_bound": 0,
+      "metabolites": {
+        "ac_m": 1,
+        "acald_m": -1,
+        "h2o_m": -1,
+        "h_m": 2,
+        "nadp_m": -1,
+        "nadph_m": 1
+      },
+      "name": "ALDD2ym",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YPL061W",
+      "id": "ALDD2y",
+      "lower_bound": 0,
+      "metabolites": {
+        "ac_c": 1,
+        "acald_c": -1,
+        "h2o_c": -1,
+        "h_c": 2,
+        "nadp_c": -1,
+        "nadph_c": 1
+      },
+      "name": "ALDD2y",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR374W",
+      "id": "ALDD2xm",
+      "lower_bound": 0,
+      "metabolites": {
+        "ac_m": 1,
+        "acald_m": -1,
+        "h2o_m": -1,
+        "h_m": 2,
+        "nad_m": -1,
+        "nadh_m": 1
+      },
+      "name": "ALDD2xm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR148W",
+      "id": "VALTA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "3mob_c": 1,
+        "akg_c": -1,
+        "glu__L_c": 1,
+        "val__L_c": -1
+      },
+      "name": "VALTA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR148W",
+      "id": "OMCDC",
+      "lower_bound": 0,
+      "metabolites": {
+        "3c4mop_c": -1,
+        "4mop_c": 1,
+        "co2tot_c": 1,
+        "h2o_c": -1,
+        "h_c": -1
+      },
+      "name": "OMCDC",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR148W",
+      "id": "LEUTA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "4mop_c": 1,
+        "akg_c": -1,
+        "glu__L_c": 1,
+        "leu__L_c": -1
+      },
+      "name": "LEUTA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR355C",
+      "id": "KARA2im",
+      "lower_bound": 0,
+      "metabolites": {
+        "23dhmp_m": 1,
+        "2ahbut_m": -1,
+        "h_m": -1,
+        "nadp_m": 1,
+        "nadph_m": -1
+      },
+      "name": "KARA2im",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR355C",
+      "id": "KARA1im",
+      "lower_bound": 0,
+      "metabolites": {
+        "23dhmb_m": 1,
+        "alac__S_m": -1,
+        "h_m": -1,
+        "nadp_m": 1,
+        "nadph_m": -1
+      },
+      "name": "KARA1im",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR108W or YNL104C",
+      "id": "IPPS",
+      "lower_bound": 0,
+      "metabolites": {
+        "3c3hmp_c": 1,
+        "3mob_c": -1,
+        "accoa_c": -1,
+        "coa_c": 1,
+        "h2o_c": -1,
+        "h_c": 1
+      },
+      "name": "IPPS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGL009C",
+      "id": "IPPMIb",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2ippm_c": -1,
+        "3c3hmp_c": 1,
+        "h2o_c": -1
+      },
+      "name": "IPPMIb",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YGL009C",
+      "id": "IPPMIa",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2ippm_c": 1,
+        "3c2hmp_c": -1,
+        "h2o_c": 1
+      },
+      "name": "IPPMIa",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL018W",
+      "id": "IPMD",
+      "lower_bound": 0,
+      "metabolites": {
+        "3c2hmp_c": -1,
+        "3c4mop_c": 1,
+        "h_c": 1,
+        "nad_c": -1,
+        "nadh_c": 1
+      },
+      "name": "IPMD",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR148W",
+      "id": "ILETA",
+      "lower_bound": -1000,
+      "metabolites": {
+        "3mop_c": 1,
+        "akg_c": -1,
+        "glu__L_c": 1,
+        "ile__L_c": -1
+      },
+      "name": "ILETA",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR016C",
+      "id": "DHAD2m",
+      "lower_bound": 0,
+      "metabolites": {
+        "23dhmp_m": -1,
+        "3mop_m": 1,
+        "h2o_m": 1
+      },
+      "name": "DHAD2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR016C",
+      "id": "DHAD1m",
+      "lower_bound": 0,
+      "metabolites": {
+        "23dhmb_m": -1,
+        "3mob_m": 1,
+        "h2o_m": 1
+      },
+      "name": "DHAD1m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL009C and YMR108W",
+      "id": "ACLSm",
+      "lower_bound": 0,
+      "metabolites": {
+        "alac__S_m": 1,
+        "co2tot_m": 1,
+        "h2o_m": -1,
+        "h_m": -1,
+        "pyr_m": -2
+      },
+      "name": "ACLSm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCL009C and YMR108W",
+      "id": "ACHBSm",
+      "lower_bound": 0,
+      "metabolites": {
+        "2ahbut_m": 1,
+        "2obut_m": -1,
+        "co2tot_m": 1,
+        "h2o_m": -1,
+        "h_m": -1,
+        "pyr_m": -1
+      },
+      "name": "ACHBSm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "GLUSxm",
+      "lower_bound": 0,
+      "metabolites": {
+        "akg_m": -1,
+        "gln__L_m": -1,
+        "glu__L_m": 2,
+        "h_m": -1,
+        "nad_m": 1,
+        "nadh_m": -1
+      },
+      "name": "GLUSxm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "AGTm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ala__L_m": -1,
+        "glx_m": -1,
+        "gly_m": 1,
+        "pyr_m": 1
+      },
+      "name": "AGTm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "HCITS",
+      "lower_bound": -1000,
+      "metabolites": {
+        "accoa_c": -1,
+        "akg_c": -1,
+        "coa_c": 1,
+        "h2o_c": -1,
+        "h_c": 1,
+        "hcit_c": 1
+      },
+      "name": "HCITS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "MALS",
+      "lower_bound": -1000,
+      "metabolites": {
+        "accoa_c": -1,
+        "coa_c": 1,
+        "glx_c": -1,
+        "h2o_c": -1,
+        "h_c": 1,
+        "mal__L_c": 1
+      },
+      "name": "MALS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "GLUDym",
+      "lower_bound": -1000,
+      "metabolites": {
+        "akg_m": 1,
+        "glu__L_m": -1,
+        "h2o_m": -1,
+        "h_m": 1,
+        "nadp_m": -1,
+        "nadph_m": 1,
+        "nh4_m": 1
+      },
+      "name": "GLUDym",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "CSc",
+      "lower_bound": 0,
+      "metabolites": {
+        "accoa_c": -1,
+        "cit_c": 1,
+        "coa_c": 1,
+        "h2o_c": -1,
+        "h_c": 1,
+        "oaa_c": -1
+      },
+      "name": "CSc",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "SUCCt2r",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": 1,
+        "h_e": -1,
+        "succ_c": 1,
+        "succ_e": -1
+      },
+      "name": "SUCCt2r",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR294W or YLR092W or YGR125W",
+      "id": "SO4ti",
+      "lower_bound": 0,
+      "metabolites": {
+        "so4_c": 1,
+        "so4_e": -1
+      },
+      "name": "SO4ti",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL217W",
+      "id": "PYRt2",
+      "lower_bound": -1000,
+      "metabolites": {
+        "pyr_c": 1,
+        "pyr_e": -1
+      },
+      "name": "PYRt2",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YCR098C or YCR037C or YBR296C or YML123C or YNR013C or YJL198W",
+      "id": "PIt2r",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": 1,
+        "h_e": -1,
+        "pi_c": 1,
+        "pi_e": -1
+      },
+      "name": "PIt2r",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "O2t",
+      "lower_bound": -1000,
+      "metabolites": {
+        "o2_c": 1,
+        "o2_e": -1
+      },
+      "name": "O2t",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YNL142W or YPR138C or YGR121C",
+      "id": "NH4t",
+      "lower_bound": -1000,
+      "metabolites": {
+        "nh4_c": 1,
+        "nh4_e": -1
+      },
+      "name": "NH4t",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "H2Ot",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h2o_c": 1,
+        "h2o_e": -1
+      },
+      "name": "H2Ot",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLL043W",
+      "id": "GLYCt",
+      "lower_bound": -1000,
+      "metabolites": {
+        "glyc_c": -1,
+        "glyc_e": 1
+      },
+      "name": "GLYCt",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YMR011W or YDL245C or YJL219W or YLR081W or YHR092C or YJL214W or YHR096C or YEL069C or YOL156W or YFL011W or YDR345C or YDR343C or YDR342C or YJR158W or YDR536W or YNR072W or YHR094C",
+      "id": "GLCt1",
+      "lower_bound": 0,
+      "metabolites": {
+        "glc__D_c": 1,
+        "glc__D_e": -1
+      },
+      "name": "GLCt1",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ETOHt",
+      "lower_bound": -1000,
+      "metabolites": {
+        "etoh_c": 1,
+        "etoh_e": -1
+      },
+      "name": "ETOHt",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "CO2t",
+      "lower_bound": -1000,
+      "metabolites": {
+        "co2tot_c": 1,
+        "co2tot_e": -1
+      },
+      "name": "CO2t",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "(YPL036W and YCR024C_A and YEL017C_A) or (YGL008C and YCR024C_A and YEL017C_A)",
+      "id": "ATPS",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "h2o_c": -1,
+        "h_e": 1,
+        "pi_c": 1
+      },
+      "name": "ATPS",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "THRt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "thr__L_c": -1,
+        "thr__L_m": 1
+      },
+      "name": "THRt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR348C",
+      "id": "SUCCtm",
+      "lower_bound": 0,
+      "metabolites": {
+        "pi_c": 1,
+        "pi_m": -1,
+        "succ_c": -1,
+        "succ_m": 1
+      },
+      "name": "SUCCtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "PYRt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": -1,
+        "h_m": 1,
+        "pyr_c": -1,
+        "pyr_m": 1
+      },
+      "name": "PYRt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YJR077C",
+      "id": "PIt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": -1,
+        "h_m": 1,
+        "pi_c": -1,
+        "pi_m": 1
+      },
+      "name": "PIt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YOR130C",
+      "id": "ORNt3m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "orn_c": 1,
+        "orn_m": -1
+      },
+      "name": "ORNt3m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YKL120W",
+      "id": "OAAt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_c": -2,
+        "h_m": 2,
+        "oaa_c": -1,
+        "oaa_m": 1
+      },
+      "name": "OAAt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "O2tm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "o2_c": -1,
+        "o2_m": 1
+      },
+      "name": "O2tm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "NH4tm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "nh4_c": -1,
+        "nh4_m": 1
+      },
+      "name": "NH4tm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YLR348C",
+      "id": "MALtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "mal__L_c": -1,
+        "mal__L_m": 1,
+        "pi_c": 1,
+        "pi_m": -1
+      },
+      "name": "MALtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "H2Otm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h2o_c": -1,
+        "h2o_m": 1
+      },
+      "name": "H2Otm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "GLYt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "gly_c": -1,
+        "gly_m": 1
+      },
+      "name": "GLYt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "GLUt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "glu__L_c": -1,
+        "glu__L_m": 1,
+        "h_c": -1,
+        "h_m": 1
+      },
+      "name": "GLUt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ETOHtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "etoh_c": -1,
+        "etoh_m": 1
+      },
+      "name": "ETOHtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "CO2tm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "co2tot_c": -1,
+        "co2tot_m": 1
+      },
+      "name": "CO2tm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "YBR291C",
+      "id": "CITtam",
+      "lower_bound": -1000,
+      "metabolites": {
+        "cit_c": -1,
+        "cit_m": 1,
+        "mal__L_c": 1,
+        "mal__L_m": -1
+      },
+      "name": "CITtam",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ATPtm__H",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": -1,
+        "adp_m": 1,
+        "atp_c": 1,
+        "atp_m": -1
+      },
+      "name": "ATPtm-H",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ACtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ac_c": -1,
+        "ac_m": 1
+      },
+      "name": "ACtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "3MOPtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "3mop_c": -1,
+        "3mop_m": 1
+      },
+      "name": "3MOPtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "3MOBtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "3mob_c": -1,
+        "3mob_m": 1
+      },
+      "name": "3MOBtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "2OXOADPtim",
+      "lower_bound": 0,
+      "metabolites": {
+        "2oxoadp_c": 1,
+        "2oxoadp_m": -1,
+        "akg_c": -1,
+        "akg_m": 1
+      },
+      "name": "2OXOADPtim",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "GLNt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "gln__L_c": -1,
+        "gln__L_m": 1
+      },
+      "name": "GLNt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "2OBUTtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "2obut_c": -1,
+        "2obut_m": 1
+      },
+      "name": "2OBUTtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ALAt2m",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ala__L_c": -1,
+        "ala__L_m": 1
+      },
+      "name": "ALAt2m",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "HCITtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "hcit_c": -1,
+        "hcit_m": 1
+      },
+      "name": "HCITtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "GLXtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "glx_c": -1,
+        "glx_m": 1
+      },
+      "name": "GLXtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ACALDtm",
+      "lower_bound": -1000,
+      "metabolites": {
+        "acald_c": -1,
+        "acald_m": 1
+      },
+      "name": "ACALDtm",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_co2_e",
+      "lower_bound": 0,
+      "metabolites": {
+        "co2tot_e": -1
+      },
+      "name": "co2[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_etoh_e",
+      "lower_bound": 0,
+      "metabolites": {
+        "etoh_e": -1
+      },
+      "name": "etoh[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_glc__D_e",
+      "lower_bound": -10,
+      "metabolites": {
+        "glc__D_e": -1
+      },
+      "name": "glc-D[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_glyc_e",
+      "lower_bound": 0,
+      "metabolites": {
+        "glyc_e": -1
+      },
+      "name": "glyc[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_h_e",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h_e": -1
+      },
+      "name": "h[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_h2o_e",
+      "lower_bound": -1000,
+      "metabolites": {
+        "h2o_e": -1
+      },
+      "name": "h2o[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_nh4_e",
+      "lower_bound": -1000,
+      "metabolites": {
+        "nh4_e": -1
+      },
+      "name": "nh4[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_o2_e",
+      "lower_bound": -1000,
+      "metabolites": {
+        "o2_e": -1
+      },
+      "name": "o2[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_pi_e",
+      "lower_bound": -1000,
+      "metabolites": {
+        "pi_e": -1
+      },
+      "name": "pi[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_pyr_e",
+      "lower_bound": 0,
+      "metabolites": {
+        "pyr_e": -1
+      },
+      "name": "pyr[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_so4_e",
+      "lower_bound": -1000,
+      "metabolites": {
+        "so4_e": -1
+      },
+      "name": "so4[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "EX_succ_e",
+      "lower_bound": 0,
+      "metabolites": {
+        "succ_e": -1
+      },
+      "name": "succ[e]_EX",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "aicarSYN",
+      "lower_bound": 0,
+      "metabolites": {
+        "10fthf_c": -1,
+        "adp_c": 4,
+        "aicar_c": 1,
+        "amp_c": 1,
+        "asp__L_c": -1,
+        "atp_c": -5,
+        "co2tot_c": -1,
+        "fum_c": 1,
+        "gln__L_c": -2,
+        "glu__L_c": 2,
+        "gly_c": -1,
+        "h2o_c": -1,
+        "h_c": 8,
+        "pi_c": 4,
+        "ppi_c": 1,
+        "r5p_c": -1,
+        "thf_c": 1
+      },
+      "name": "aicarSYN",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "ampSYN",
+      "lower_bound": 0,
+      "metabolites": {
+        "10fthf_c": -1,
+        "adp_c": 1,
+        "aicar_c": -1,
+        "amp_c": 1,
+        "asp__L_c": -1,
+        "atp_c": -1,
+        "fum_c": 1,
+        "h2o_c": 1,
+        "h_c": 2,
+        "pi_c": 1,
+        "thf_c": 1
+      },
+      "name": "ampSYN",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "13BDglcnSYN",
+      "lower_bound": 0,
+      "metabolites": {
+        "13BDglcn_c": 1,
+        "adp_c": 1,
+        "atp_c": -1,
+        "g6p_c": -1,
+        "ppi_c": 1
+      },
+      "name": "13BDglcnSYN",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "mannanSYN",
+      "lower_bound": 0,
+      "metabolites": {
+        "adp_c": 1,
+        "atp_c": -1,
+        "f6p_c": -1,
+        "mannan_c": 1,
+        "ppi_c": 1
+      },
+      "name": "mannanSYN",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_13BDglcn_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "13BDglcn_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_adp_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "adp_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_ala__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ala__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_arg__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "arg__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_asn__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "asn__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_asp__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "asp__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_atp_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "atp_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_cys__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "cys__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_gln__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "gln__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_glu__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "glu__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_glyc_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "glyc_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_gly_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "gly_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_his__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "his__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_ile__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ile__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_leu__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "leu__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_lys__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "lys__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_mal__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "mal__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_mannan_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "mannan_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_met__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "met__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_phe__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "phe__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_phpyr_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "phpyr_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_pi_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "pi_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_ppi_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ppi_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_pro__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "pro__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_pyr_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "pyr_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_ser__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "ser__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_so4_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "so4_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_thr__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "thr__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_trp__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "trp__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_tyr__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "tyr__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    },
+    {
+      "gene_reaction_rule": "",
+      "id": "DM_val__L_c",
+      "lower_bound": -1000,
+      "metabolites": {
+        "val__L_c": -1
+      },
+      "name": "",
+      "upper_bound": 1000
+    }
+  ],
+  "version": 1
+}
