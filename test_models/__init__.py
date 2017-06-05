@@ -11,15 +11,8 @@ def load_contador():
 
     solution = model.optimize()
 
-    for rxn in model.reactions.query(lambda x: x.x == 0):
-        rxn.remove_from_model()
-        
-    for met in model.metabolites.query(lambda x: len(x.reactions) < 2):
-        met.remove_from_model()
-
     N = np.array(model.to_array_based_model().S.
                  todense())
-    solution = model.optimize()
     v_star = np.array(list(solution.x))
 
     return model, N, v_star
