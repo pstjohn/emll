@@ -6,30 +6,33 @@ import pandas as pd
 
 currdir = os.path.dirname(os.path.abspath(__file__))
 
-def load_contador():
-    model = cobra.io.load_json_model(currdir + '/contador.json')
+def get_N_v(model):
 
     solution = model.optimize()
+    N = cobra.util.create_stoichiometric_matrix(model)
+    v_star = solution.fluxes.values
+    return N, v_star
 
-    N = np.array(model.to_array_based_model().S.
-                 todense())
-    v_star = np.array(list(solution.x))
+
+def load_contador():
+    model = cobra.io.load_json_model(currdir + '/contador.json')
+    model.reactions.EX_glc.bounds = (-1.243, 1000)
+    model.reactions.EX_lys.lower_bound = .139
+    model.reactions.zwf.lower_bound = .778
+
+    N, v_star = get_N_v(model)
 
     return model, N, v_star
 
 def load_teusink():
     model = cobra.io.read_sbml_model(currdir + '/BIOMD0000000064.xml')
-    N = np.array(model.to_array_based_model().S.
-                 todense())
-
     model.reactions.vGLT.bounds = (-88.1, 88.1)
-
     for rxn in model.reactions:
         rxn.lower_bound = 0.1
 
     model.objective = model.reactions.vATP
-    solution = model.optimize()
-    v_star = np.array(list(solution.x))
+
+    N, v_star = get_N_v(model)
 
     return model, N, v_star
     
@@ -43,10 +46,7 @@ def load_mendes():
 def load_textbook():
 
     model = cobra.io.load_json_model(currdir + '/textbook_reduced.json')
-    solution = model.optimize()
-    
-    N = np.array(model.to_array_based_model().S.todense())
-    v_star = np.array(list(solution.x))
+    N, v_star = get_N_v(model)
 
     return model, N, v_star
 
