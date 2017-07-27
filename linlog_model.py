@@ -7,7 +7,6 @@ import casadi as cs
 
 import theano
 import theano.tensor as T
-from theano.tensor.slinalg import solve
 floatX = theano.config.floatX
 
 
@@ -506,12 +505,16 @@ class LinLogModel(object):
     
         # Calculate the steady-state log(x/x_star) with some complicated matrix algebra...
         N_hat = (self.Nr @ e_diag).astype(floatX)
-        chi_ss_left = T.dot(N_hat, Ez)
         inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr, dtype=floatX)
+
+
+        chi_ss_left = T.dot(N_hat, Ez)
+        chi_ss_left_inv, _ = theano.scan(
+            lambda n: T.nlinalg.matrix_inverse(n), chi_ss_left, strict=True)
+
         chi_ss_right = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
-        chi_ss, _ = theano.scan(
-            lambda n_left, n_right: solve(n_left, n_right),
-            sequences=[chi_ss_left, chi_ss_right], strict=True)
+
+        chi_ss = T.batched_dot(chi_ss_left_inv, chi_ss_right)
 
         v_hat_ss = (e_hat) * (
             np.ones(self.nr) +
@@ -531,7 +534,7 @@ class LinLogModel(object):
         b = -N_hat.dot(Ey.dot(T.log(y_hat.T)).T + 
                        np.ones(self.nr, dtype=floatX))
         A = N_hat.dot(Ez)
-        chi_ss = solve(A, b)
+        chi_ss = T.dot(T.nlinalg.matrix_inverse(A), b)
         v_hat_ss = e_hat * (np.ones(self.nr) + T.dot(Ez, chi_ss) + 
                             T.dot(Ey, np.log(y_hat)))
 
