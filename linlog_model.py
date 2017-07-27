@@ -518,7 +518,7 @@ class LinLogModel(object):
 
         v_hat_ss = (e_hat) * (
             np.ones(self.nr) +
-            T.dot(Ez, chi_ss).squeeze().T + 
+            T.dot(Ez, chi_ss[:, :, np.newaxis]).squeeze().T + 
             T.dot(Ey, np.log(y_hat)[:, :, np.newaxis]).squeeze().T)
 
 
