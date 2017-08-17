@@ -350,6 +350,15 @@ class LinLogModel(object):
 
         return v
 
+    def calc_fluxes_from_chi(self, chi, e_hat=None, y_hat=None):
+        """Calculate fluxes for a given steady-state and parameters"""
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
+        v = e_hat * self.v_star * (1 + self.Ez @ chi + self.Ey @ np.log(y_hat))
+
+        return v
+
     def calc_steady_state_fluxes(self, e_hat=None, y_hat=None):
         """Calculate the steady-state fluxes directly"""
 

@@ -127,6 +127,7 @@ def test_steady_state_methods(linlog_model):
     # Test matrix steady-state
     x_ss_mat = ll.calc_xs_mat(e_hat, y_hat)
     z_ss_mat = ll.calc_zs_mat(e_hat, y_hat)
+    chi_ss_mat = ll.calc_chi_mat(e_hat, y_hat)
 
     assert np.all(np.isfinite(x_ss_mat))
     assert np.all(np.isfinite(z_ss_mat))
@@ -147,6 +148,10 @@ def test_steady_state_methods(linlog_model):
     assert np.allclose(
         ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat),
         ll.calc_fluxes_from_z(z_ss_mat, e_hat, y_hat))
+
+    assert np.allclose(
+        ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat),
+        ll.calc_fluxes_from_chi(chi_ss_mat, e_hat, y_hat))
 
     assert np.allclose(
         ll.calc_fluxes_from_z(z_ss_mat, e_hat, y_hat),
