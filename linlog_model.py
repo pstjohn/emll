@@ -3,7 +3,10 @@ import copy
 import numpy as np
 import scipy as sp
 
-import casadi as cs
+try:
+    import casadi as cs
+except ImportError:
+    cs = None
 
 import theano
 import theano.tensor as T
