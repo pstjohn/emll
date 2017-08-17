@@ -37,8 +37,7 @@ def create_elasticity_matrix(model):
 
 def create_Ey_matrix(model):
 
-    boundary_indexes = [model.reactions.index(r) for r in
-                        model.reactions.query(lambda x: x.boundary, None)]
+    boundary_indexes = [model.reactions.index(r) for r in model.exchanges]
     boundary_directions = [1 if r.products else -1 for r in
                            model.reactions.query(
                                lambda x: x.boundary, None)]

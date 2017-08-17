@@ -9,9 +9,7 @@ from test_models import models
 import theano
 import theano.tensor as tt
 theano.config.compute_test_value = 'ignore' 
-
-import os
-os.environ["THEANO_FLAGS"] = "mode=FAST_COMPILE"
+tt.config.optimizer = 'fast_compile'
 
 try:
     import casadi as cs
@@ -307,8 +305,8 @@ def test_theano_steady_state(linlog_model):
     assert np.allclose(chi_test, x_theano_test)
     assert np.allclose(v_test, v_theano_test)
 
-
-def test_calculate_steady_state_batch_theano(linlog_model):
+@pytest.mark.parametrize("solve_method", ['nlinalg', 'slinalg'])
+def test_calculate_steady_state_batch_theano(linlog_model, solve_method):
 
     ll, e_hat, y_hat = linlog_model
 
@@ -332,7 +330,7 @@ def test_calculate_steady_state_batch_theano(linlog_model):
     v_hat_np = ll.calc_steady_state_fluxes(e_hat_np, y_hat_np) / ll.v_star
 
     chi_ss, v_hat_ss = ll.calculate_steady_state_batch_theano(
-        Ez_t, Ey_t, e_hat_t, y_hat_t)
+        Ez_t, Ey_t, e_hat_t, y_hat_t, solve_method=solve_method)
     io_fun = theano.function([Ez_t, Ey_t, e_hat_t, y_hat_t], 
                              [chi_ss, v_hat_ss])
 
