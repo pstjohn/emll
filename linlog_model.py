@@ -53,8 +53,10 @@ class LinLogModel(object):
         assert len(x_star) == self.nm, "x_star is the wrong length"
 
         if smallbone:
-            # q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex).T, pivoting=True)
-            q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex @ N).T, pivoting=True)
+            # q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex).T,
+            # pivoting=True)
+            q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex @ N).T,
+                                   pivoting=True)
         else:
             q, r, p = sp.linalg.qr((N).T, pivoting=True)
 
@@ -138,7 +140,8 @@ class LinLogModel(object):
         assert self.Ex.shape == Ex_new.shape
         if self._smallbone:
             new_rank = np.linalg.matrix_rank(
-                    self.N @ np.diag(self.v_star) @ Ex_new_perm, tol=self._ranktol)
+                self.N @ np.diag(self.v_star) @ Ex_new_perm,
+                tol=self._ranktol)
             assert new_rank == self.rank, "Ex_new changes the model rank"
 
         self.Ex = Ex_new_perm
@@ -408,7 +411,6 @@ class LinLogModel(object):
         else:
             assert y_hat.shape == (self.ny,)
 
-
         Ex_theano = T.dmatrix('Ex')
         Ex_theano.tag.test_value = self.Ex
 
@@ -447,7 +449,7 @@ class LinLogModel(object):
         return theano.function([Ex_theano, e_hat], rel_v_grad)
 
     def calc_metabolite_control_coeff(self, e_hat=None, y_hat=None):
-        """Calculate the metabolite control coefficient matrix, 
+        """Calculate the metabolite control coefficient matrix,
         Cx = d(ln x)/d(ln e).
 
         full_return: bool
@@ -463,14 +465,14 @@ class LinLogModel(object):
         # Calculate the elasticity matrix at the new steady-state
         Ez_ss = np.diag(self.v_star * e_hat / v_ss) @ self.Ez
 
-        Cx = (-self.L @ 
+        Cx = (-self.L @
               np.linalg.inv(self.Nr @ np.diag(v_ss) @ Ez_ss) @
               self.Nr @ np.diag(v_ss))
-        
+
         return Cx
 
     def calc_flux_control_coeff(self, e_hat=None, y_hat=None):
-        """Calculate the flux control coefficient matrix, 
+        """Calculate the flux control coefficient matrix,
         Cv = d(ln v)/d(ln e).
 
         """
@@ -482,12 +484,11 @@ class LinLogModel(object):
         # Calculate the elasticity matrix at the new steady-state
         Ez_ss = np.diag(self.v_star * e_hat / v_ss) @ self.Ez
 
-        Cv = (-Ez_ss @ 
+        Cv = (-Ez_ss @
               np.linalg.inv(self.Nr @ np.diag(v_ss) @ Ez_ss) @
               self.Nr @ np.diag(v_ss)) + np.eye(self.nr)
 
         return Cv
-
 
     def _generate_default_inputs(self, e_hat=None, y_hat=None):
         """Create matricies of ones if input arguments are None"""
@@ -500,22 +501,22 @@ class LinLogModel(object):
 
         return e_hat, y_hat
 
-
     def calculate_jacobian_theano(self, Ez):
         """Return an expression for the jacobian matrix given a
         theano-expression for Ex @ L"""
 
-        N_hat_jac = T.diag(1 / self.z_star).dot(self.Nr).dot(T.diag(self.v_star))
+        N_hat_jac = T.diag(
+            1 / self.z_star).dot(self.Nr).dot(T.diag(self.v_star))
         return T.dot(N_hat_jac, Ez)
-
 
     def calculate_steady_state_theano(self, Ez, Ey, e_hat, y_hat):
         """For a matrix of e_hat, y_hat values, calculate the chi_ss and v_hat_ss
         resulting from the relevant perturbations (using theano)"""
 
         e_diag = e_hat[:, np.newaxis] * np.diag(self.v_star)
-    
-        # Calculate the steady-state log(x/x_star) with some complicated matrix algebra...
+
+        # Calculate the steady-state log(x/x_star) with some complicated matrix
+        # algebra...
         N_hat = (self.Nr @ e_diag).astype(floatX)
         inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr, dtype=floatX)
 
@@ -530,21 +531,19 @@ class LinLogModel(object):
 
         v_hat_ss = (e_hat) * (
             np.ones(self.nr) +
-            T.dot(Ez, chi_ss[:, :, np.newaxis]).squeeze().T + 
+            T.dot(Ez, chi_ss[:, :, np.newaxis]).squeeze().T +
             T.dot(Ey, np.log(y_hat)[:, :, np.newaxis]).squeeze().T)
 
-
         return chi_ss.squeeze(), v_hat_ss
-
 
     def calculate_steady_state_batch_theano(self, Ez, Ey, e_hat, y_hat,
                                             solve_method='nlinalg'):
         """For a single e_hat, y_hat perturbation (as theano variables),
         calculate the steady state"""
 
-        e_diag = T.diag(e_hat * self.v_star.astype(floatX))   
+        e_diag = T.diag(e_hat * self.v_star.astype(floatX))
         N_hat = T.dot(self.Nr, e_diag)
-        b = -N_hat.dot(Ey.dot(T.log(y_hat.T)).T + 
+        b = -N_hat.dot(Ey.dot(T.log(y_hat.T)).T +
                        np.ones(self.nr, dtype=floatX))
         A = N_hat.dot(Ez)
 
@@ -553,8 +552,7 @@ class LinLogModel(object):
         else:
             chi_ss = T.slinalg.solve(A, b)
 
-
-        v_hat_ss = e_hat * (np.ones(self.nr) + T.dot(Ez, chi_ss) + 
+        v_hat_ss = e_hat * (np.ones(self.nr) + T.dot(Ez, chi_ss) +
                             T.dot(Ey, np.log(y_hat)))
 
         return chi_ss, v_hat_ss
@@ -575,14 +573,14 @@ class LinLogModel(object):
             Ez = Exz
 
         N_hat = self.Nr @ cs.diag(e_hat * self.v_star)
-        
+
         A = N_hat @ Ez
         b = -N_hat @ (np.ones(self.nr) + Ey @ cs.log(y_hat))
         chi = cs.solve(A, b)
-        
-        v_hat = e_hat * (np.ones(self.nr) + Ez @ chi + 
+
+        v_hat = e_hat * (np.ones(self.nr) + Ez @ chi +
                          Ey @ cs.log(y_hat))
-        
+
         return chi, v_hat
 
     def copy(self):
