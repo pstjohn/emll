@@ -242,6 +242,7 @@ def test_casadi_methods(linlog_model):
         x_ss_full = ll.calc_xs_full_ode(e_hat, y_hat)
         x_ss_red = ll.calc_xs_reduced_ode(e_hat, y_hat)
         x_ss_xform = ll.calc_xs_transformed_ode(e_hat, y_hat)
+        x_ss_pinv = ll.calc_xs_pinv(e_hat, y_hat)
 
         # assert np.allclose(x_ss_mat, x_ss_full)
         assert np.allclose(x_ss_mat, x_ss_red)
@@ -252,6 +253,10 @@ def test_casadi_methods(linlog_model):
         # This one needs a lower tolerance since x_ss_full != x_ss_mat from
         # the linlog assumption
         from scipy.stats import pearsonr
+
+        assert pearsonr(
+            ll.calc_fluxes_from_x(x_ss_pinv, e_hat, y_hat),
+            ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat))[0] > .99
 
         assert pearsonr(
             ll.calc_fluxes_from_x(x_ss_full, e_hat, y_hat),

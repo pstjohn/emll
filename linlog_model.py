@@ -146,6 +146,22 @@ class LinLogModel(object):
 
         self.Ex = Ex_new_perm
 
+    def calc_xs_pinv(self, e_hat=None, y_hat=None):
+        """Rather than explicitly removing the unidentifiable state variables,
+        use a pseudoinverse to calculate the minimum-norm solution (which
+        should be closest to the reference state)
+        """
+
+        e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
+
+        N_hat = self.N @ np.diag(self.v_star * e_hat)
+        A = N_hat @ self.Ex
+        b = -N_hat @ (np.ones(self.nr) + self.Ey @ np.log(y_hat))
+
+        chi_f = np.linalg.pinv(A) @ b
+
+        return self.x_star * np.exp(chi_f)
+
     def calc_chi_mat(self, e_hat=None, y_hat=None):
         """Calculate a the steady-state transformed independent metabolite
         concentrations using a matrix solve method.
