@@ -287,6 +287,45 @@ def test_theano_jac(linlog_model):
     assert np.allclose(jac_mat, jac_theano)
 
 
+def test_theano_steady_state_pinv(linlog_model):
+
+    ll, e_hat, y_hat = linlog_model
+
+    # Fake up some experiments
+    n_exp = 10
+    e_hat = 2**(0.5*np.random.randn(n_exp, ll.nr))
+    y_hat = 2**(0.5*np.random.randn(n_exp, ll.ny))
+    
+    # Calculate the numpy-expected results
+    chi_test = np.array([ll.calc_chi_pinv(e_hat[i], y_hat[i]) for i in
+                         range(n_exp)])
+    v_test = np.array([ll.calc_fluxes_from_x(ll.x_star * np.exp(chi_i), ei, yi)
+                       for chi_i, ei, yi in zip(chi_test, e_hat, y_hat)])
+
+    Ex_t = tt.dmatrix('Ex')
+    Ex_t.tag.test_value = ll.Ex
+
+    Ey_t = tt.dmatrix('Ey')
+    Ey_t.tag.test_value = ll.Ey
+
+    chi_ss, v_hat_ss = ll.calculate_steady_state_pinv_theano(
+        Ex_t, Ey_t, e_hat, y_hat)
+
+    io_fun = theano.function([Ex_t, Ey_t], [chi_ss, ll.v_star * v_hat_ss])
+    x_theano_test, v_theano_test = io_fun(ll.Ex, ll.Ey)
+
+    assert np.allclose(chi_test, x_theano_test)
+    assert np.allclose(v_test, v_theano_test)
+
+    chi_ss_b, v_hat_ss_b = ll.calculate_steady_state_batch_pinv_theano(
+        Ex_t, Ey_t, e_hat[0], y_hat[0])
+
+    io_fun_b = theano.function([Ex_t, Ey_t], [chi_ss_b, ll.v_star * v_hat_ss_b])
+    x_theano_b_test, v_theano_b_test = io_fun_b(ll.Ex, ll.Ey)
+
+    assert np.allclose(chi_test[0], x_theano_b_test)
+    assert np.allclose(v_test[0], v_theano_b_test)
+
 def test_theano_steady_state(linlog_model):
 
     ll, e_hat, y_hat = linlog_model

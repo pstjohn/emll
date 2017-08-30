@@ -146,10 +146,12 @@ class LinLogModel(object):
 
         self.Ex = Ex_new_perm
 
-    def calc_xs_pinv(self, e_hat=None, y_hat=None):
+    def calc_chi_pinv(self, e_hat=None, y_hat=None):
         """Rather than explicitly removing the unidentifiable state variables,
         use a pseudoinverse to calculate the minimum-norm solution (which
         should be closest to the reference state)
+
+        Note: the chi here is the full xs vector.
         """
 
         e_hat, y_hat = self._generate_default_inputs(e_hat, y_hat)
@@ -158,9 +160,10 @@ class LinLogModel(object):
         A = N_hat @ self.Ex
         b = -N_hat @ (np.ones(self.nr) + self.Ey @ np.log(y_hat))
 
-        chi_f = np.linalg.pinv(A) @ b
+        return np.linalg.pinv(A) @ b
 
-        return self.x_star * np.exp(chi_f)
+    def calc_xs_pinv(self, e_hat=None, y_hat=None):
+        return self.x_star * np.exp(self.calc_chi_pinv(e_hat, y_hat))
 
     def calc_chi_mat(self, e_hat=None, y_hat=None):
         """Calculate a the steady-state transformed independent metabolite
@@ -525,6 +528,36 @@ class LinLogModel(object):
             1 / self.z_star).dot(self.Nr).dot(T.diag(self.v_star))
         return T.dot(N_hat_jac, Ez)
 
+    def calculate_steady_state_pinv_theano(self, Ex, Ey, e_hat, y_hat):
+        """A theano implementation of the pseudo-inverse steady state
+        concentration method.
+        
+        Note: the chi_ss returned here will be the full metabolite length
+        """
+
+        e_diag = e_hat[:, np.newaxis] * np.diag(self.v_star)
+
+        # Calculate the steady-state log(x/x_star) with some complicated matrix
+        # algebra...
+        N_hat = (self.N @ e_diag).astype(floatX)
+        inner_v = Ey.dot(T.log(y_hat.T)).T + np.ones(self.nr, dtype=floatX)
+
+        chi_ss_left = T.dot(N_hat, Ex)
+
+        chi_ss_left_inv, _ = theano.scan(
+            lambda n: T.nlinalg.pinv(n), chi_ss_left, strict=True)
+
+        chi_ss_right = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
+
+        chi_ss = T.batched_dot(chi_ss_left_inv, chi_ss_right)
+
+        v_hat_ss = (e_hat) * (
+            np.ones(self.nr) +
+            T.dot(Ex, chi_ss[:, :, np.newaxis]).squeeze().T +
+            T.dot(Ey, np.log(y_hat)[:, :, np.newaxis]).squeeze().T)
+
+        return chi_ss.squeeze(), v_hat_ss
+
     def calculate_steady_state_theano(self, Ez, Ey, e_hat, y_hat):
         """For a matrix of e_hat, y_hat values, calculate the chi_ss and v_hat_ss
         resulting from the relevant perturbations (using theano)"""
@@ -551,6 +584,22 @@ class LinLogModel(object):
             T.dot(Ey, np.log(y_hat)[:, :, np.newaxis]).squeeze().T)
 
         return chi_ss.squeeze(), v_hat_ss
+
+    def calculate_steady_state_batch_pinv_theano(self, Ex, Ey, e_hat, y_hat):
+        """For a single e_hat, y_hat perturbation (as theano variables),
+        calculate the steady state"""
+
+        e_diag = T.diag(e_hat * self.v_star.astype(floatX))
+        N_hat = T.dot(self.N, e_diag)
+        b = -N_hat.dot(Ey.dot(T.log(y_hat.T)).T +
+                       np.ones(self.nr, dtype=floatX))
+        A = N_hat.dot(Ex)
+
+        chi_ss = T.dot(T.nlinalg.pinv(A), b)
+        v_hat_ss = e_hat * (np.ones(self.nr) + T.dot(Ex, chi_ss) +
+                            T.dot(Ey, np.log(y_hat)))
+
+        return chi_ss, v_hat_ss
 
     def calculate_steady_state_batch_theano(self, Ez, Ey, e_hat, y_hat,
                                             solve_method='nlinalg'):
