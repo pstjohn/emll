@@ -157,6 +157,13 @@ def test_steady_state_methods(linlog_model):
         ll.calc_fluxes_from_z(z_ss_mat, e_hat, y_hat),
         ll.calc_steady_state_fluxes(e_hat, y_hat))
 
+    # Make sure fluxes from z->x are the same as x.
+    assert np.allclose(
+        ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat),
+        ll.calc_fluxes_from_x(ll.z_to_x(z_ss_mat), e_hat, y_hat))
+
+    assert np.allclose(ll.N @ ll.calc_fluxes_from_x(x_ss_mat, e_hat, y_hat), 0)
+
 def test_metabolite_control_coeff(linlog_model):
 
     ll, e_hat, y_hat = linlog_model
