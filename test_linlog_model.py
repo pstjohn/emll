@@ -132,7 +132,7 @@ def test_steady_state_methods(linlog_model):
     assert np.all(np.isfinite(x_ss_mat))
     assert np.all(np.isfinite(z_ss_mat))
 
-    # Test jacovian method equi valence
+    # Test jacovian method equivalence
     ll.calc_jacobian_full_ode(x_ss_mat, e_hat, y_hat)
     pjac_red = ll.calc_jacobian_reduced_ode(z_ss_mat, e_hat, y_hat)
     pjac_mat = ll.calc_jacobian_mat(z_ss_mat, e_hat, y_hat)
