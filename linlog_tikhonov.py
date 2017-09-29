@@ -88,6 +88,10 @@ class LinLogTikhonov(object):
             solver = partial(chol_solve_theano, lambda_=self.lambda_)
         elif solve_method == 'direct':
             solver = direct_solve_theano
+        elif solve_method == 'sym2x2':
+            solver = symbolic_2x2
+        elif solve_method == 'noop_inv':
+            solver = direct_inverse
 
         en = np.atleast_2d(en)
         yn = np.atleast_2d(yn)
@@ -98,6 +102,7 @@ class LinLogTikhonov(object):
         N_hat = self.N @ e_diag
         inner_v = Ey.dot(yn.T).T + np.ones(self.nr, dtype=floatX)
         As = T.dot(N_hat, Ex)
+    
         bs = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
         xn, _ = theano.scan(
             lambda A, b: solver(A, b),
@@ -109,14 +114,14 @@ class LinLogTikhonov(object):
 
         return xn, vn
 
-    def calculate_jacobian_theano(self, Ex, x_star):
-        """Return an expression for the jacobian matrix given a
-        theano-expression for Ex and the reference metabolite concentration"""
-
-        return T.diag(1 / x_star)\
-            .dot(self.N)\
-            .dot(T.diag(self.v_star))\
-            .dot(Ex)
+    # def calculate_jacobian_theano(self, Ex, x_star):
+    #     """Return an expression for the jacobian matrix given a
+    #     theano-expression for Ex and the reference metabolite concentration"""
+    #
+    #     return T.diag(1 / x_star)\
+    #         .dot(self.N)\
+    #         .dot(T.diag(self.v_star))\
+    #         .dot(Ex)
 
 
 
@@ -141,3 +146,21 @@ def chol_solve_theano(A, b, lambda_=None):
 
 def direct_solve_theano(A, b):
     return T.slinalg.solve(A, b).squeeze()
+
+def symbolic_2x2(A, bi):
+    a = A[0,0]
+    b = A[0,1]
+    c = A[1,0]
+    d = A[1,1]
+
+    A_inv = (T.stacklists([[d, -b], [-c, a]]) / (a * d - b * c))
+    return T.dot(A_inv, bi).squeeze()
+
+class NoOpMatrixInverse(T.nlinalg.MatrixInverse):
+    pass
+
+
+no_op_inverse = NoOpMatrixInverse()
+
+def direct_inverse(A, b):
+    return T.dot(no_op_inverse(A), b).squeeze()
