@@ -72,7 +72,7 @@ class LinLogTikhonov(object):
         xn = chol_solve_scipy(A, b, self.lambda_)
 
         # Plug concentrations into the flux equation.
-        vn = self.N @ (np.ones(self.nr) + self.Ex @ xn + self.Ey @ yn)
+        vn = en * (np.ones(self.nr) + self.Ex @ xn + self.Ey @ yn)
 
         return xn, vn
 
@@ -114,6 +114,30 @@ class LinLogTikhonov(object):
 
         return xn, vn
 
+    def control_coef_fns(self):
+        """Construct theano functions to evaluate dxn/den and dvn/den at the
+        reference state as a function of the elasticity matrix.
+
+        """
+        Ex = T.dmatrix('Ex')
+        Ex.tag.test_value = self.Ex
+        en = T.dvector('e')
+        en.tag.test_value = np.ones(self.nr)
+
+        A = T.dot(self.N, T.diag(self.v_star * en)).dot(Ex)
+        b = -T.dot(self.N, np.diag(self.v_star)).dot(en)
+        xn = chol_solve_theano(A, b, lambda_=self.lambda_)
+        vn = en * (np.ones(self.nr) + T.dot(Ex, xn))
+
+        x_jac = T.jacobian(xn, en)
+        v_jac = T.jacobian(vn, en)
+
+        Cx = theano.function([Ex, theano.In(en, 'en', np.ones(self.nr))], x_jac)
+        Cv = theano.function([Ex, theano.In(en, 'en', np.ones(self.nr))], v_jac)
+
+        return Cx, Cv
+
+
     # def calculate_jacobian_theano(self, Ex, x_star):
     #     """Return an expression for the jacobian matrix given a
     #     theano-expression for Ex and the reference metabolite concentration"""
@@ -131,7 +155,7 @@ def chol_solve_scipy(A, b, lambda_=None):
     b_hat = A.T @ b
 
     cho = sp.linalg.cho_factor(A_hat)
-    return np.linalg.cho_solve(cho, b_hat)
+    return sp.linalg.cho_solve(cho, b_hat)
 
 def chol_solve_theano(A, b, lambda_=None):
     A_hat = T.dot(A.T, A) + lambda_ * T.eye(b.shape[0])
