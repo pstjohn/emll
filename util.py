@@ -36,6 +36,10 @@ def create_elasticity_matrix(model):
     return array
 
 def create_Ey_matrix(model):
+    """ This function should return a good guess for the Ey matrix. This
+    essentially requires considering the effects of the reactants / products
+    for the unbalanced exchange reactions, and is probably best handled
+    manually for now. """
 
     boundary_indexes = [model.reactions.index(r) for r in model.exchanges]
     boundary_directions = [1 if r.products else -1 for r in
@@ -49,3 +53,4 @@ def create_Ey_matrix(model):
         Ey[rid, i] = direction
 
     return Ey
+

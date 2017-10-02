@@ -59,24 +59,35 @@ class LinLogTikhonov(object):
 
         return en, yn
 
-    def steady_state_mat(self, en=None, yn=None):
+    def steady_state_mat(self, en=None, yn=None, solver=None):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using a matrix solve method.
+
+        en: np.ndarray
+            a NR vector of perturbed normalized enzyme activities
+        yn: np.ndarray
+            a NY vector of normalized external metabolite concentrations
+        solver: function
+            A function to solve Ax = b for a (possibly) singular A.
+
         """
         en, yn = self._generate_default_inputs(en, yn)
+
+        if solver is None:
+            solver = partial(chol_solve_scipy, lambda_=self.lambda_)
 
         # Calculate steady-state concentrations using linear solve.
         N_hat = self.N @ np.diag(self.v_star * en)
         A = N_hat @ self.Ex
         b = -N_hat @ (np.ones(self.nr) + self.Ey @ yn)
-        xn = chol_solve_scipy(A, b, self.lambda_)
+        xn = solver(A, b)
 
         # Plug concentrations into the flux equation.
         vn = en * (np.ones(self.nr) + self.Ex @ xn + self.Ey @ yn)
 
         return xn, vn
 
-    def steady_state_theano(self, Ex, Ey, en=None, yn=None,
+    def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
                             solve_method='tikhonov'):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
@@ -93,13 +104,25 @@ class LinLogTikhonov(object):
         elif solve_method == 'noop_inv':
             solver = direct_inverse
 
-        en = np.atleast_2d(en)
-        yn = np.atleast_2d(yn)
+        if Ey is None:
+            Ey = T.as_tensor_variable(Ey)
 
-        assert en.shape[0] == yn.shape[0], "input shape mismatch"
+        if isinstance(en, np.ndarray):
+            en = np.atleast_2d(en)
+            yn = np.atleast_2d(yn)
 
-        e_diag = en[:, np.newaxis] * np.diag(self.v_star)
-        N_hat = self.N @ e_diag
+            n_exp = en.shape[0]
+
+        else:
+            n_exp = en.tag.test_value.shape[0]
+
+        en = T.as_tensor_variable(en)
+        yn = T.as_tensor_variable(yn)
+
+        e_diag = en.dimshuffle(0, 1, 'x') * np.diag(self.v_star)
+        N_rep = self.N.reshape((-1, *self.N.shape)).repeat(n_exp, axis=0)
+        N_hat = T.batched_dot(N_rep, e_diag)
+
         inner_v = Ey.dot(yn.T).T + np.ones(self.nr, dtype=floatX)
         As = T.dot(N_hat, Ex)
     
