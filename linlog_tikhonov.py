@@ -5,6 +5,7 @@ import scipy as sp
 
 import theano
 import theano.tensor as T
+import theano.tensor.slinalg
 floatX = theano.config.floatX
 
 class LinLogTikhonov(object):
