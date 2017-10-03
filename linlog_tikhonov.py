@@ -8,6 +8,8 @@ import theano.tensor as T
 import theano.tensor.slinalg
 floatX = theano.config.floatX
 
+from emll.tikhohov_solve import RegularizedSolve
+
 class LinLogTikhonov(object):
 
     def __init__(self, N, Ex, Ey, v_star, lambda_=None):
@@ -89,21 +91,20 @@ class LinLogTikhonov(object):
         return xn, vn
 
     def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
-                            solve_method='tikhonov'):
+                            solver=None):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
 
         Ex and Ey should be theano matrices, en and yn should be numpy arrays.
+
+        solver: function
+            A function to solve Ax = b for a (possibly) singular A. Should
+            accept theano matrices A and b, and return a symbolic x.
         """
 
-        if solve_method == 'tikhonov':
-            solver = partial(chol_solve_theano, lambda_=self.lambda_)
-        elif solve_method == 'direct':
-            solver = direct_solve_theano
-        elif solve_method == 'sym2x2':
-            solver = symbolic_2x2
-        elif solve_method == 'noop_inv':
-            solver = direct_inverse
+        if solver is None:
+            rsolve_op = RegularizedSolve(self.lambda_)
+            solver = partial(chol_solve_theano, rsolve_op=rsolve_op)
 
         if Ey is None:
             Ey = T.as_tensor_variable(Ey)
@@ -150,7 +151,8 @@ class LinLogTikhonov(object):
 
         A = T.dot(self.N, T.diag(self.v_star * en)).dot(Ex)
         b = -T.dot(self.N, np.diag(self.v_star)).dot(en)
-        xn = chol_solve_theano(A, b, lambda_=self.lambda_)
+        rsolve = RegularizedSolve(self.lambda_)
+        xn = rsolve(A, b).squeeze()
         vn = en * (np.ones(self.nr) + T.dot(Ex, xn))
 
         x_jac = T.jacobian(xn, en)
@@ -181,7 +183,7 @@ def chol_solve_scipy(A, b, lambda_=None):
     cho = sp.linalg.cho_factor(A_hat)
     return sp.linalg.cho_solve(cho, b_hat)
 
-def chol_solve_theano(A, b, lambda_=None):
+def chol_solve_theano_old(A, b, lambda_=None):
     A_hat = T.dot(A.T, A) + lambda_ * T.eye(b.shape[0])
     b_hat = T.dot(A.T, b)
     
@@ -191,6 +193,9 @@ def chol_solve_theano(A, b, lambda_=None):
     x = T.slinalg.solve_upper_triangular(L.T, y)
 
     return x.squeeze()
+
+def chol_solve_theano(A, b, rsolve_op=None):
+    return rsolve_op(A, b).squeeze()
 
 def direct_solve_theano(A, b):
     return T.slinalg.solve(A, b).squeeze()
