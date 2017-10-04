@@ -2,8 +2,29 @@ import numpy as np
 import scipy.linalg
 
 from theano import tensor
-from theano.tensor.slinalg import Solve, solve
+from theano.tensor.slinalg import Solve
 
+class SymPosSolve(Solve):   
+    """
+    Class to allow `solve` to accept a symmetric matrix
+    """
+
+    def perform(self, node, inputs, output_storage):
+        A, b = inputs
+        if self.A_structure == 'lower_triangular':
+            rval = scipy.linalg.solve_triangular(
+                A, b, lower=True)
+        elif self.A_structure == 'upper_triangular':
+            rval = scipy.linalg.solve_triangular(
+                A, b, lower=False)
+        elif self.A_structure == 'symmetric':
+            rval = scipy.linalg.solve(A, b, assume_a='pos')
+        else:
+            rval = scipy.linalg.solve(A, b)
+        output_storage[0][0] = rval
+
+
+sympos_solve = SymPosSolve(A_structure='symmetric')
 
 class RegularizedSolve(Solve):
     """
@@ -11,7 +32,7 @@ class RegularizedSolve(Solve):
 
     """
 
-    __props__ = ('lambda_',)
+    __props__ = ('lambda_', *Solve.__props__)
 
     def __init__(self, lambda_=None):
 
@@ -42,7 +63,7 @@ class RegularizedSolve(Solve):
         c_bar = output_gradients[0]
 
         A_hat = A.T.dot(A) + self.lambda_ * tensor.eye(*A.shape)
-        x = solve(A_hat, c_bar)
+        x = sympos_solve(A_hat, c_bar)
 
         b_bar = A.dot(x)
 
