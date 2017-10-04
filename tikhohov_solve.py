@@ -1,5 +1,8 @@
 import numpy as np
-import scipy.linalg
+# import scipy.linalg
+
+from scipy.linalg.misc import LinAlgError
+from scipy.linalg.lapack import get_lapack_funcs
 
 from theano import tensor
 from theano.tensor.slinalg import Solve
@@ -11,16 +14,15 @@ class SymPosSolve(Solve):
 
     def perform(self, node, inputs, output_storage):
         A, b = inputs
-        if self.A_structure == 'lower_triangular':
-            rval = scipy.linalg.solve_triangular(
-                A, b, lower=True)
-        elif self.A_structure == 'upper_triangular':
-            rval = scipy.linalg.solve_triangular(
-                A, b, lower=False)
-        elif self.A_structure == 'symmetric':
-            rval = scipy.linalg.solve(A, b, assume_a='pos')
-        else:
-            rval = scipy.linalg.solve(A, b)
+    
+        posv, = get_lapack_funcs(('posv',), (A,b))
+        c, rval, info = posv(A, b, lower=False,
+                             overwrite_a=False,
+                             overwrite_b=False)
+    
+        if info > 0:
+            raise LinAlgError("singular matrix")
+
         output_storage[0][0] = rval
 
 
@@ -48,8 +50,14 @@ class RegularizedSolve(Solve):
         A_hat = A.T @ A + self.lambda_ * np.eye(*A.shape)
         b_hat = A.T @ b
 
-        cho = scipy.linalg.cho_factor(A_hat)
-        rval = scipy.linalg.cho_solve(cho, b_hat)
+        posv, = get_lapack_funcs(('posv',), (A_hat, b_hat))
+        c, rval, info = posv(A_hat, b_hat, lower=False,
+                             overwrite_a=False,
+                             overwrite_b=False)
+    
+        if info > 0:
+            raise LinAlgError("singular matrix")
+
         output_storage[0][0] = rval
 
     def grad(self, inputs, output_gradients):
