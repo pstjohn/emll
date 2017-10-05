@@ -139,29 +139,52 @@ class LinLogTikhonov(object):
 
         return xn, vn
 
-    def control_coef_fns(self):
+    def control_coef_fns(self, en=None, yn=None, solver=None):
         """Construct theano functions to evaluate dxn/den and dvn/den at the
         reference state as a function of the elasticity matrix.
 
+        en: np.ndarray
+            a NR vector of perturbed normalized enzyme activities
+        yn: np.ndarray
+            a NY vector of normalized external metabolite concentrations
+        solver: function
+            A function to solve Ax = b for a (possibly) singular A. Should
+            accept theano matrices A and b, and return a symbolic x.
+
+        Returns:
+
+        Cx, Cv: theano.functions
+            Functions which operate on Ex matrices to return the flux control
+            coefficients at the desired point.
+
         """
+        en, yn = self._generate_default_inputs(en, yn)
+
+        if solver is None:
+            rsolve_op = RegularizedSolve(self.lambda_)
+            solver = partial(chol_solve_theano, rsolve_op=rsolve_op)
+
         Ex = T.dmatrix('Ex')
         Ex.tag.test_value = self.Ex
-        en = T.dvector('e')
-        en.tag.test_value = np.ones(self.nr)
+        en_t = T.dvector('e')
+        en_t.tag.test_value = en
 
-        A = T.dot(self.N, T.diag(self.v_star * en)).dot(Ex)
-        b = -T.dot(self.N, np.diag(self.v_star)).dot(en)
-        rsolve = RegularizedSolve(self.lambda_)
-        xn = rsolve(A, b).squeeze()
-        vn = en * (np.ones(self.nr) + T.dot(Ex, xn))
+        N_hat = T.dot(self.N, T.diag(self.v_star * en_t))
+        A = N_hat.dot(Ex)
+        b = -N_hat.dot(self.Ey.dot(yn.T).T + np.ones(self.nr))
 
-        x_jac = T.jacobian(xn, en)
-        v_jac = T.jacobian(vn, en)
+        xn = solver(A, b)
+        vn = en_t * (np.ones(self.nr) + T.dot(Ex, xn))
 
-        Cx = theano.function([Ex, theano.In(en, 'en', np.ones(self.nr))], x_jac)
-        Cv = theano.function([Ex, theano.In(en, 'en', np.ones(self.nr))], v_jac)
+        x_jac = T.jacobian(xn, en_t)
+        v_jac = T.jacobian(vn, en_t)
+
+        Cx = theano.function([Ex, theano.In(en_t, 'en', en)], x_jac)
+        Cv = theano.function([Ex, theano.In(en_t, 'en', en)], v_jac)
 
         return Cx, Cv
+
+
 
 
     # def calculate_jacobian_theano(self, Ex, x_star):
