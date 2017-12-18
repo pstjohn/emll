@@ -95,7 +95,7 @@ class LinLogTikhonov(object):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
 
-        Ex and Ey should be theano matrices, en and yn should be numpy arrays.
+        Ex, Ey, en and yn should be theano matrices
 
         solver: function
             A function to solve Ax = b for a (possibly) singular A. Should
@@ -111,12 +111,12 @@ class LinLogTikhonov(object):
 
         if isinstance(en, np.ndarray):
             en = np.atleast_2d(en)
-            yn = np.atleast_2d(yn)
-
             n_exp = en.shape[0]
-
         else:
             n_exp = en.tag.test_value.shape[0]
+
+        if isinstance(yn, np.ndarray):
+            yn = np.atleast_2d(yn)
 
         en = T.as_tensor_variable(en)
         yn = T.as_tensor_variable(yn)
