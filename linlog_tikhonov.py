@@ -203,8 +203,8 @@ def chol_solve_scipy(A, b, lambda_=None):
     A_hat = A.T @ A + lambda_ * np.eye(*A.shape)
     b_hat = A.T @ b
 
-    cho = sp.linalg.cho_factor(A_hat)
-    return sp.linalg.cho_solve(cho, b_hat)
+    # cho = sp.linalg.cho_factor(A_hat)
+    # return sp.linalg.cho_solve(cho, b_hat)
 
 def chol_solve_theano_old(A, b, lambda_=None):
     A_hat = T.dot(A.T, A) + lambda_ * T.eye(b.shape[0])
