@@ -1,5 +1,3 @@
-from functools import partial
-
 import numpy as np
 import scipy as sp
 
@@ -8,11 +6,12 @@ import theano.tensor as T
 import theano.tensor.slinalg
 floatX = theano.config.floatX
 
-from emll.tikhohov_solve import RegularizedSolve
+from emll.tikhohov_solve import RegularizedSolve, LeastSquaresSolve
 
-class LinLogTikhonov(object):
 
-    def __init__(self, N, Ex, Ey, v_star, lambda_=None):
+class LinLogBase(object):
+
+    def __init__(self, N, Ex, Ey, v_star):
         """A class to perform the linear algebra underlying the 
         decomposition method.
 
@@ -42,13 +41,12 @@ class LinLogTikhonov(object):
         self.Ex = Ex
         self.Ey = Ey
         self.v_star = v_star
-        self.lambda_ = lambda_ if lambda_ else 0
 
         assert Ex.shape == (self.nr, self.nm), "Ex is the wrong shape"
         assert Ey.shape == (self.nr, self.ny), "Ey is the wrong shape"
         assert len(v_star) == self.nr, "v_star is the wrong length"
-        assert self.lambda_ >= 0, "lambda must be positive"
         assert np.allclose(self.N @ v_star, 0), "reference not steady state"
+
 
     def _generate_default_inputs(self, en=None, yn=None):
         """Create matricies representing no perturbation is input is None.
@@ -62,7 +60,8 @@ class LinLogTikhonov(object):
 
         return en, yn
 
-    def steady_state_mat(self, en=None, yn=None, solver=None):
+
+    def steady_state_mat(self, en=None, yn=None):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using a matrix solve method.
 
@@ -76,19 +75,17 @@ class LinLogTikhonov(object):
         """
         en, yn = self._generate_default_inputs(en, yn)
 
-        if solver is None:
-            solver = partial(chol_solve_scipy, lambda_=self.lambda_)
-
         # Calculate steady-state concentrations using linear solve.
         N_hat = self.N @ np.diag(self.v_star * en)
         A = N_hat @ self.Ex
         b = -N_hat @ (np.ones(self.nr) + self.Ey @ yn)
-        xn = solver(A, b)
+        xn = self.solve(A, b)
 
         # Plug concentrations into the flux equation.
         vn = en * (np.ones(self.nr) + self.Ex @ xn + self.Ey @ yn)
 
         return xn, vn
+
 
     def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
                             solver=None):
@@ -101,10 +98,6 @@ class LinLogTikhonov(object):
             A function to solve Ax = b for a (possibly) singular A. Should
             accept theano matrices A and b, and return a symbolic x.
         """
-
-        if solver is None:
-            rsolve_op = RegularizedSolve(self.lambda_)
-            solver = partial(chol_solve_theano, rsolve_op=rsolve_op)
 
         if Ey is None:
             Ey = T.as_tensor_variable(Ey)
@@ -130,7 +123,7 @@ class LinLogTikhonov(object):
     
         bs = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
         xn, _ = theano.scan(
-            lambda A, b: solver(A, b),
+            lambda A, b: self.solve_theano(A, b),
             sequences=[As, bs], strict=True)
 
         vn = en * (np.ones(self.nr) +
@@ -160,10 +153,6 @@ class LinLogTikhonov(object):
         """
         en, yn = self._generate_default_inputs(en, yn)
 
-        if solver is None:
-            rsolve_op = RegularizedSolve(self.lambda_)
-            solver = partial(chol_solve_theano, rsolve_op=rsolve_op)
-
         Ex = T.dmatrix('Ex')
         Ex.tag.test_value = self.Ex
         en_t = T.dvector('e')
@@ -173,7 +162,7 @@ class LinLogTikhonov(object):
         A = N_hat.dot(Ex)
         b = -N_hat.dot(self.Ey.dot(yn.T).T + np.ones(self.nr))
 
-        xn = solver(A, b)
+        xn = self.solve_theano(A, b)
         vn = en_t * (np.ones(self.nr) + T.dot(Ex, xn))
 
         x_jac = T.jacobian(xn, en_t)
@@ -185,58 +174,58 @@ class LinLogTikhonov(object):
         return Cx, Cv
 
 
+class LinLogSymbolic2x2(LinLogBase):
+    """ Class for handling special case of a 2x2 full rank A matrix """
+
+    def solve(self, A, bi):
+        a = A[0,0]
+        b = A[0,1]
+        c = A[1,0]
+        d = A[1,1]
+
+        A_inv = np.array([[d, -b], [-c, a]]) / (a * d - b * c)
+        return A_inv @ bi
 
 
-    # def calculate_jacobian_theano(self, Ex, x_star):
-    #     """Return an expression for the jacobian matrix given a
-    #     theano-expression for Ex and the reference metabolite concentration"""
-    #
-    #     return T.diag(1 / x_star)\
-    #         .dot(self.N)\
-    #         .dot(T.diag(self.v_star))\
-    #         .dot(Ex)
+    def solve_theano(self, A, bi):
+        a = A[0,0]
+        b = A[0,1]
+        c = A[1,0]
+        d = A[1,1]
+
+        A_inv = (T.stacklists([[d, -b], [-c, a]]) / (a * d - b * c))
+        return T.dot(A_inv, bi).squeeze()
 
 
+class LinLogLeastNorm(LinLogBase):
+    """ Uses dgels to solve for the least-norm solution to the linear equation """
+
+    def solve(self, A, bi):
+        x, residues, rank, s = sp.linalg.lstsq(A, bi)
+        return x
+
+    def solve_theano(self, A, bi):
+        rsolve_op = LeastSquaresSolve()
+        return rsolve_op(A, bi).squeeze()
 
 
-def chol_solve_scipy(A, b, lambda_=None):
-    A_hat = A.T @ A + lambda_ * np.eye(*A.shape)
-    b_hat = A.T @ b
+class LinLogTikhonov(LinLogBase):
+    """ Adds regularization to the linear solve, assumes A matrix is positive semi-definite """
 
-    # cho = sp.linalg.cho_factor(A_hat)
-    # return sp.linalg.cho_solve(cho, b_hat)
+    def __init__(self, N, Ex, Ey, v_star, lambda_=None):
 
-def chol_solve_theano_old(A, b, lambda_=None):
-    A_hat = T.dot(A.T, A) + lambda_ * T.eye(b.shape[0])
-    b_hat = T.dot(A.T, b)
-    
-    L = T.slinalg.cholesky(A_hat)
-    
-    y = T.slinalg.solve_lower_triangular(L, b_hat)
-    x = T.slinalg.solve_upper_triangular(L.T, y)
+        self.lambda_ = lambda_ if lambda_ else 0
+        assert self.lambda_ >= 0, "lambda must be positive"
 
-    return x.squeeze()
+        LinLogBase.__init__(self, N, Ex, Ey, v_star)
 
-def chol_solve_theano(A, b, rsolve_op=None):
-    return rsolve_op(A, b).squeeze()
+    def solve(self, A, b):
+        A_hat = A.T @ A + self.lambda_ * np.eye(*A.shape)
+        b_hat = A.T @ b
 
-def direct_solve_theano(A, b):
-    return T.slinalg.solve(A, b).squeeze()
+        cho = sp.linalg.cho_factor(A_hat)
+        return sp.linalg.cho_solve(cho, b_hat)
 
-def symbolic_2x2(A, bi):
-    a = A[0,0]
-    b = A[0,1]
-    c = A[1,0]
-    d = A[1,1]
-
-    A_inv = (T.stacklists([[d, -b], [-c, a]]) / (a * d - b * c))
-    return T.dot(A_inv, bi).squeeze()
-
-class NoOpMatrixInverse(T.nlinalg.MatrixInverse):
-    pass
-
-
-no_op_inverse = NoOpMatrixInverse()
-
-def direct_inverse(A, b):
-    return T.dot(no_op_inverse(A), b).squeeze()
+    def solve_theano(self, A, b):
+        rsolve_op = RegularizedSolve(self.labmda_)
+        return rsolve_op(A, b).squeeze()
