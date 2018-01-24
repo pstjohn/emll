@@ -118,7 +118,7 @@ class LeastSquaresSolve(Solve):
         c_bar = output_gradients[0]
 
         A_hat = A.T.dot(A)
-        x = solve_symmetric(A_hat, c_bar)
+        x = self(A_hat, c_bar)
 
         b_bar = A.dot(x)
 

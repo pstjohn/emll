@@ -87,8 +87,7 @@ class LinLogBase(object):
         return xn, vn
 
 
-    def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
-                            solver=None):
+    def steady_state_theano(self, Ex, Ey=None, en=None, yn=None):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
 
