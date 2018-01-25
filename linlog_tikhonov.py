@@ -6,7 +6,8 @@ import theano.tensor as T
 import theano.tensor.slinalg
 floatX = theano.config.floatX
 
-from emll.tikhohov_solve import RegularizedSolve, LeastSquaresSolve
+from emll.tikhohov_solve import (RegularizedSolve, LeastSquaresSolve,
+                                 lstsq_wrapper)
 
 
 class LinLogBase(object):
@@ -199,12 +200,16 @@ class LinLogSymbolic2x2(LinLogBase):
 class LinLogLeastNorm(LinLogBase):
     """ Uses dgels to solve for the least-norm solution to the linear equation """
 
+    def __init__(self, N, Ex, Ey, v_star, driver='gels'):
+
+        self.driver = driver
+        LinLogBase.__init__(self, N, Ex, Ey, v_star)
+
     def solve(self, A, bi):
-        x, residues, rank, s = sp.linalg.lstsq(A, bi)
-        return x
+        return lstsq_wrapper(A, bi, self.driver)
 
     def solve_theano(self, A, bi):
-        rsolve_op = LeastSquaresSolve()
+        rsolve_op = LeastSquaresSolve(driver=self.driver)
         return rsolve_op(A, bi).squeeze()
 
 

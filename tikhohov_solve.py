@@ -1,11 +1,11 @@
 import numpy as np
-# import scipy.linalg
+import scipy as sp
 
 from scipy.linalg.misc import LinAlgError
 from scipy.linalg.lapack import get_lapack_funcs
 
 from theano import tensor
-from theano.tensor.slinalg import Solve, solve_symmetric
+from theano.tensor.slinalg import Solve
 
 class SymPosSolve(Solve):   
     """
@@ -89,8 +89,11 @@ class LeastSquaresSolve(Solve):
 
     """
 
-    def __init__(self):
+    __props__ = ('driver', *Solve.__props__)
 
+    def __init__(self, driver='gels'):
+
+        self.driver = driver
         Solve.__init__(self)
 
     def __repr__(self):
@@ -98,14 +101,7 @@ class LeastSquaresSolve(Solve):
 
     def perform(self, node, inputs, output_storage):
         A, b = inputs
-
-        gels, = get_lapack_funcs(('gels',), (A, b))
-        c, rval, info = gels(A, b, overwrite_a=False, overwrite_b=False)
-    
-        if info > 0:
-            raise LinAlgError("singular matrix")
-
-        output_storage[0][0] = rval
+        output_storage[0][0] = lstsq_wrapper(A, b, driver=self.driver)
 
     def L_op(self, inputs, outputs, output_gradients):
         """
@@ -128,3 +124,19 @@ class LeastSquaresSolve(Solve):
         A_bar = force_outer(b - A.dot(c), x) - force_outer(b_bar, c)
         return [A_bar, b_bar]
 
+
+def lstsq_wrapper(A, b, driver='gels'):
+    """ Wrap sp.linalg.lstsq to also support the faster _gels solver """
+
+    if driver is 'gels':
+        lapack_op, = get_lapack_funcs((driver,), (A, b))
+        c, x, info = lapack_op(A, b)
+
+        if info > 0:
+            raise LinAlgError("singular matrix")
+
+    else:
+        x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=False,
+                                     lapack_driver=driver)
+
+    return x
