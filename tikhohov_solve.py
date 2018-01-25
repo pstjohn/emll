@@ -128,7 +128,7 @@ class LeastSquaresSolve(Solve):
 def lstsq_wrapper(A, b, driver='gels'):
     """ Wrap sp.linalg.lstsq to also support the faster _gels solver """
 
-    if driver is 'gels':
+    if driver == 'gels':
         lapack_op, = get_lapack_funcs((driver,), (A, b))
         c, x, info = lapack_op(A, b)
 
