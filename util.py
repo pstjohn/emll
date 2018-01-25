@@ -1,4 +1,5 @@
 import numpy as np
+import scipy as sp
 
 def create_elasticity_matrix(model):
     """Create an elasticity matrix given the model in model.
@@ -53,4 +54,20 @@ def create_Ey_matrix(model):
         Ey[rid, i] = direction
 
     return Ey
+
+
+def compute_waldherr_reduction(N, tol=1E-8):
+    """ Uses the SVD to calculate a reduced stoichiometric matrix, link, and
+    conservation matrices.
+    
+    Returns:
+    Nr, L, G
+    
+    """
+    u, e, vh = sp.linalg.svd(N)
+    Nr = (np.diag(e[e > tol]) @ vh[e > tol])
+    L =  u[:, e > tol]
+    G =  u[:, e >= tol]
+
+    return Nr, L, G
 

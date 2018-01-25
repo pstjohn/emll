@@ -2,7 +2,7 @@ import numpy as np
 import scipy as sp
 from theano.tests import unittest_tools as utt
 
-from .tikhohov_solve import RegularizedSolve, LeastSquaresSolve
+from .theano_utils import RegularizedSolve, LeastSquaresSolve
 
 def test_regularized_solve():
 

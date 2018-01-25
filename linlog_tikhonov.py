@@ -6,8 +6,10 @@ import theano.tensor as T
 import theano.tensor.slinalg
 floatX = theano.config.floatX
 
-from emll.tikhohov_solve import (RegularizedSolve, LeastSquaresSolve,
-                                 lstsq_wrapper)
+from emll.theano_utils import (RegularizedSolve, LeastSquaresSolve,
+                               lstsq_wrapper)
+
+from emll.util import compute_waldherr_reduction
 
 
 class LinLogBase(object):
@@ -39,6 +41,8 @@ class LinLogBase(object):
         self.ny = Ey.shape[1]
 
         self.N = N
+        self.Nr, self.L, self.G = compute_waldherr_reduction(N)
+
         self.Ex = Ex
         self.Ey = Ey
         self.v_star = v_star
@@ -46,23 +50,29 @@ class LinLogBase(object):
         assert Ex.shape == (self.nr, self.nm), "Ex is the wrong shape"
         assert Ey.shape == (self.nr, self.ny), "Ey is the wrong shape"
         assert len(v_star) == self.nr, "v_star is the wrong length"
-        assert np.allclose(self.N @ v_star, 0), "reference not steady state"
+        assert np.allclose(self.Nr @ v_star, 0), "reference not steady state"
 
 
-    def _generate_default_inputs(self, en=None, yn=None):
+    def _generate_default_inputs(self, Ex=None, Ey=None, en=None, yn=None):
         """Create matricies representing no perturbation is input is None.
            
         """
+        if Ex is None:
+            Ex = self.Ex
+
+        if Ey is None:
+            Ey = self.Ey
+
         if en is None:
             en = np.ones(self.nr)
 
         if yn is None:
             yn = np.zeros(self.ny)
 
-        return en, yn
+        return Ex, Ey, en, yn
 
 
-    def steady_state_mat(self, en=None, yn=None):
+    def steady_state_mat(self, Ex=None, Ey=None, en=None, yn=None,):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using a matrix solve method.
 
@@ -70,20 +80,19 @@ class LinLogBase(object):
             a NR vector of perturbed normalized enzyme activities
         yn: np.ndarray
             a NY vector of normalized external metabolite concentrations
-        solver: function
-            A function to solve Ax = b for a (possibly) singular A.
+        Ex, Ey: optional replacement elasticity matrices
 
         """
-        en, yn = self._generate_default_inputs(en, yn)
+        Ex, Ey, en, yn = self._generate_default_inputs(Ex, Ey, en, yn)
 
         # Calculate steady-state concentrations using linear solve.
-        N_hat = self.N @ np.diag(self.v_star * en)
-        A = N_hat @ self.Ex
-        b = -N_hat @ (np.ones(self.nr) + self.Ey @ yn)
+        N_hat = self.Nr @ np.diag(self.v_star * en)
+        A = N_hat @ Ex
+        b = -N_hat @ (np.ones(self.nr) + Ey @ yn)
         xn = self.solve(A, b)
 
         # Plug concentrations into the flux equation.
-        vn = en * (np.ones(self.nr) + self.Ex @ xn + self.Ey @ yn)
+        vn = en * (np.ones(self.nr) + Ex @ xn + Ey @ yn)
 
         return xn, vn
 
@@ -115,7 +124,7 @@ class LinLogBase(object):
         yn = T.as_tensor_variable(yn)
 
         e_diag = en.dimshuffle(0, 1, 'x') * np.diag(self.v_star)
-        N_rep = self.N.reshape((-1, *self.N.shape)).repeat(n_exp, axis=0)
+        N_rep = self.Nr.reshape((-1, *self.Nr.shape)).repeat(n_exp, axis=0)
         N_hat = T.batched_dot(N_rep, e_diag)
 
         inner_v = Ey.dot(yn.T).T + np.ones(self.nr, dtype=floatX)
@@ -132,46 +141,94 @@ class LinLogBase(object):
 
         return xn, vn
 
-    def control_coef_fns(self, en=None, yn=None, solver=None):
-        """Construct theano functions to evaluate dxn/den and dvn/den at the
-        reference state as a function of the elasticity matrix.
 
-        en: np.ndarray
-            a NR vector of perturbed normalized enzyme activities
-        yn: np.ndarray
-            a NY vector of normalized external metabolite concentrations
-        solver: function
-            A function to solve Ax = b for a (possibly) singular A. Should
-            accept theano matrices A and b, and return a symbolic x.
-
-        Returns:
-
-        Cx, Cv: theano.functions
-            Functions which operate on Ex matrices to return the flux control
-            coefficients at the desired point.
+    def metabolite_control_coefficient(self, Ex=None, Ey=None,
+                                       en=None, yn=None):
+        """ Calculate the metabolite control coefficient matrix at the desired
+        perturbed state.
+        
+        Note: These don't agree with the older method (using the pseudoinverse
+        link matrix), so maybe don't trust MCC's all that much. FCC's agree though.
 
         """
-        en, yn = self._generate_default_inputs(en, yn)
 
-        Ex = T.dmatrix('Ex')
-        Ex.tag.test_value = self.Ex
-        en_t = T.dvector('e')
-        en_t.tag.test_value = en
+        Ex, Ey, en, yn = self._generate_default_inputs(Ex, Ey, en, yn)
 
-        N_hat = T.dot(self.N, T.diag(self.v_star * en_t))
-        A = N_hat.dot(Ex)
-        b = -N_hat.dot(self.Ey.dot(yn.T).T + np.ones(self.nr))
+        xn, vn = self.steady_state_mat(Ex, Ey, en, yn)
+  
+        # Calculate the elasticity matrix at the new steady-state
+        Ex_ss = np.diag(en / vn) @ Ex
 
-        xn = self.solve_theano(A, b)
-        vn = en_t * (np.ones(self.nr) + T.dot(Ex, xn))
+        Cx = (-self.L @ sp.linalg.solve(
+            self.Nr @ np.diag(vn * self.v_star) @ Ex_ss @ self.L,
+            self.Nr @ np.diag(vn * self.v_star)))
 
-        x_jac = T.jacobian(xn, en_t)
-        v_jac = T.jacobian(vn, en_t)
+        return Cx
 
-        Cx = theano.function([Ex, theano.In(en_t, 'en', en)], x_jac)
-        Cv = theano.function([Ex, theano.In(en_t, 'en', en)], v_jac)
 
-        return Cx, Cv
+    def flux_control_coefficient(self, Ex=None, Ey=None,
+                                 en=None, yn=None):
+        """ Calculate the metabolite control coefficient matrix at the desired
+        perturbed state """
+
+        Ex, Ey, en, yn = self._generate_default_inputs(Ex, Ey, en, yn)
+
+        xn, vn = self.steady_state_mat(Ex, Ey, en, yn)
+
+        # Calculate the elasticity matrix at the new steady-state
+        Ex_ss = np.diag(en / vn) @ Ex
+
+        Cx = self.metabolite_control_coefficient(Ex, Ey, en, yn)
+        Cv = np.eye(self.nr) + Ex_ss @ Cx
+
+        return Cv
+
+
+
+
+
+
+
+    # def control_coef_fns(self, en=None, yn=None, solver=None):
+    #     """Construct theano functions to evaluate dxn/den and dvn/den at the
+    #     reference state as a function of the elasticity matrix.
+    #
+    #     en: np.ndarray
+    #         a NR vector of perturbed normalized enzyme activities
+    #     yn: np.ndarray
+    #         a NY vector of normalized external metabolite concentrations
+    #     solver: function
+    #         A function to solve Ax = b for a (possibly) singular A. Should
+    #         accept theano matrices A and b, and return a symbolic x.
+    #
+    #     Returns:
+    #
+    #     Cx, Cv: theano.functions
+    #         Functions which operate on Ex matrices to return the flux control
+    #         coefficients at the desired point.
+    #
+    #     """
+    #     en, yn = self._generate_default_inputs(en, yn)
+    #
+    #     Ex = T.dmatrix('Ex')
+    #     Ex.tag.test_value = self.Ex
+    #     en_t = T.dvector('e')
+    #     en_t.tag.test_value = en
+    #
+    #     N_hat = T.dot(self.N, T.diag(self.v_star * en_t))
+    #     A = N_hat.dot(Ex)
+    #     b = -N_hat.dot(self.Ey.dot(yn.T).T + np.ones(self.nr))
+    #
+    #     xn = self.solve_theano(A, b)
+    #     vn = en_t * (np.ones(self.nr) + T.dot(Ex, xn))
+    #
+    #     x_jac = T.jacobian(xn, en_t)
+    #     v_jac = T.jacobian(vn, en_t)
+    #
+    #     Cx = theano.function([Ex, theano.In(en_t, 'en', en)], x_jac)
+    #     Cv = theano.function([Ex, theano.In(en_t, 'en', en)], v_jac)
+    #
+    #     return Cx, Cv
 
 
 class LinLogSymbolic2x2(LinLogBase):
@@ -200,7 +257,7 @@ class LinLogSymbolic2x2(LinLogBase):
 class LinLogLeastNorm(LinLogBase):
     """ Uses dgels to solve for the least-norm solution to the linear equation """
 
-    def __init__(self, N, Ex, Ey, v_star, driver='gels'):
+    def __init__(self, N, Ex, Ey, v_star, driver='gelsd'):
 
         self.driver = driver
         LinLogBase.__init__(self, N, Ex, Ey, v_star)
