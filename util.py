@@ -71,3 +71,32 @@ def compute_waldherr_reduction(N, tol=1E-8):
 
     return Nr, L, G
 
+
+def compute_smallbone_reduction(N, Ex, v_star, tol=1E-8):
+    """ Uses the SVD to calculate a reduced stoichiometric matrix, then
+    calculates a link matrix as described in Smallbone *et al* 2007.
+    
+    Returns:
+    Nr, L, P
+    
+    """
+    q, r, p = sp.linalg.qr((N @ np.diag(v_star) @ Ex).T,
+                           pivoting=True)
+
+    # Construct permutation matrix
+    P = np.zeros((len(p), len(p)), dtype=int)
+    for i, pi in enumerate(p):
+        P[i, pi] = 1
+
+    # Get the matrix rank from the r matrix
+    maxabs = np.max(np.abs(np.diag(r)))
+    maxdim = max(N.shape)
+    tol = maxabs * maxdim * np.MachAr().eps
+    # Find where the rows of r are all less than tol
+    rank = (~(np.abs(r) < tol).all(1)).sum()
+
+    Nr = P[:rank] @ N
+    L = N @ np.linalg.pinv(Nr)
+
+    return Nr, L, P
+

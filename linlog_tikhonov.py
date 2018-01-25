@@ -9,7 +9,7 @@ floatX = theano.config.floatX
 from emll.theano_utils import (RegularizedSolve, LeastSquaresSolve,
                                lstsq_wrapper)
 
-from emll.util import compute_waldherr_reduction
+from emll.util import compute_smallbone_reduction
 
 
 class LinLogBase(object):
@@ -41,7 +41,7 @@ class LinLogBase(object):
         self.ny = Ey.shape[1]
 
         self.N = N
-        self.Nr, self.L, self.G = compute_waldherr_reduction(N)
+        self.Nr, self.L, self.P = compute_smallbone_reduction(N, Ex, v_star)
 
         self.Ex = Ex
         self.Ey = Ey
@@ -254,6 +254,22 @@ class LinLogSymbolic2x2(LinLogBase):
         return T.dot(A_inv, bi).squeeze()
 
 
+class LinLogLinkMatrix(LinLogBase):
+
+    def solve(self, A, b):
+
+        A_linked = A @ self.L
+        z = sp.linalg.solve(A_linked, b)
+        return self.L @ z
+
+
+    def solve_theano(self, A, b):
+        
+        A_linked = T.dot(A, self.L)
+        z = theano.tensor.slinalg.solve(A_linked, b).squeeze()
+        return T.dot(self.L, z)
+
+
 class LinLogLeastNorm(LinLogBase):
     """ Uses dgels to solve for the least-norm solution to the linear equation """
 
@@ -262,12 +278,12 @@ class LinLogLeastNorm(LinLogBase):
         self.driver = driver
         LinLogBase.__init__(self, N, Ex, Ey, v_star)
 
-    def solve(self, A, bi):
-        return lstsq_wrapper(A, bi, self.driver)
+    def solve(self, A, b):
+        return lstsq_wrapper(A, b, self.driver)
 
-    def solve_theano(self, A, bi):
+    def solve_theano(self, A, b):
         rsolve_op = LeastSquaresSolve(driver=self.driver)
-        return rsolve_op(A, bi).squeeze()
+        return rsolve_op(A, b).squeeze()
 
 
 class LinLogTikhonov(LinLogBase):
