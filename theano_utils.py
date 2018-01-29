@@ -2,7 +2,7 @@ import numpy as np
 import scipy as sp
 
 from scipy.linalg.misc import LinAlgError
-from scipy.linalg.lapack import get_lapack_funcs
+from scipy.linalg.lapack import get_lapack_funcs, _compute_lwork
 
 from theano import tensor
 from theano.tensor.slinalg import Solve
@@ -129,8 +129,17 @@ def lstsq_wrapper(A, b, driver='gels'):
     """ Wrap sp.linalg.lstsq to also support the faster _gels solver """
 
     if driver == 'gels':
-        lapack_op, = get_lapack_funcs((driver,), (A, b))
-        c, x, info = lapack_op(A, b)
+
+        m, n = A.shape
+                
+        if m < n:
+            b2 = np.zeros(n, dtype=b.dtype)
+            b2[:m] = b
+
+        gls, glslw = get_lapack_funcs(('gels', 'gels_lwork'), (A, b2))
+
+        lwork = _compute_lwork(glslw, m, n, 1)
+        c, x, info = gls(A, b2, lwork=lwork)
 
         if info > 0:
             raise LinAlgError("singular matrix")
