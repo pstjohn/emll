@@ -97,7 +97,7 @@ class LinLogBase(object):
         return xn, vn
 
 
-    def steady_state_theano(self, Ex, Ey=None, en=None, yn=None):
+    def steady_state_theano(self, Ex, Ey=None, en=None, yn=None, method='scan'):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
 
@@ -131,9 +131,15 @@ class LinLogBase(object):
         As = T.dot(N_hat, Ex)
     
         bs = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
-        xn, _ = theano.scan(
-            lambda A, b: self.solve_theano(A, b),
-            sequences=[As, bs], strict=True)
+        if method == 'scan':
+            xn, _ = theano.scan(
+                lambda A, b: self.solve_theano(A, b),
+                sequences=[As, bs], strict=True)
+        else:
+            xn_list = [None] * n_exp
+            for i in range(n_exp):
+                xn_list[i] = self.solve_theano(As[i], bs[i])
+            xn = T.stack(xn_list)
 
         vn = en * (np.ones(self.nr) +
                    T.dot(Ex, xn.T).T +
@@ -311,7 +317,7 @@ class LinLogTikhonov(LinLogBase):
 class LinLogPinv(LinLogLeastNorm):
 
     def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
-                            solution_basis=None):
+                            solution_basis=None, method='scan'):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
 
@@ -357,9 +363,16 @@ class LinLogPinv(LinLogLeastNorm):
             x = x_ln + T.dot((T.eye(self.nm) - T.dot(A_pinv, A)), basis)
             return x
         
-        xn, _ = theano.scan(
-            lambda A, b, w: pinv_solution(A, b, basis=w),
-            sequences=[As, bs, solution_basis], strict=True)
+        if method == 'scan':
+            xn, _ = theano.scan(
+                lambda A, b, w: pinv_solution(A, b, basis=w),
+                sequences=[As, bs, solution_basis], strict=True)
+
+        else:
+            xn_list = [None] * n_exp
+            for i in range(n_exp):
+                xn_list[i] = pinv_solution(As[i], bs[i], solution_basis[i])
+            xn = T.stack(xn_list)
 
         vn = en * (np.ones(self.nr) +
                    T.dot(Ex, xn.T).T +
