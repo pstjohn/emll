@@ -306,3 +306,65 @@ class LinLogTikhonov(LinLogBase):
     def solve_theano(self, A, b):
         rsolve_op = RegularizedSolve(self.labmda_)
         return rsolve_op(A, b).squeeze()
+
+
+class LinLogPinv(LinLogLeastNorm):
+
+    def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
+                            solution_basis=None):
+        """Calculate a the steady-state transformed metabolite concentrations
+        and fluxes using theano.
+
+        Ex, Ey, en and yn should be theano matrices
+
+        solution_basis is a (n_exp, nr) theano matrix of the current solution
+        basis.
+
+        solver: function
+            A function to solve Ax = b for a (possibly) singular A. Should
+            accept theano matrices A and b, and return a symbolic x.
+        """
+
+        if Ey is None:
+            Ey = T.as_tensor_variable(Ey)
+
+        if isinstance(en, np.ndarray):
+            en = np.atleast_2d(en)
+            n_exp = en.shape[0]
+        else:
+            n_exp = en.tag.test_value.shape[0]
+
+        if isinstance(yn, np.ndarray):
+            yn = np.atleast_2d(yn)
+
+        en = T.as_tensor_variable(en)
+        yn = T.as_tensor_variable(yn)
+
+        e_diag = en.dimshuffle(0, 1, 'x') * np.diag(self.v_star)
+        N_rep = self.Nr.reshape((-1, *self.Nr.shape)).repeat(n_exp, axis=0)
+        N_hat = T.batched_dot(N_rep, e_diag)
+
+        inner_v = Ey.dot(yn.T).T + np.ones(self.nr, dtype=floatX)
+        As = T.dot(N_hat, Ex)
+    
+        bs = T.batched_dot(-N_hat, inner_v.dimshuffle(0, 1, 'x'))
+
+        # Here we have to redefine the entire function, since we have to pass
+        # an additional argument to solve.
+        def pinv_solution(A, b, basis=None):
+            A_pinv = T.nlinalg.pinv(A)
+            x_ln = T.dot(A_pinv, b).squeeze()
+            x = x_ln + T.dot((T.eye(self.nm) - T.dot(A_pinv, A)), basis)
+            return x
+        
+        xn, _ = theano.scan(
+            lambda A, b, w: pinv_solution(A, b, basis=w),
+            sequences=[As, bs, solution_basis], strict=True)
+
+        vn = en * (np.ones(self.nr) +
+                   T.dot(Ex, xn.T).T +
+                   T.dot(Ey, yn.T).T)
+
+        return xn, vn
+
+
