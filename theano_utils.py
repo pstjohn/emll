@@ -148,10 +148,7 @@ def lstsq_wrapper(A, b, driver='gels'):
         try:
             x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=True,
                                          lapack_driver=driver)
-        except Exception as ex:
-            print(A)
-            print(b)
-            raise ex
-
+        except Exception:
+            x = np.inf * np.ones(n)
 
     return x
