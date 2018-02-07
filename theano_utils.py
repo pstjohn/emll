@@ -145,7 +145,13 @@ def lstsq_wrapper(A, b, driver='gels'):
             raise LinAlgError("singular matrix")
 
     else:
-        x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=False,
-                                     lapack_driver=driver)
+        try:
+            x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=True,
+                                         lapack_driver=driver)
+        except Exception as ex:
+            print(A)
+            print(b)
+            raise ex
+
 
     return x
