@@ -279,7 +279,7 @@ class LinLogLinkMatrix(LinLogBase):
 class LinLogLeastNorm(LinLogBase):
     """ Uses dgels to solve for the least-norm solution to the linear equation """
 
-    def __init__(self, N, Ex, Ey, v_star, driver='gelsd'):
+    def __init__(self, N, Ex, Ey, v_star, driver='gelsy'):
 
         self.driver = driver
         LinLogBase.__init__(self, N, Ex, Ey, v_star)
@@ -317,7 +317,7 @@ class LinLogTikhonov(LinLogBase):
 class LinLogPinv(LinLogLeastNorm):
 
     def steady_state_theano(self, Ex, Ey=None, en=None, yn=None,
-                            solution_basis=None, method='scan'):
+                            solution_basis=None, method='scan', driver='gelsy'):
         """Calculate a the steady-state transformed metabolite concentrations
         and fluxes using theano.
 
