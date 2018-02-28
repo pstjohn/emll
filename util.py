@@ -102,3 +102,34 @@ def compute_smallbone_reduction(N, Ex, v_star, tol=1E-8):
 
     return Nr, L, P
 
+
+import theano.tensor as T
+import pymc3 as pm
+
+def initialize_elasticity(N, name=None, b=0.1):
+    
+    if name is None:
+        name = 'ex'
+    
+    e_guess = -N.T
+
+    e_flat = e_guess.flatten()
+    nonzero_inds = np.where(e_flat != 0)[0]
+    zero_inds = np.where(e_flat == 0)[0]
+    
+    e_sign = np.sign(e_flat[nonzero_inds])
+    flat_indexer = np.hstack([nonzero_inds, zero_inds]).argsort()
+    num_zero = len(zero_inds)
+    num_nonzero = len(nonzero_inds)
+        
+    e_kin_entries = pm.HalfNormal(name + '_kinetic_entries', sd=1, shape=num_nonzero,
+                                  testval=np.abs(np.random.randn(num_nonzero)))
+    
+    e_cap_entries = pm.Laplace(name + '_capacity_entries', mu=0, b=b, shape=num_zero,
+                               testval=b * np.random.randn(num_zero))
+    
+    flat_e_entries = T.concatenate([e_kin_entries * e_sign, e_cap_entries])
+        
+    E = flat_e_entries[flat_indexer].reshape(N.T.shape)
+    
+    return E
