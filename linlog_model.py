@@ -287,6 +287,29 @@ class LinLogLeastNorm(LinLogBase):
     def solve(self, A, b):
         return lstsq_wrapper(A, b, self.driver)
 
+    def metabolite_control_coefficient(self, Ex=None, Ey=None,
+                                       en=None, yn=None):
+        """ Calculate the metabolite control coefficient matrix at the desired
+        perturbed state.
+        
+        Note: Here I use a lstsq solution so the mccs/fccs agree with the
+        steady_state_mat method.
+
+        """
+
+        Ex, Ey, en, yn = self._generate_default_inputs(Ex, Ey, en, yn)
+
+        xn, vn = self.steady_state_mat(Ex, Ey, en, yn)
+  
+        # Calculate the elasticity matrix at the new steady-state
+        Ex_ss = np.diag(en / vn) @ Ex
+
+        Cx = -lstsq_wrapper(
+            self.Nr @ np.diag(vn * self.v_star) @ Ex_ss,
+            self.Nr @ np.diag(vn * self.v_star), self.driver)
+
+        return Cx
+
     def solve_theano(self, A, b):
         rsolve_op = LeastSquaresSolve(driver=self.driver)
         return rsolve_op(A, b).squeeze()
