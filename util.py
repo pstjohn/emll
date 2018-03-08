@@ -106,7 +106,34 @@ def compute_smallbone_reduction(N, Ex, v_star, tol=1E-8):
 import theano.tensor as T
 import pymc3 as pm
 
-def initialize_elasticity(N, name=None, b=0.1):
+def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1):
+    """ Initialize the elasticity matrix, adjusting priors to account for
+    reaction stoichiometry. Uses `SkewNormal(mu=0, sd=sd, alpha=sign*alpha)`
+    for reactions in which a metabolite participates, and a `Laplace(mu=0,
+    b=b)` for off-target regulation. 
+    
+    Parameters
+    ==========
+
+    N : np.ndarray
+        A (nm x nr) stoichiometric matrix for the given reactions and metabolites
+    name : string
+        A name to be used for the returned pymc3 probabilities
+    b : float
+        Hyperprior to use for the Laplace distributions on regulatory interactions
+    alpha : float
+        Hyperprior to use for the SkewNormal distributions. As alpha ->
+        infinity, these priors begin to resemble half-normal distributions.
+    sd : float
+        Scale parameter for the SkewNormal distribution.
+
+    Returns
+    =======
+
+    E : pymc3 matrix
+        constructed elasticity matrix
+
+    """
     
     if name is None:
         name = 'ex'
