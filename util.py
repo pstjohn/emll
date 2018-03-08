@@ -149,8 +149,9 @@ def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1):
     num_zero = len(zero_inds)
     num_nonzero = len(nonzero_inds)
         
-    e_kin_entries = pm.HalfNormal(name + '_kinetic_entries', sd=1, shape=num_nonzero,
-                                  testval=np.abs(np.random.randn(num_nonzero)))
+    e_kin_entries = pm.SkewNormal(
+        name + '_kinetic_entries', sd=sd, alpha=alpha, shape=num_nonzero,
+        testval=np.abs(np.random.randn(num_nonzero)))
     
     e_cap_entries = pm.Laplace(name + '_capacity_entries', mu=0, b=b, shape=num_zero,
                                testval=b * np.random.randn(num_zero))
