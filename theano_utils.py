@@ -148,4 +148,6 @@ def lstsq_wrapper(A, b, driver='gels'):
         x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=True,
                                      lapack_driver=driver)
 
+    assert np.isfinite(x).all()
+
     return x
