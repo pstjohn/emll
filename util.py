@@ -105,12 +105,18 @@ def compute_smallbone_reduction(N, Ex, v_star, tol=1E-8):
 
 import theano.tensor as T
 import pymc3 as pm
+from itertools import product
 
-def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1):
+def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1,
+                          m_compartments=None, r_compartments=None):
     """ Initialize the elasticity matrix, adjusting priors to account for
     reaction stoichiometry. Uses `SkewNormal(mu=0, sd=sd, alpha=sign*alpha)`
     for reactions in which a metabolite participates, and a `Laplace(mu=0,
     b=b)` for off-target regulation. 
+
+    Also accepts compartments for metabolites and reactions. If given,
+    metabolites are only given regulatory priors if they come from the same
+    compartment as the reaction.
     
     Parameters
     ==========
@@ -126,6 +132,11 @@ def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1):
         infinity, these priors begin to resemble half-normal distributions.
     sd : float
         Scale parameter for the SkewNormal distribution.
+    m_compartments : list
+        Compartments of metabolites. If None, use a densely connected
+        regulatory prior.
+    r_compartments : list
+        Compartments of reactions
 
     Returns
     =======
@@ -137,26 +148,55 @@ def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1):
     
     if name is None:
         name = 'ex'
-    
+
+    if m_compartments is not None:
+        assert r_compartments is not None, \
+            "reaction and metabolite compartments must both be given"
+
+        regulation_array = np.array(
+            [a == b for a, b in product(m_compartments, r_compartments)
+             ])
+    else:
+        # If compartment information is not given, assume all metabolites and
+        # reactions are in the same compartment
+        regulation_array = np.array([True] * (N.shape[0] * N.shape[1]))
+
+
+    # Guess an elasticity matrix from the smallbone approximation
     e_guess = -N.T
 
+    # Find where the guessed E matrix has zero entries
     e_flat = e_guess.flatten()
     nonzero_inds = np.where(e_flat != 0)[0]
-    zero_inds = np.where(e_flat == 0)[0]
-    
+    offtarget_inds = np.where(e_flat == 0)[0]
     e_sign = np.sign(e_flat[nonzero_inds])
-    flat_indexer = np.hstack([nonzero_inds, zero_inds]).argsort()
-    num_zero = len(zero_inds)
+
+    # For the zero entries, determine whether regulation is feasible based on
+    # the compartment comparison
+    offtarget_reg = regulation_array[offtarget_inds]
+    reg_inds = offtarget_inds[offtarget_reg]
+    zero_inds = offtarget_inds[~offtarget_reg]
+
     num_nonzero = len(nonzero_inds)
+    num_regulations = len(reg_inds)
+    num_zeros = len(zero_inds)
+    
+    # Get an index vector that 'unrolls' a stacked [kinetic, capacity, zero]
+    # vector into the correct order
+    flat_indexer = np.hstack([nonzero_inds, reg_inds, zero_inds]).argsort()
         
     e_kin_entries = pm.SkewNormal(
         name + '_kinetic_entries', sd=sd, alpha=alpha, shape=num_nonzero,
         testval=np.abs(np.random.randn(num_nonzero)))
     
-    e_cap_entries = pm.Laplace(name + '_capacity_entries', mu=0, b=b, shape=num_zero,
-                               testval=b * np.random.randn(num_zero))
+    e_cap_entries = pm.Laplace(
+        name + '_capacity_entries', mu=0, b=b, shape=num_regulations,
+        testval=b * np.random.randn(num_regulations))
     
-    flat_e_entries = T.concatenate([e_kin_entries * e_sign, e_cap_entries])
+    flat_e_entries = T.concatenate(
+        [e_kin_entries * e_sign,  # kinetic entries
+         e_cap_entries,           # capacity entries
+         T.zeros(num_zeros)])     # different compartments
         
     E = flat_e_entries[flat_indexer].reshape(N.T.shape)
     
