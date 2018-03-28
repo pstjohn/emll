@@ -14,17 +14,7 @@ class SymPosSolve(Solve):
 
     def perform(self, node, inputs, output_storage):
         A, b = inputs
-    
-        posv, = get_lapack_funcs(('posv',), (A, b))
-        c, rval, info = posv(A, b, lower=False,
-                             overwrite_a=False,
-                             overwrite_b=False)
-    
-        if info > 0:
-            print("singular matrix")
-            # raise LinAlgError("singular matrix")
-            rval = np.zeros(len(b))
-
+        rval = sympos_solve_wrapper(A, b)
         output_storage[0][0] = rval
 
 
@@ -53,14 +43,7 @@ class RegularizedSolve(Solve):
         A_hat = A.T @ A + self.lambda_ * np.eye(A.shape[1])
         b_hat = A.T @ b
 
-        posv, = get_lapack_funcs(('posv',), (A_hat, b_hat))
-        c, rval, info = posv(A_hat, b_hat, lower=False,
-                             overwrite_a=False,
-                             overwrite_b=False)
-    
-        if info > 0:
-            raise LinAlgError("singular matrix")
-
+        rval = sympos_solve_wrapper(A_hat, b_hat)
         output_storage[0][0] = rval
 
     def L_op(self, inputs, outputs, output_gradients):
@@ -125,6 +108,20 @@ class LeastSquaresSolve(Solve):
 
         A_bar = force_outer(b - A.dot(c), x) - force_outer(b_bar, c)
         return [A_bar, b_bar]
+
+
+def sympos_solve_wrapper(A, b):
+        posv, = get_lapack_funcs(('posv',), (A, b))
+        c, rval, info = posv(A, b, lower=False,
+                             overwrite_a=False,
+                             overwrite_b=False)
+    
+        if info > 0:
+            print("singular matrix")
+            # raise LinAlgError("singular matrix")
+            rval = np.zeros(len(b))
+
+        return rval
 
 
 def lstsq_wrapper(A, b, driver='gelsy'):
