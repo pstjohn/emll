@@ -1,0 +1,76 @@
+import numpy as np
+import pytest
+
+from .linlog_model import LinLogLeastNorm, LinLogLinkMatrix, LinLogTikhonov
+from .util import create_elasticity_matrix, create_Ey_matrix
+
+from test_models import models
+
+import theano
+import theano.tensor as tt
+theano.config.compute_test_value = 'ignore' 
+tt.config.optimizer = 'fast_compile'
+
+
+@pytest.fixture(params=['teusink', 'mendes', 'textbook',
+                        'greene_small', 'greene_large', 'contador'])
+def cobra_model(request):
+    model, N, v_star = models[request.param]()
+    Ex = create_elasticity_matrix(model)
+    Ey = create_Ey_matrix(model)
+    return model, N, Ex, Ey, v_star
+
+
+@pytest.fixture()
+def linlog_least_norm(cobra_model):
+     model, N, Ex, Ey, v_star = cobra_model
+     return LinLogLeastNorm(N, Ex, Ey, v_star)
+
+
+@pytest.fixture()
+def linlog_tikhonov(cobra_model):
+     model, N, Ex, Ey, v_star = cobra_model
+     return LinLogTikhonov(N, Ex, Ey, v_star, lambda_=1E-6)
+
+
+@pytest.fixture()
+def linlog_link(cobra_model):
+     model, N, Ex, Ey, v_star = cobra_model
+     return LinLogLinkMatrix(N, Ex, Ey, v_star)
+
+@pytest.fixture(params=[linlog_least_norm, linlog_tikhonov, linlog_link])
+def linlog_model(request, cobra_model):
+    return request.param(cobra_model)
+
+
+def test_steady_state(linlog_model):
+    ll = linlog_model
+
+    # Fake up some experiments
+    n_exp = 1
+
+    e_hat_np = 2**(0.5*np.random.randn(n_exp, ll.nr))
+    y_hat_np = 2**(0.5*np.random.randn(n_exp, ll.ny))
+
+    e_hat_t = tt.dmatrix('en')
+    e_hat_t.tag.test_value = e_hat_np
+
+    y_hat_t = tt.dmatrix('yn')
+    y_hat_t.tag.test_value = y_hat_np
+
+    Ex_t = tt.dmatrix('Ex')
+    Ex_t.tag.test_value = ll.Ex
+
+    Ey_t = tt.dmatrix('Ey')
+    Ey_t.tag.test_value = ll.Ey
+
+    chi_ss, v_hat_ss = ll.steady_state_theano(Ex_t, Ey_t, e_hat_t, y_hat_t)
+
+    io_fun = theano.function([Ex_t, Ey_t, e_hat_t, y_hat_t], 
+                             [chi_ss, v_hat_ss])
+    x_theano_test, v_theano_test = io_fun(ll.Ex, ll.Ey, e_hat_np, y_hat_np)
+
+    x_np, v_np = ll.steady_state_mat(ll.Ex, ll.Ey, e_hat_np[0], y_hat_np[0])
+
+    np.testing.assert_array_almost_equal(x_np, x_theano_test.flatten())
+    np.testing.assert_array_almost_equal(v_np, v_theano_test.flatten())
