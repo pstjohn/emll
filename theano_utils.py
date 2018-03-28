@@ -2,7 +2,7 @@ import numpy as np
 import scipy as sp
 
 from scipy.linalg.misc import LinAlgError
-from scipy.linalg.lapack import get_lapack_funcs, _compute_lwork
+from scipy.linalg.lapack import get_lapack_funcs
 
 from theano import tensor
 from theano.tensor.slinalg import Solve
@@ -71,7 +71,7 @@ class RegularizedSolve(Solve):
         c = outputs[0]
         c_bar = output_gradients[0]
 
-        A_hat = A.T.dot(A) + self.lambda_ * tensor.eye(*A.shape)
+        A_hat = A.T.dot(A) + self.lambda_ * tensor.eye(A.shape[1])
         x = sympos_solve(A_hat, c_bar)
 
         b_bar = A.dot(x)
@@ -91,7 +91,7 @@ class LeastSquaresSolve(Solve):
 
     __props__ = ('driver', *Solve.__props__)
 
-    def __init__(self, driver='gels'):
+    def __init__(self, driver='gelsy'):
 
         self.driver = driver
         Solve.__init__(self)
@@ -125,28 +125,27 @@ class LeastSquaresSolve(Solve):
         return [A_bar, b_bar]
 
 
-def lstsq_wrapper(A, b, driver='gels'):
+def lstsq_wrapper(A, b, driver='gelsy'):
     """ Wrap sp.linalg.lstsq to also support the faster _gels solver """
 
-    if driver == 'gels':
-
-        m, n = A.shape
-                
-        if m < n:
-            b2 = np.zeros(n, dtype=b.dtype)
-            b2[:m] = b
-
-        gls, glslw = get_lapack_funcs(('gels', 'gels_lwork'), (A, b2))
-
-        lwork = _compute_lwork(glslw, m, n, 1)
-        c, x, info = gls(A, b2, lwork=lwork)
-
-        if info > 0:
-            raise LinAlgError("singular matrix")
-
-    else:
-        x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=True,
-                                     lapack_driver=driver)
+    # if driver == 'gels':
+    #
+    #     m, n = A.shape
+    #             
+    #     if m < n:
+    #         b2 = np.zeros(n, dtype=b.dtype)
+    #         b2[:m] = b
+    #
+    #     gls, glslw = get_lapack_funcs(('gels', 'gels_lwork'), (A, b2))
+    #
+    #     lwork = _compute_lwork(glslw, m, n, 1)
+    #     c, x, info = gls(A, b2, lwork=lwork)
+    #
+    #     if info > 0:
+    #         raise LinAlgError("singular matrix")
+    #
+    # else:
+    x, _, _, _ = sp.linalg.lstsq(A, b, check_finite=True, lapack_driver=driver)
 
     assert np.isfinite(x).all()
 
