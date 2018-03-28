@@ -333,7 +333,7 @@ class LinLogTikhonov(LinLogBase):
         return sp.linalg.cho_solve(cho, b_hat)
 
     def solve_theano(self, A, b):
-        rsolve_op = RegularizedSolve(self.labmda_)
+        rsolve_op = RegularizedSolve(self.lambda_)
         return rsolve_op(A, b).squeeze()
 
 
