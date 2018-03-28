@@ -21,7 +21,9 @@ class SymPosSolve(Solve):
                              overwrite_b=False)
     
         if info > 0:
-            raise LinAlgError("singular matrix")
+            print("singular matrix")
+            # raise LinAlgError("singular matrix")
+            rval = np.zeros(len(b))
 
         output_storage[0][0] = rval
 
