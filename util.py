@@ -185,9 +185,14 @@ def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1,
     # vector into the correct order
     flat_indexer = np.hstack([nonzero_inds, reg_inds, zero_inds]).argsort()
         
-    e_kin_entries = pm.SkewNormal(
-        name + '_kinetic_entries', sd=sd, alpha=alpha, shape=num_nonzero,
-        testval=np.abs(np.random.randn(num_nonzero)))
+    if alpha is not None:
+        e_kin_entries = pm.SkewNormal(
+            name + '_kinetic_entries', sd=sd, alpha=alpha, shape=num_nonzero,
+            testval= 0.1 + np.abs(np.random.randn(num_nonzero)))
+    else:
+        e_kin_entries = pm.HalfNormal(
+            name + '_kinetic_entries', sd=sd, shape=num_nonzero,
+            testval= 0.1 + np.abs(np.random.randn(num_nonzero)))
     
     e_cap_entries = pm.Laplace(
         name + '_capacity_entries', mu=0, b=b, shape=num_regulations,

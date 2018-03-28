@@ -119,7 +119,7 @@ def sympos_solve_wrapper(A, b):
         if info > 0:
             print("singular matrix")
             # raise LinAlgError("singular matrix")
-            rval = np.zeros(len(b))
+            rval = np.zeros(len(rval))
 
         return rval
 
