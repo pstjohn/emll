@@ -48,7 +48,7 @@ class RegularizedSolve(Solve):
     def perform(self, node, inputs, output_storage):
         A, b = inputs
 
-        A_hat = A.T @ A + self.lambda_ * np.eye(*A.shape)
+        A_hat = A.T @ A + self.lambda_ * np.eye(A.shape[1])
         b_hat = A.T @ b
 
         posv, = get_lapack_funcs(('posv',), (A_hat, b_hat))
