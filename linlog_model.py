@@ -326,7 +326,7 @@ class LinLogTikhonov(LinLogBase):
         LinLogBase.__init__(self, N, Ex, Ey, v_star)
 
     def solve(self, A, b):
-        A_hat = A.T @ A + self.lambda_ * np.eye(*A.shape)
+        A_hat = A.T @ A + self.lambda_ * np.eye(A.shape[1])
         b_hat = A.T @ b
 
         cho = sp.linalg.cho_factor(A_hat)
