@@ -105,7 +105,6 @@ def compute_smallbone_reduction(N, Ex, v_star, tol=1E-8):
 
 import theano.tensor as T
 import pymc3 as pm
-from itertools import product
 
 def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1,
                           m_compartments=None, r_compartments=None):
@@ -154,8 +153,9 @@ def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1,
             "reaction and metabolite compartments must both be given"
 
         regulation_array = np.array(
-            [a == b for a, b in product(m_compartments, r_compartments)
-             ])
+            [[a == b for a in m_compartments]
+              for b in r_compartments]).flatten()
+        
     else:
         # If compartment information is not given, assume all metabolites and
         # reactions are in the same compartment
