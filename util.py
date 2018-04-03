@@ -42,7 +42,7 @@ def create_Ey_matrix(model):
     for the unbalanced exchange reactions, and is probably best handled
     manually for now. """
 
-    boundary_indexes = [model.reactions.index(r) for r in model.media.keys()]
+    boundary_indexes = [model.reactions.index(r) for r in model.medium.keys()]
     boundary_directions = [1 if r.products else -1 for r in
                            model.reactions.query(
                                lambda x: x.boundary, None)]
