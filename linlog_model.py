@@ -165,9 +165,9 @@ class LinLogBase(object):
         # Calculate the elasticity matrix at the new steady-state
         Ex_ss = np.diag(en / vn) @ Ex
 
-        Cx = (-self.L @ sp.linalg.solve(
-            self.Nr @ np.diag(vn * self.v_star) @ Ex_ss @ self.L,
-            self.Nr @ np.diag(vn * self.v_star)))
+        Cx = -self.solve(
+            self.Nr @ np.diag(vn * self.v_star) @ Ex_ss,
+            self.Nr @ np.diag(vn * self.v_star))
 
         return Cx
 
@@ -188,53 +188,6 @@ class LinLogBase(object):
         Cv = np.eye(self.nr) + Ex_ss @ Cx
 
         return Cv
-
-
-
-
-
-
-
-    # def control_coef_fns(self, en=None, yn=None, solver=None):
-    #     """Construct theano functions to evaluate dxn/den and dvn/den at the
-    #     reference state as a function of the elasticity matrix.
-    #
-    #     en: np.ndarray
-    #         a NR vector of perturbed normalized enzyme activities
-    #     yn: np.ndarray
-    #         a NY vector of normalized external metabolite concentrations
-    #     solver: function
-    #         A function to solve Ax = b for a (possibly) singular A. Should
-    #         accept theano matrices A and b, and return a symbolic x.
-    #
-    #     Returns:
-    #
-    #     Cx, Cv: theano.functions
-    #         Functions which operate on Ex matrices to return the flux control
-    #         coefficients at the desired point.
-    #
-    #     """
-    #     en, yn = self._generate_default_inputs(en, yn)
-    #
-    #     Ex = T.dmatrix('Ex')
-    #     Ex.tag.test_value = self.Ex
-    #     en_t = T.dvector('e')
-    #     en_t.tag.test_value = en
-    #
-    #     N_hat = T.dot(self.N, T.diag(self.v_star * en_t))
-    #     A = N_hat.dot(Ex)
-    #     b = -N_hat.dot(self.Ey.dot(yn.T).T + np.ones(self.nr))
-    #
-    #     xn = self.solve_theano(A, b)
-    #     vn = en_t * (np.ones(self.nr) + T.dot(Ex, xn))
-    #
-    #     x_jac = T.jacobian(xn, en_t)
-    #     v_jac = T.jacobian(vn, en_t)
-    #
-    #     Cx = theano.function([Ex, theano.In(en_t, 'en', en)], x_jac)
-    #     Cv = theano.function([Ex, theano.In(en_t, 'en', en)], v_jac)
-    #
-    #     return Cx, Cv
 
 
 class LinLogSymbolic2x2(LinLogBase):
@@ -286,29 +239,6 @@ class LinLogLeastNorm(LinLogBase):
 
     def solve(self, A, b):
         return lstsq_wrapper(A, b, self.driver)
-
-    def metabolite_control_coefficient(self, Ex=None, Ey=None,
-                                       en=None, yn=None):
-        """ Calculate the metabolite control coefficient matrix at the desired
-        perturbed state.
-        
-        Note: Here I use a lstsq solution so the mccs/fccs agree with the
-        steady_state_mat method.
-
-        """
-
-        Ex, Ey, en, yn = self._generate_default_inputs(Ex, Ey, en, yn)
-
-        xn, vn = self.steady_state_mat(Ex, Ey, en, yn)
-  
-        # Calculate the elasticity matrix at the new steady-state
-        Ex_ss = np.diag(en / vn) @ Ex
-
-        Cx = -lstsq_wrapper(
-            self.Nr @ np.diag(vn * self.v_star) @ Ex_ss,
-            self.Nr @ np.diag(vn * self.v_star), self.driver)
-
-        return Cx
 
     def solve_theano(self, A, b):
         rsolve_op = LeastSquaresSolve(driver=self.driver)

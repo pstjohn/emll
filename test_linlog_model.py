@@ -72,5 +72,25 @@ def test_steady_state(linlog_model):
 
     x_np, v_np = ll.steady_state_mat(ll.Ex, ll.Ey, e_hat_np[0], y_hat_np[0])
 
-    np.testing.assert_array_almost_equal(x_np, x_theano_test.flatten())
-    np.testing.assert_array_almost_equal(v_np, v_theano_test.flatten())
+    np.testing.assert_allclose(x_np, x_theano_test.flatten(), atol=1E-5, rtol=1E-5)
+    np.testing.assert_allclose(v_np, v_theano_test.flatten(), atol=1E-5, rtol=1E-5)
+
+
+def test_control_coeff(linlog_model):
+
+    ll = linlog_model
+
+    fd = 1E-5
+    es = np.ones((ll.nr, ll.nr)) + fd * np.eye(ll.nr)
+
+    cx_fd = np.zeros((ll.nm, ll.nr))
+    cv_fd = np.zeros((ll.nr, ll.nr))
+    for i, ei in enumerate(es):
+        xni, vni = ll.steady_state_mat(en=ei)
+        cx_fd[:, i] = xni / fd
+        cv_fd[:, i] = (vni - 1) / fd
+
+    np.testing.assert_allclose(
+        cx_fd, ll.metabolite_control_coefficient(en=ei), atol=1E-5, rtol=1E-4)
+    np.testing.assert_allclose(
+        cv_fd, ll.flux_control_coefficient(en=ei), atol=1E-5, rtol=1E-4)
