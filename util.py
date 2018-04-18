@@ -153,7 +153,7 @@ def initialize_elasticity(N, name=None, b=0.01, alpha=5, sd=1,
             "reaction and metabolite compartments must both be given"
 
         regulation_array = np.array(
-            [[a == b for a in m_compartments]
+            [[a in b for a in m_compartments]
               for b in r_compartments]).flatten()
         
     else:
