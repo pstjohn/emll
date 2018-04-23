@@ -113,4 +113,8 @@ def test_reduction_methods(cobra_model):
     np.testing.assert_allclose(x2, x3)
     np.testing.assert_allclose(v1, v2)
     np.testing.assert_allclose(v2, v3)
+
+    np.testing.assert_allclose(ll1.Nr @ (v1 * v_star), 0., atol=1E-10)
+    np.testing.assert_allclose(ll2.Nr @ (v2 * v_star), 0., atol=1E-10)
+    np.testing.assert_allclose(ll3.Nr @ (v3 * v_star), 0., atol=1E-10)
     
