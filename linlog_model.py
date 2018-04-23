@@ -9,12 +9,12 @@ floatX = theano.config.floatX
 from emll.theano_utils import (RegularizedSolve, LeastSquaresSolve,
                                lstsq_wrapper)
 
-from emll.util import compute_smallbone_reduction
+from emll.util import compute_smallbone_reduction, compute_waldherr_reduction
 
 
 class LinLogBase(object):
 
-    def __init__(self, N, Ex, Ey, v_star):
+    def __init__(self, N, Ex, Ey, v_star, reduction_method='smallbone'):
         """A class to perform the linear algebra underlying the 
         decomposition method.
 
@@ -35,13 +35,25 @@ class LinLogBase(object):
             solution of the model.
         lam : float
             The $\lambda$ value to use for tikhonov regularization
+        reduction_method : 'waldherr', 'smallbone', or None
+            Type of stoichiometric decomposition to perform (default
+            'smallbone')
+
         
         """
         self.nm, self.nr = N.shape
         self.ny = Ey.shape[1]
 
         self.N = N
-        self.Nr, self.L, self.P = compute_smallbone_reduction(N, Ex, v_star)
+
+        if reduction_method is 'smallbone':
+            self.Nr, self.L, _ = compute_smallbone_reduction(N, Ex, v_star)
+
+        elif reduction_method is 'waldherr':
+            self.Nr, _, _ = compute_waldherr_reduction(N)
+
+        elif reduction_method is None:
+            self.Nr = N
 
         self.Ex = Ex
         self.Ey = Ey
@@ -232,10 +244,10 @@ class LinLogLinkMatrix(LinLogBase):
 class LinLogLeastNorm(LinLogBase):
     """ Uses dgels to solve for the least-norm solution to the linear equation """
 
-    def __init__(self, N, Ex, Ey, v_star, driver='gelsy'):
+    def __init__(self, N, Ex, Ey, v_star, driver='gelsy', **kwargs):
 
         self.driver = driver
-        LinLogBase.__init__(self, N, Ex, Ey, v_star)
+        LinLogBase.__init__(self, N, Ex, Ey, v_star, **kwargs)
 
     def solve(self, A, b):
         return lstsq_wrapper(A, b, self.driver)
@@ -248,12 +260,12 @@ class LinLogLeastNorm(LinLogBase):
 class LinLogTikhonov(LinLogBase):
     """ Adds regularization to the linear solve, assumes A matrix is positive semi-definite """
 
-    def __init__(self, N, Ex, Ey, v_star, lambda_=None):
+    def __init__(self, N, Ex, Ey, v_star, lambda_=None, **kwargs):
 
         self.lambda_ = lambda_ if lambda_ else 0
         assert self.lambda_ >= 0, "lambda must be positive"
 
-        LinLogBase.__init__(self, N, Ex, Ey, v_star)
+        LinLogBase.__init__(self, N, Ex, Ey, v_star, **kwargs)
 
     def solve(self, A, b):
         A_hat = A.T @ A + self.lambda_ * np.eye(A.shape[1])

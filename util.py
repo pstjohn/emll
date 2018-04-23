@@ -65,7 +65,13 @@ def compute_waldherr_reduction(N, tol=1E-8):
     
     """
     u, e, vh = sp.linalg.svd(N)
+
     E = sp.linalg.diagsvd(e, *N.shape)
+
+    if len(e) is not E.shape[0]:
+        e_new = np.zeros(N.shape[0])
+        e_new[:len(e)] = e
+        e = e_new
 
     Nr = (E[e > tol] @ vh)
     L = u[:, e > tol]

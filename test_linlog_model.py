@@ -20,7 +20,6 @@ def cobra_model(request):
     Ey = create_Ey_matrix(model)
     return model, N, Ex, Ey, v_star
 
-
 @pytest.fixture()
 def linlog_least_norm(cobra_model):
      model, N, Ex, Ey, v_star = cobra_model
@@ -73,7 +72,7 @@ def test_steady_state(linlog_model):
     x_np, v_np = ll.steady_state_mat(ll.Ex, ll.Ey, e_hat_np[0], y_hat_np[0])
 
     np.testing.assert_allclose(x_np, x_theano_test.flatten(), atol=1E-5, rtol=1E-5)
-    np.testing.assert_allclose(v_np, v_theano_test.flatten(), atol=1E-5, rtol=1E-5)
+    np.testing.assert_allclose(v_np, v_theano_test.flatten(), atol=1e-5, rtol=1e-5)
 
 
 def test_control_coeff(linlog_model):
@@ -94,3 +93,24 @@ def test_control_coeff(linlog_model):
         cx_fd, ll.metabolite_control_coefficient(en=ei), atol=1E-5, rtol=1E-4)
     np.testing.assert_allclose(
         cv_fd, ll.flux_control_coefficient(en=ei), atol=1E-5, rtol=1E-4)
+
+
+def test_reduction_methods(cobra_model):
+    model, N, Ex, Ey, v_star = cobra_model
+    ll1 = LinLogLeastNorm(N, Ex, Ey, v_star, reduction_method='smallbone')
+    ll2 = LinLogLeastNorm(N, Ex, Ey, v_star, reduction_method='waldherr')
+    ll3 = LinLogLeastNorm(N, Ex, Ey, v_star, reduction_method=None)
+
+    n_exp = 1
+    e_hat_np = 2**(0.5*np.random.randn(n_exp, ll1.nr))
+    y_hat_np = 2**(0.5*np.random.randn(n_exp, ll1.ny))
+
+    x1, v1 = ll1.steady_state_mat(en=e_hat_np[0], yn=y_hat_np[0])
+    x2, v2 = ll2.steady_state_mat(en=e_hat_np[0], yn=y_hat_np[0])
+    x3, v3 = ll3.steady_state_mat(en=e_hat_np[0], yn=y_hat_np[0])
+
+    np.testing.assert_allclose(x1, x2)
+    np.testing.assert_allclose(x2, x3)
+    np.testing.assert_allclose(v1, v2)
+    np.testing.assert_allclose(v2, v3)
+    
