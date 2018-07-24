@@ -1,4 +1,4 @@
-# Linlog modeling code
+# Ensemble Modeling with Linear-Logarithmic Kinetics
 
 Some very rough, in-progress work on using linlog kinetics (Wu et al., *Eur. J. Biochem.* **271**, 3348–3359 (2004)) with cobrapy models.
 
