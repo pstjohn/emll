@@ -18,7 +18,6 @@ def get_N_v(model):
             N[:, i] *= -1
             v_star[i] *= -1
 
-
     assert np.all(v_star >= 0)
 
     return N, v_star
