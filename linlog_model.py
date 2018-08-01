@@ -1,3 +1,5 @@
+import warnings
+
 import numpy as np
 import scipy as sp
 
@@ -57,6 +59,12 @@ class LinLogBase(object):
 
         self.Ex = Ex
         self.Ey = Ey
+
+        assert np.all(v_star >= 0), "reference fluxes should be nonnegative"
+        if np.any(np.isclose(v_star, 0)):
+            warnings.warn(
+                "v_star contains zero entries, this will cause problems")
+
         self.v_star = v_star
 
         assert Ex.shape == (self.nr, self.nm), "Ex is the wrong shape"

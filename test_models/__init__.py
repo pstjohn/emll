@@ -9,8 +9,18 @@ currdir = os.path.dirname(os.path.abspath(__file__))
 def get_N_v(model):
 
     solution = model.optimize()
+
     N = cobra.util.create_stoichiometric_matrix(model)
     v_star = solution.fluxes.values
+
+    for i, v in enumerate(v_star):
+        if v < 0:
+            N[:, i] *= -1
+            v_star[i] *= -1
+
+
+    assert np.all(v_star >= 0)
+
     return N, v_star
 
 
