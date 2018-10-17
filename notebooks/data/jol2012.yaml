@@ -1,0 +1,5258 @@
+!!omap
+- metabolites:
+  - !!omap
+    - id: 10fthf_c
+    - name: 10-Formyltetrahydrofolate
+    - compartment: c
+    - formula: C20H21N7O7
+  - !!omap
+    - id: 13BDglcn_c
+    - name: 1 3 beta D Glucan C6H10O5
+    - compartment: c
+    - formula: C6H10O5
+  - !!omap
+    - id: 13dpg_c
+    - name: 3-Phospho-D-glyceroyl phosphate
+    - compartment: c
+    - formula: C3H4O10P2
+  - !!omap
+    - id: 1pyr5c_c
+    - name: 1-Pyrroline-5-carboxylate
+    - compartment: c
+    - formula: C5H6NO2
+  - !!omap
+    - id: 23dhmb_m
+    - name: (R)-2,3-Dihydroxy-3-methylbutanoate
+    - compartment: m
+    - formula: C5H9O4
+  - !!omap
+    - id: 23dhmp_m
+    - name: (R)-2,3-Dihydroxy-3-methylpentanoate
+    - compartment: m
+    - formula: C6H11O4
+  - !!omap
+    - id: 2ahbut_m
+    - name: (S)-2-Aceto-2-hydroxybutanoate
+    - compartment: m
+    - formula: C6H9O4
+  - !!omap
+    - id: 2cpr5p_c
+    - name: 1-(2-Carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate
+    - compartment: c
+    - formula: C12H13NO9P
+  - !!omap
+    - id: 2dda7p_c
+    - name: 2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate
+    - compartment: c
+    - formula: C7H10O10P
+  - !!omap
+    - id: 2ippm_c
+    - name: 2-Isopropylmaleate
+    - compartment: c
+    - formula: C7H8O4
+  - !!omap
+    - id: 2obut_c
+    - name: 2-Oxobutanoate
+    - compartment: c
+    - formula: C4H5O3
+  - !!omap
+    - id: 2obut_m
+    - name: 2-Oxobutanoate
+    - compartment: m
+    - formula: C4H5O3
+  - !!omap
+    - id: 2oxoadp_c
+    - name: 2 Oxoadipate C6H6O5
+    - compartment: c
+    - formula: C6H6O5
+  - !!omap
+    - id: 2oxoadp_m
+    - name: 2 Oxoadipate C6H6O5
+    - compartment: m
+    - formula: C6H6O5
+  - !!omap
+    - id: 2pg_c
+    - name: D-Glycerate 2-phosphate
+    - compartment: c
+    - formula: C3H4O7P
+  - !!omap
+    - id: 34hpp_c
+    - name: 3-(4-Hydroxyphenyl)pyruvate
+    - compartment: c
+    - formula: C9H7O4
+  - !!omap
+    - id: 3c2hmp_c
+    - name: 3-Carboxy-2-hydroxy-4-methylpentanoate
+    - compartment: c
+    - formula: C7H10O5
+  - !!omap
+    - id: 3c3hmp_c
+    - name: 3-Carboxy-3-hydroxy-4-methylpentanoate
+    - compartment: c
+    - formula: C7H10O5
+  - !!omap
+    - id: 3c4mop_c
+    - name: 3-Carboxy-4-methyl-2-oxopentanoate
+    - compartment: c
+    - formula: C7H8O5
+  - !!omap
+    - id: 3dhq_c
+    - name: 3-Dehydroquinate
+    - compartment: c
+    - formula: C7H9O6
+  - !!omap
+    - id: 3dhsk_c
+    - name: 3-Dehydroshikimate
+    - compartment: c
+    - formula: C7H7O5
+  - !!omap
+    - id: 3ig3p_c
+    - name: C'-(3-Indolyl)-glycerol 3-phosphate
+    - compartment: c
+    - formula: C11H12NO6P
+  - !!omap
+    - id: 3mob_c
+    - name: 3-Methyl-2-oxobutanoate
+    - compartment: c
+    - formula: C5H7O3
+  - !!omap
+    - id: 3mob_m
+    - name: 3-Methyl-2-oxobutanoate
+    - compartment: m
+    - formula: C5H7O3
+  - !!omap
+    - id: 3mop_c
+    - name: (S)-3-Methyl-2-oxopentanoate
+    - compartment: c
+    - formula: C6H9O3
+  - !!omap
+    - id: 3mop_m
+    - name: (S)-3-Methyl-2-oxopentanoate
+    - compartment: m
+    - formula: C6H9O3
+  - !!omap
+    - id: 3pg_c
+    - name: 3-Phospho-D-glycerate
+    - compartment: c
+    - formula: C3H4O7P
+  - !!omap
+    - id: 3php_c
+    - name: 3-Phosphohydroxypyruvate
+    - compartment: c
+    - formula: C3H2O7P
+  - !!omap
+    - id: 3psme_c
+    - name: 5-O-(1-Carboxyvinyl)-3-phosphoshikimate
+    - compartment: c
+    - formula: C10H9O10P
+  - !!omap
+    - id: 4mop_c
+    - name: 4-Methyl-2-oxopentanoate
+    - compartment: c
+    - formula: C6H9O3
+  - !!omap
+    - id: 4pasp_c
+    - name: 4-Phospho-L-aspartate
+    - compartment: c
+    - formula: C4H6NO7P
+  - !!omap
+    - id: 5mthf_c
+    - name: 5-Methyltetrahydrofolate
+    - compartment: c
+    - formula: C20H24N7O6
+  - !!omap
+    - id: 6pgc_c
+    - name: 6-Phospho-D-gluconate
+    - compartment: c
+    - formula: C6H10O10P
+  - !!omap
+    - id: 6pgl_c
+    - name: 6-phospho-D-glucono-1,5-lactone
+    - compartment: c
+    - formula: C6H9O9P
+  - !!omap
+    - id: acald_c
+    - name: Acetaldehyde
+    - compartment: c
+    - formula: C2H4O
+  - !!omap
+    - id: acald_m
+    - name: Acetaldehyde
+    - compartment: m
+    - formula: C2H4O
+  - !!omap
+    - id: accoa_c
+    - name: Acetyl-CoA
+    - compartment: c
+    - formula: C23H34N7O17P3S
+  - !!omap
+    - id: accoa_m
+    - name: Acetyl-CoA
+    - compartment: m
+    - formula: C23H34N7O17P3S
+  - !!omap
+    - id: acg5p_m
+    - name: N-Acetyl-L-glutamyl 5-phosphate
+    - compartment: m
+    - formula: C7H9NO8P
+  - !!omap
+    - id: acg5sa_m
+    - name: N-Acetyl-L-glutamate 5-semialdehyde
+    - compartment: m
+    - formula: C7H10NO4
+  - !!omap
+    - id: acglu_m
+    - name: N-Acetyl-L-glutamate
+    - compartment: m
+    - formula: C7H9NO5
+  - !!omap
+    - id: achms_c
+    - name: O Acetyl L homoserine C6H11NO4
+    - compartment: c
+    - formula: C6H11NO4
+  - !!omap
+    - id: acorn_m
+    - name: N2-Acetyl-L-ornithine
+    - compartment: m
+    - formula: C7H14N2O3
+  - !!omap
+    - id: ac_c
+    - name: Acetate
+    - compartment: c
+    - formula: C2H3O2
+  - !!omap
+    - id: ac_e
+    - name: Acetate
+    - compartment: e
+    - formula: C2H3O2
+  - !!omap
+    - id: ac_m
+    - name: Acetate
+    - compartment: m
+    - formula: C2H3O2
+  - !!omap
+    - id: adp_c
+    - name: ADP C10H12N5O10P2
+    - compartment: c
+    - formula: C10H12N5O10P2
+  - !!omap
+    - id: adp_m
+    - name: ADP C10H12N5O10P2
+    - compartment: m
+    - formula: C10H12N5O10P2
+  - !!omap
+    - id: aicar_c
+    - name: 5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide
+    - compartment: c
+    - formula: C9H13N4O8P
+  - !!omap
+    - id: akg_c
+    - name: 2-Oxoglutarate
+    - compartment: c
+    - formula: C5H4O5
+  - !!omap
+    - id: akg_m
+    - name: 2-Oxoglutarate
+    - compartment: m
+    - formula: C5H4O5
+  - !!omap
+    - id: ala__L_c
+    - name: L-Alanine
+    - compartment: c
+    - formula: C3H7NO2
+  - !!omap
+    - id: ala__L_m
+    - name: L-Alanine
+    - compartment: m
+    - formula: C3H7NO2
+  - !!omap
+    - id: alac__S_m
+    - name: (S)-2-Acetolactate
+    - compartment: m
+    - formula: C5H7O4
+  - !!omap
+    - id: amp_c
+    - name: AMP C10H12N5O7P
+    - compartment: c
+    - formula: C10H12N5O7P
+  - !!omap
+    - id: amp_m
+    - name: AMP C10H12N5O7P
+    - compartment: m
+    - formula: C10H12N5O7P
+  - !!omap
+    - id: anth_c
+    - name: Anthranilate
+    - compartment: c
+    - formula: C7H6NO2
+  - !!omap
+    - id: aps_c
+    - name: Adenosine 5'-phosphosulfate
+    - compartment: c
+    - formula: C10H12N5O10PS
+  - !!omap
+    - id: arg__L_c
+    - name: L-Arginine
+    - compartment: c
+    - formula: C6H15N4O2
+  - !!omap
+    - id: argsuc_c
+    - name: N(omega)-(L-Arginino)succinate
+    - compartment: c
+    - formula: C10H17N4O6
+  - !!omap
+    - id: asn__L_c
+    - name: L-Asparagine
+    - compartment: c
+    - formula: C4H8N2O3
+  - !!omap
+    - id: asp__L_c
+    - name: L-Aspartate
+    - compartment: c
+    - formula: C4H6NO4
+  - !!omap
+    - id: aspsa_c
+    - name: L-Aspartate 4-semialdehyde
+    - compartment: c
+    - formula: C4H7NO3
+  - !!omap
+    - id: atp_c
+    - name: ATP C10H12N5O13P3
+    - compartment: c
+    - formula: C10H12N5O13P3
+  - !!omap
+    - id: atp_m
+    - name: ATP C10H12N5O13P3
+    - compartment: m
+    - formula: C10H12N5O13P3
+  - !!omap
+    - id: b124tc_m
+    - name: But 1 ene 1 2 4 tricarboxylate C7H5O6
+    - compartment: m
+    - formula: C7H5O6
+  - !!omap
+    - id: cbp_c
+    - name: Carbamoyl phosphate
+    - compartment: c
+    - formula: CH2NO5P
+  - !!omap
+    - id: chor_c
+    - name: Chorismate
+    - compartment: c
+    - formula: C10H8O6
+  - !!omap
+    - id: citr__L_c
+    - name: L-Citrulline
+    - compartment: c
+    - formula: C6H13N3O3
+  - !!omap
+    - id: cit_c
+    - name: Citrate
+    - compartment: c
+    - formula: C6H5O7
+  - !!omap
+    - id: cit_m
+    - name: Citrate
+    - compartment: m
+    - formula: C6H5O7
+  - !!omap
+    - id: co2tot_c
+    - name: co2tot[c]
+    - compartment: c
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: co2tot_e
+    - name: co2tot[e]
+    - compartment: e
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: co2tot_m
+    - name: co2tot[m]
+    - compartment: m
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: coa_c
+    - name: Coenzyme A
+    - compartment: c
+    - formula: C21H32N7O16P3S
+  - !!omap
+    - id: coa_m
+    - name: Coenzyme A
+    - compartment: m
+    - formula: C21H32N7O16P3S
+  - !!omap
+    - id: cys__L_c
+    - name: L-Cysteine
+    - compartment: c
+    - formula: C3H7NO2S
+  - !!omap
+    - id: cyst__L_c
+    - name: L-Cystathionine
+    - compartment: c
+    - formula: C7H14N2O4S
+  - !!omap
+    - id: dhap_c
+    - name: Dihydroxyacetone phosphate
+    - compartment: c
+    - formula: C3H5O6P
+  - !!omap
+    - id: e4p_c
+    - name: D-Erythrose 4-phosphate
+    - compartment: c
+    - formula: C4H7O7P
+  - !!omap
+    - id: eig3p_c
+    - name: D-erythro-1-(Imidazol-4-yl)glycerol 3-phosphate
+    - compartment: c
+    - formula: C6H9N2O6P
+  - !!omap
+    - id: etoh_c
+    - name: Ethanol
+    - compartment: c
+    - formula: C2H6O
+  - !!omap
+    - id: etoh_e
+    - name: Ethanol
+    - compartment: e
+    - formula: C2H6O
+  - !!omap
+    - id: etoh_m
+    - name: Ethanol
+    - compartment: m
+    - formula: C2H6O
+  - !!omap
+    - id: f6p_c
+    - name: D-Fructose 6-phosphate
+    - compartment: c
+    - formula: C6H11O9P
+  - !!omap
+    - id: fdp_c
+    - name: D-Fructose 1,6-bisphosphate
+    - compartment: c
+    - formula: C6H10O12P2
+  - !!omap
+    - id: ficytc_m
+    - name: Ferricytochrome c C42H52FeN8O6S2
+    - compartment: m
+    - formula: C42H52FeN8O6S2
+  - !!omap
+    - id: focytc_m
+    - name: Ferrocytochrome c C42H53FeN8O6S2
+    - compartment: m
+    - formula: C42H53FeN8O6S2
+  - !!omap
+    - id: for_c
+    - name: Formate
+    - compartment: c
+    - formula: CH1O2
+  - !!omap
+    - id: fum_c
+    - name: Fumarate
+    - compartment: c
+    - formula: C4H2O4
+  - !!omap
+    - id: fum_m
+    - name: Fumarate
+    - compartment: m
+    - formula: C4H2O4
+  - !!omap
+    - id: g3p_c
+    - name: Glyceraldehyde 3-phosphate
+    - compartment: c
+    - formula: C3H5O6P
+  - !!omap
+    - id: g6p_c
+    - name: D-Glucose 6-phosphate
+    - compartment: c
+    - formula: C6H11O9P
+  - !!omap
+    - id: glc__D_c
+    - name: D-Glucose
+    - compartment: c
+    - formula: C6H12O6
+  - !!omap
+    - id: glc__D_e
+    - name: D-Glucose
+    - compartment: e
+    - formula: C6H12O6
+  - !!omap
+    - id: gln__L_c
+    - name: L-Glutamine
+    - compartment: c
+    - formula: C5H10N2O3
+  - !!omap
+    - id: gln__L_m
+    - name: gln-L[m]
+    - compartment: m
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: glu__L_c
+    - name: L-Glutamate
+    - compartment: c
+    - formula: C5H8NO4
+  - !!omap
+    - id: glu__L_m
+    - name: L-Glutamate
+    - compartment: m
+    - formula: C5H8NO4
+  - !!omap
+    - id: glu5p_c
+    - name: L-Glutamate 5-phosphate
+    - compartment: c
+    - formula: C5H8NO7P
+  - !!omap
+    - id: glu5sa_c
+    - name: L-Glutamate 5-semialdehyde
+    - compartment: c
+    - formula: C5H9NO3
+  - !!omap
+    - id: glx_c
+    - name: Glyoxylate
+    - compartment: c
+    - formula: C2H1O3
+  - !!omap
+    - id: glx_m
+    - name: glx[m]
+    - compartment: m
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: glyc3p_c
+    - name: Glycerol 3-phosphate
+    - compartment: c
+    - formula: C3H7O6P
+  - !!omap
+    - id: glyc_c
+    - name: Glycerol
+    - compartment: c
+    - formula: C3H8O3
+  - !!omap
+    - id: glyc_e
+    - name: Glycerol
+    - compartment: e
+    - formula: C3H8O3
+  - !!omap
+    - id: gly_c
+    - name: Glycine
+    - compartment: c
+    - formula: C2H5NO2
+  - !!omap
+    - id: gly_m
+    - name: Glycine
+    - compartment: m
+    - formula: C2H5NO2
+  - !!omap
+    - id: h2o_c
+    - name: H2O H2O
+    - compartment: c
+    - formula: H2O
+  - !!omap
+    - id: h2o_e
+    - name: H2O H2O
+    - compartment: e
+    - formula: H2O
+  - !!omap
+    - id: h2o_m
+    - name: H2O H2O
+    - compartment: m
+    - formula: H2O
+  - !!omap
+    - id: h2s_c
+    - name: Hydrogen sulfide
+    - compartment: c
+    - formula: H2S
+  - !!omap
+    - id: hcit_c
+    - name: hcit[c]
+    - compartment: c
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: hcit_m
+    - name: 2 Hydroxybutane 1 2 4 tricarboxylate C7H7O7
+    - compartment: m
+    - formula: C7H7O7
+  - !!omap
+    - id: hcys__L_c
+    - name: L-Homocysteine
+    - compartment: c
+    - formula: C4H9NO2S
+  - !!omap
+    - id: hcyt_c
+    - name: hcyt[c]
+    - compartment: c
+    - charge: 0
+    - formula: ''
+  - !!omap
+    - id: hicit_m
+    - name: Homoisocitrate C7H7O7
+    - compartment: m
+    - formula: C7H7O7
+  - !!omap
+    - id: his__L_c
+    - name: L-Histidine
+    - compartment: c
+    - formula: C6H9N3O2
+  - !!omap
+    - id: hisp_c
+    - name: L-Histidinol phosphate
+    - compartment: c
+    - formula: C6H11N3O4P
+  - !!omap
+    - id: histd_c
+    - name: L-Histidinol
+    - compartment: c
+    - formula: C6H12N3O
+  - !!omap
+    - id: hom__L_c
+    - name: L-Homoserine
+    - compartment: c
+    - formula: C4H9NO3
+  - !!omap
+    - id: h_c
+    - name: H+
+    - compartment: c
+    - formula: H
+  - !!omap
+    - id: h_e
+    - name: H+
+    - compartment: e
+    - formula: H
+  - !!omap
+    - id: h_m
+    - name: H+
+    - compartment: m
+    - formula: H
+  - !!omap
+    - id: icit_c
+    - name: Isocitrate
+    - compartment: c
+    - formula: C6H5O7
+  - !!omap
+    - id: icit_m
+    - name: Isocitrate
+    - compartment: m
+    - formula: C6H5O7
+  - !!omap
+    - id: ile__L_c
+    - name: L-Isoleucine
+    - compartment: c
+    - formula: C6H13NO2
+  - !!omap
+    - id: imacp_c
+    - name: 3-(Imidazol-4-yl)-2-oxopropyl phosphate
+    - compartment: c
+    - formula: C6H7N2O5P
+  - !!omap
+    - id: L2aadp6sa_c
+    - name: L 2 Aminoadipate 6 semialdehyde C6H11NO3
+    - compartment: c
+    - formula: C6H11NO3
+  - !!omap
+    - id: L2aadp_c
+    - name: L 2 Aminoadipate C6H10NO4
+    - compartment: c
+    - formula: C6H10NO4
+  - !!omap
+    - id: leu__L_c
+    - name: L-Leucine
+    - compartment: c
+    - formula: C6H13NO2
+  - !!omap
+    - id: lys__L_c
+    - name: L-Lysine
+    - compartment: c
+    - formula: C6H15N2O2
+  - !!omap
+    - id: mal__L_c
+    - name: L-Malate
+    - compartment: c
+    - formula: C4H4O5
+  - !!omap
+    - id: mal__L_m
+    - name: L-Malate
+    - compartment: m
+    - formula: C4H4O5
+  - !!omap
+    - id: mannan_c
+    - name: Mannan C6H10O5
+    - compartment: c
+    - formula: C6H10O5
+  - !!omap
+    - id: met__L_c
+    - name: L-Methionine
+    - compartment: c
+    - formula: C5H11NO2S
+  - !!omap
+    - id: methf_c
+    - name: 5,10-Methenyltetrahydrofolate
+    - compartment: c
+    - formula: C20H20N7O6
+  - !!omap
+    - id: mlthf_c
+    - name: 5,10-Methylenetetrahydrofolate
+    - compartment: c
+    - formula: C20H21N7O6
+  - !!omap
+    - id: nadh_c
+    - name: Nicotinamide adenine dinucleotide - reduced
+    - compartment: c
+    - formula: C21H27N7O14P2
+  - !!omap
+    - id: nadh_m
+    - name: Nicotinamide adenine dinucleotide - reduced
+    - compartment: m
+    - formula: C21H27N7O14P2
+  - !!omap
+    - id: nadph_c
+    - name: Nicotinamide adenine dinucleotide phosphate - reduced
+    - compartment: c
+    - formula: C21H26N7O17P3
+  - !!omap
+    - id: nadph_m
+    - name: Nicotinamide adenine dinucleotide phosphate - reduced
+    - compartment: m
+    - formula: C21H26N7O17P3
+  - !!omap
+    - id: nadp_c
+    - name: Nicotinamide adenine dinucleotide phosphate
+    - compartment: c
+    - formula: C21H25N7O17P3
+  - !!omap
+    - id: nadp_m
+    - name: Nicotinamide adenine dinucleotide phosphate
+    - compartment: m
+    - formula: C21H25N7O17P3
+  - !!omap
+    - id: nad_c
+    - name: Nicotinamide adenine dinucleotide
+    - compartment: c
+    - formula: C21H26N7O14P2
+  - !!omap
+    - id: nad_m
+    - name: Nicotinamide adenine dinucleotide
+    - compartment: m
+    - formula: C21H26N7O14P2
+  - !!omap
+    - id: nh4_c
+    - name: Ammonium
+    - compartment: c
+    - formula: H4N
+  - !!omap
+    - id: nh4_e
+    - name: Ammonium
+    - compartment: e
+    - formula: H4N
+  - !!omap
+    - id: nh4_m
+    - name: Ammonium
+    - compartment: m
+    - formula: H4N
+  - !!omap
+    - id: o2_c
+    - name: O2 O2
+    - compartment: c
+    - formula: O2
+  - !!omap
+    - id: o2_e
+    - name: O2 O2
+    - compartment: e
+    - formula: O2
+  - !!omap
+    - id: o2_m
+    - name: O2 O2
+    - compartment: m
+    - formula: O2
+  - !!omap
+    - id: oaa_c
+    - name: Oxaloacetate
+    - compartment: c
+    - formula: C4H2O5
+  - !!omap
+    - id: oaa_m
+    - name: Oxaloacetate
+    - compartment: m
+    - formula: C4H2O5
+  - !!omap
+    - id: orn_c
+    - name: Ornithine
+    - compartment: c
+    - formula: C5H13N2O2
+  - !!omap
+    - id: orn_m
+    - name: Ornithine
+    - compartment: m
+    - formula: C5H13N2O2
+  - !!omap
+    - id: oxag_m
+    - name: Oxaloglutarate C7H5O7
+    - compartment: m
+    - formula: C7H5O7
+  - !!omap
+    - id: paps_c
+    - name: 3'-Phosphoadenylyl sulfate
+    - compartment: c
+    - formula: C10H11N5O13P2S
+  - !!omap
+    - id: pap_c
+    - name: Adenosine 3',5'-bisphosphate
+    - compartment: c
+    - formula: C10H11N5O10P2
+  - !!omap
+    - id: pep_c
+    - name: Phosphoenolpyruvate
+    - compartment: c
+    - formula: C3H2O6P
+  - !!omap
+    - id: phe__L_c
+    - name: L-Phenylalanine
+    - compartment: c
+    - formula: C9H11NO2
+  - !!omap
+    - id: phom_c
+    - name: O-Phospho-L-homoserine
+    - compartment: c
+    - formula: C4H8NO6P
+  - !!omap
+    - id: phpyr_c
+    - name: Phenylpyruvate
+    - compartment: c
+    - formula: C9H7O3
+  - !!omap
+    - id: pi_c
+    - name: Phosphate
+    - compartment: c
+    - formula: HO4P
+  - !!omap
+    - id: pi_e
+    - name: Phosphate
+    - compartment: e
+    - formula: HO4P
+  - !!omap
+    - id: pi_m
+    - name: Phosphate
+    - compartment: m
+    - formula: HO4P
+  - !!omap
+    - id: pphn_c
+    - name: Prephenate
+    - compartment: c
+    - formula: C10H8O6
+  - !!omap
+    - id: ppi_c
+    - name: Diphosphate
+    - compartment: c
+    - formula: HO7P2
+  - !!omap
+    - id: ppi_m
+    - name: Diphosphate
+    - compartment: m
+    - formula: HO7P2
+  - !!omap
+    - id: pran_c
+    - name: N-(5-Phospho-D-ribosyl)anthranilate
+    - compartment: c
+    - formula: C12H13NO9P
+  - !!omap
+    - id: prbamp_c
+    - name: 1-(5-Phosphoribosyl)-AMP
+    - compartment: c
+    - formula: C15H19N5O14P2
+  - !!omap
+    - id: prbatp_c
+    - name: 1-(5-Phosphoribosyl)-ATP
+    - compartment: c
+    - formula: C15H19N5O20P4
+  - !!omap
+    - id: prfp_c
+    - name: 1-(5-Phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide
+    - compartment: c
+    - formula: C15H21N5O15P2
+  - !!omap
+    - id: prlp_c
+    - name: 5-[(5-phospho-1-deoxyribulos-1-ylamino)methylideneamino]-1-(5-phosphoribosyl)imidazole-4-carboxamide
+    - compartment: c
+    - formula: C15H21N5O15P2
+  - !!omap
+    - id: pro__L_c
+    - name: L-Proline
+    - compartment: c
+    - formula: C5H9NO2
+  - !!omap
+    - id: prpp_c
+    - name: 5-Phospho-alpha-D-ribose 1-diphosphate
+    - compartment: c
+    - formula: C5H8O14P3
+  - !!omap
+    - id: pser__L_c
+    - name: O-Phospho-L-serine
+    - compartment: c
+    - formula: C3H6NO6P
+  - !!omap
+    - id: pyr_c
+    - name: Pyruvate
+    - compartment: c
+    - formula: C3H3O3
+  - !!omap
+    - id: pyr_e
+    - name: Pyruvate
+    - compartment: e
+    - formula: C3H3O3
+  - !!omap
+    - id: pyr_m
+    - name: Pyruvate
+    - compartment: m
+    - formula: C3H3O3
+  - !!omap
+    - id: q6h2_m
+    - name: Ubiquinol 6 C39H60O4
+    - compartment: m
+    - formula: C39H60O4
+  - !!omap
+    - id: q6_m
+    - name: Ubiquinone 6 C39H58O4
+    - compartment: m
+    - formula: C39H58O4
+  - !!omap
+    - id: r5p_c
+    - name: Alpha-D-Ribose 5-phosphate
+    - compartment: c
+    - formula: C5H9O8P
+  - !!omap
+    - id: ru5p__D_c
+    - name: D-Ribulose 5-phosphate
+    - compartment: c
+    - formula: C5H9O8P
+  - !!omap
+    - id: s7p_c
+    - name: Sedoheptulose 7-phosphate
+    - compartment: c
+    - formula: C7H13O10P
+  - !!omap
+    - id: saccrp__L_c
+    - name: L Saccharopine C11H19N2O6
+    - compartment: c
+    - formula: C11H19N2O6
+  - !!omap
+    - id: ser__L_c
+    - name: L-Serine
+    - compartment: c
+    - formula: C3H7NO3
+  - !!omap
+    - id: skm5p_c
+    - name: Shikimate 5-phosphate
+    - compartment: c
+    - formula: C7H8O8P
+  - !!omap
+    - id: skm_c
+    - name: Shikimate
+    - compartment: c
+    - formula: C7H9O5
+  - !!omap
+    - id: so3_c
+    - name: Sulfite
+    - compartment: c
+    - formula: O3S
+  - !!omap
+    - id: so4_c
+    - name: Sulfate
+    - compartment: c
+    - formula: O4S
+  - !!omap
+    - id: so4_e
+    - name: Sulfate
+    - compartment: e
+    - formula: O4S
+  - !!omap
+    - id: succoa_m
+    - name: Succinyl-CoA
+    - compartment: m
+    - formula: C25H35N7O19P3S
+  - !!omap
+    - id: succ_c
+    - name: Succinate
+    - compartment: c
+    - formula: C4H4O4
+  - !!omap
+    - id: succ_e
+    - name: Succinate
+    - compartment: e
+    - formula: C4H4O4
+  - !!omap
+    - id: succ_m
+    - name: Succinate
+    - compartment: m
+    - formula: C4H4O4
+  - !!omap
+    - id: thf_c
+    - name: 5,6,7,8-Tetrahydrofolate
+    - compartment: c
+    - formula: C19H21N7O6
+  - !!omap
+    - id: thr__L_c
+    - name: L-Threonine
+    - compartment: c
+    - formula: C4H9NO3
+  - !!omap
+    - id: thr__L_m
+    - name: L-Threonine
+    - compartment: m
+    - formula: C4H9NO3
+  - !!omap
+    - id: trp__L_c
+    - name: L-Tryptophan
+    - compartment: c
+    - formula: C11H12N2O2
+  - !!omap
+    - id: tyr__L_c
+    - name: L-Tyrosine
+    - compartment: c
+    - formula: C9H11NO3
+  - !!omap
+    - id: val__L_c
+    - name: L-Valine
+    - compartment: c
+    - formula: C5H11NO2
+  - !!omap
+    - id: xu5p__D_c
+    - name: D-Xylulose 5-phosphate
+    - compartment: c
+    - formula: C5H9O8P
+- reactions:
+  - !!omap
+    - id: ASPTA
+    - name: Aspartate transaminase
+    - metabolites: !!omap
+      - akg_c: 1.0
+      - asp__L_c: 1.0
+      - glu__L_c: -1.0
+      - oaa_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 0
+    - gene_reaction_rule: YLR027C
+  - !!omap
+    - id: ASPKi
+    - name: Aspartate kinase
+    - metabolites: !!omap
+      - 4pasp_c: 1.0
+      - adp_c: 1.0
+      - asp__L_c: -1.0
+      - atp_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER052C
+  - !!omap
+    - id: ASNS1
+    - name: Asparagine synthase (glutamine-hydrolysing)
+    - metabolites: !!omap
+      - amp_c: 1.0
+      - asn__L_c: 1.0
+      - asp__L_c: -1.0
+      - atp_c: -1.0
+      - gln__L_c: -1.0
+      - glu__L_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - ppi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YML096W or YGR124W or YPR145W
+  - !!omap
+    - id: ASADi
+    - name: Aspartate-semialdehyde dehydrogenase
+    - metabolites: !!omap
+      - 4pasp_c: -1.0
+      - aspsa_c: 1.0
+      - h_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR158W
+  - !!omap
+    - id: ALATA_Lm
+    - name: L alanine transaminase  mitochondrial
+    - metabolites: !!omap
+      - akg_m: 1.0
+      - ala__L_m: 1.0
+      - glu__L_m: -1.0
+      - pyr_m: -1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR089C
+  - !!omap
+    - id: ALATA_L
+    - name: L-alanine transaminase
+    - metabolites: !!omap
+      - akg_c: 1.0
+      - ala__L_c: 1.0
+      - glu__L_c: -1.0
+      - pyr_c: -1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR111C
+  - !!omap
+    - id: PPCK
+    - name: Phosphoenolpyruvate carboxykinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - co2tot_c: 1.0
+      - h2o_c: -1.0
+      - oaa_c: -1.0
+      - pep_c: 1.0
+    - lower_bound: 0.1
+    - upper_bound: 1000
+    - gene_reaction_rule: YKR097W
+  - !!omap
+    - id: PC
+    - name: Pyruvate carboxylase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - co2tot_c: -1.0
+      - h_c: 1.0
+      - oaa_c: 1.0
+      - pi_c: 1.0
+      - pyr_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL062W or YBR218C
+  - !!omap
+    - id: ME2m
+    - name: Malic enzyme  NADP   mitochondrial
+    - metabolites: !!omap
+      - co2tot_m: 1.0
+      - h2o_m: -1.0
+      - mal__L_m: -1.0
+      - nadp_m: -1.0
+      - nadph_m: 1.0
+      - pyr_m: 1.0
+    - lower_bound: 0.1
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL029C
+  - !!omap
+    - id: ICL
+    - name: Isocitrate lyase
+    - metabolites: !!omap
+      - glx_c: 1.0
+      - icit_c: -1.0
+      - succ_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER065C
+  - !!omap
+    - id: FBP
+    - name: Fructose-bisphosphatase
+    - metabolites: !!omap
+      - f6p_c: 1.0
+      - fdp_c: -1.0
+      - h2o_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0.1
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR377C
+  - !!omap
+    - id: P5CR
+    - name: Pyrroline-5-carboxylate reductase
+    - metabolites: !!omap
+      - 1pyr5c_c: -1.0
+      - h_c: -2.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - pro__L_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER023W
+  - !!omap
+    - id: ORNTACim
+    - name: Ornithine transacetylase  irreversible  mitochondrial
+    - metabolites: !!omap
+      - acglu_m: 1.0
+      - acorn_m: -1.0
+      - glu__L_m: -1.0
+      - orn_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR062C
+  - !!omap
+    - id: OCBTi
+    - name: Ornithine carbamoyltransferase
+    - metabolites: !!omap
+      - cbp_c: -1.0
+      - citr__L_c: 1.0
+      - h_c: 1.0
+      - orn_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL088W
+  - !!omap
+    - id: GLU5K
+    - name: Glutamate 5-kinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - glu5p_c: 1.0
+      - glu__L_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR300C
+  - !!omap
+    - id: G5SD
+    - name: Glutamate-5-semialdehyde dehydrogenase
+    - metabolites: !!omap
+      - glu5p_c: -1.0
+      - glu5sa_c: 1.0
+      - h_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR323C
+  - !!omap
+    - id: G5SADr
+    - name: L-glutamate 5-semialdehyde dehydratase (spontaneous)
+    - metabolites: !!omap
+      - 1pyr5c_c: 1.0
+      - glu5sa_c: -1.0
+      - h2o_c: 1.0
+      - h_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: CBPS
+    - name: Carbamoyl-phosphate synthase (glutamine-hydrolysing)
+    - metabolites: !!omap
+      - adp_c: 2.0
+      - atp_c: -2.0
+      - cbp_c: 1.0
+      - co2tot_c: -1.0
+      - gln__L_c: -1.0
+      - glu__L_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 2.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR303W and YJR109C
+  - !!omap
+    - id: ARGSSr
+    - name: Argininosuccinate synthase
+    - metabolites: !!omap
+      - amp_c: 1.0
+      - argsuc_c: 1.0
+      - asp__L_c: -1.0
+      - atp_c: -1.0
+      - citr__L_c: -1.0
+      - h_c: 1.0
+      - ppi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL058W
+  - !!omap
+    - id: ARGSL
+    - name: Argininosuccinate lyase
+    - metabolites: !!omap
+      - arg__L_c: 1.0
+      - argsuc_c: -1.0
+      - fum_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR018C
+  - !!omap
+    - id: AGPRim
+    - name: N acetyl g glutamyl phosphate reductase  irreversible  mitochondrial
+    - metabolites: !!omap
+      - acg5p_m: -1.0
+      - acg5sa_m: 1.0
+      - h_m: -1.0
+      - nadp_m: 1.0
+      - nadph_m: -1.0
+      - pi_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER069W
+  - !!omap
+    - id: ACOTAim
+    - name: Acteylornithine transaminase  irreversible  mitochondrial
+    - metabolites: !!omap
+      - acg5sa_m: -1.0
+      - acorn_m: 1.0
+      - akg_m: 1.0
+      - glu__L_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL140W
+  - !!omap
+    - id: ACGKm
+    - name: Acetylglutamate kinase  mitochondrial
+    - metabolites: !!omap
+      - acg5p_m: 1.0
+      - acglu_m: -1.0
+      - adp_m: 1.0
+      - atp_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER069W
+  - !!omap
+    - id: SUCOAS1m
+    - name: 'Succinate  CoA ligase  ADP forming '
+    - metabolites: !!omap
+      - adp_m: -1.0
+      - atp_m: 1.0
+      - coa_m: 1.0
+      - pi_m: -1.0
+      - succ_m: 1.0
+      - succoa_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR142W and YGR244C
+  - !!omap
+    - id: SUCD2_u6m
+    - name: Succinate dehydrogenase  ubiquinone 6   mitochondrial
+    - metabolites: !!omap
+      - fum_m: 1.0
+      - q6_m: -1.0
+      - q6h2_m: 1.0
+      - succ_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: (YKL141W and YDR178W and YLL041C and YJL045W) or (YKL141W
+        and YDR178W and YLL041C and YKL148C) or (YDR178W and YLL041C and YMR118C and
+        YKL148C) or (YLR164W and YKL141W and YLL041C and YKL148C)
+  - !!omap
+    - id: ICDHy
+    - name: ICDHy
+    - metabolites: !!omap
+      - akg_c: 1.0
+      - co2tot_c: 1.0
+      - h2o_c: -1.0
+      - icit_c: -1.0
+      - nadp_c: -1.0
+      - nadph_c: 1.0
+    - lower_bound: 0.1
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ICDHxm
+    - name: 'Isocitrate dehydrogenase  NAD '
+    - metabolites: !!omap
+      - akg_m: 1.0
+      - co2tot_m: 1.0
+      - h2o_m: -1.0
+      - icit_m: -1.0
+      - nad_m: -1.0
+      - nadh_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR136W and YNL037C
+  - !!omap
+    - id: CSm
+    - name: Citrate synthase
+    - metabolites: !!omap
+      - accoa_m: -1.0
+      - cit_m: 1.0
+      - coa_m: 1.0
+      - h2o_m: -1.0
+      - h_m: 1.0
+      - oaa_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YNR001C or YPR001W
+  - !!omap
+    - id: AKGDam
+    - name: 'Oxoglutarate dehydrogenase  lipoamide '
+    - metabolites: !!omap
+      - akg_m: -1.0
+      - co2tot_m: 1.0
+      - coa_m: -1.0
+      - h2o_m: -1.0
+      - nad_m: -1.0
+      - nadh_m: 1.0
+      - succoa_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL125W and YFL018C and YDR148C
+  - !!omap
+    - id: ACONTm
+    - name: Aconitate hydratase
+    - metabolites: !!omap
+      - cit_m: -1.0
+      - icit_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR304C or YJL200C
+  - !!omap
+    - id: ACONT
+    - name: Aconitate hydratase
+    - metabolites: !!omap
+      - cit_c: -1.0
+      - icit_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR304C
+  - !!omap
+    - id: SULR
+    - name: Sulfite reductase (NADPH2)
+    - metabolites: !!omap
+      - h2o_c: 3.0
+      - h2s_c: 1.0
+      - h_c: -5.0
+      - nadp_c: 3.0
+      - nadph_c: -3.0
+      - so3_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 0
+    - gene_reaction_rule: YJR137C or YFR030W
+  - !!omap
+    - id: SLFAT
+    - name: 'Sulfate adenylyltransferase  ADP '
+    - metabolites: !!omap
+      - adp_c: -1.0
+      - aps_c: 1.0
+      - h_c: -1.0
+      - pi_c: 1.0
+      - so4_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL050C
+  - !!omap
+    - id: PAPSR
+    - name: Phosphoadenylyl-sulfate reductase (thioredoxin)
+    - metabolites: !!omap
+      - h_c: 2.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - pap_c: 1.0
+      - paps_c: -1.0
+      - so3_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YPR167C
+  - !!omap
+    - id: BPNT
+    - name: 3',5'-bisphosphate nucleotidase
+    - metabolites: !!omap
+      - amp_c: 1.0
+      - h2o_c: -1.0
+      - pap_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL064C
+  - !!omap
+    - id: ADSK
+    - name: Adenylyl-sulfate kinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - aps_c: -1.0
+      - atp_c: -1.0
+      - h_c: 1.0
+      - paps_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL001C
+  - !!omap
+    - id: MTHFR3
+    - name: '5, 10 methylenetetrahydrofolate reductase NADPH '
+    - metabolites: !!omap
+      - 5mthf_c: 1.0
+      - h_c: -1.0
+      - mlthf_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YPL023C or YGL125W
+  - !!omap
+    - id: MTHFD
+    - name: Methylenetetrahydrofolate dehydrogenase (NADP)
+    - metabolites: !!omap
+      - h_c: 1.0
+      - methf_c: 1.0
+      - mlthf_c: -1.0
+      - nadp_c: -1.0
+      - nadph_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR204W
+  - !!omap
+    - id: MTHFC
+    - name: Methenyltetrahydrofolate cyclohydrolase
+    - metabolites: !!omap
+      - 10fthf_c: 1.0
+      - h2o_c: -1.0
+      - methf_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR204W
+  - !!omap
+    - id: FTHFL
+    - name: Formate-tetrahydrofolate ligase
+    - metabolites: !!omap
+      - 10fthf_c: -1.0
+      - adp_c: -1.0
+      - atp_c: 1.0
+      - for_c: 1.0
+      - pi_c: -1.0
+      - thf_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR204W
+  - !!omap
+    - id: GLUDy
+    - name: Glutamate dehydrogenase (NADP)
+    - metabolites: !!omap
+      - akg_c: -1.0
+      - glu__L_c: 1.0
+      - h2o_c: 1.0
+      - h_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - nh4_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 0
+    - gene_reaction_rule: YAL062W or YOR375C
+  - !!omap
+    - id: GLNS
+    - name: Glutamine synthetase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - gln__L_c: 1.0
+      - glu__L_c: -1.0
+      - h_c: 1.0
+      - nh4_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YPR035W
+  - !!omap
+    - id: ANS
+    - name: Anthranilate synthase
+    - metabolites: !!omap
+      - anth_c: 1.0
+      - chor_c: -1.0
+      - gln__L_c: -1.0
+      - glu__L_c: 1.0
+      - h_c: 1.0
+      - pyr_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER090W or YKL211C
+  - !!omap
+    - id: GLYK
+    - name: Glycerol kinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - glyc3p_c: 1.0
+      - glyc_c: -1.0
+      - h_c: 1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YHL032C
+  - !!omap
+    - id: G3PT
+    - name: Glycerol-3-phosphatase
+    - metabolites: !!omap
+      - glyc3p_c: -1.0
+      - glyc_c: 1.0
+      - h2o_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL053W or YER062C
+  - !!omap
+    - id: G3PD1ir
+    - name: 'Glycerol 3 phosphate dehydrogenase  NAD '
+    - metabolites: !!omap
+      - dhap_c: -1.0
+      - glyc3p_c: 1.0
+      - h_c: -1.0
+      - nad_c: 1.0
+      - nadh_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL022W
+  - !!omap
+    - id: ALCD2m
+    - name: Alcohol dehydrogenase  reverse rxn  acetaldehyde   ethanol   mitochondrial
+    - metabolites: !!omap
+      - acald_m: -1.0
+      - etoh_m: 1.0
+      - h_m: -1.0
+      - nad_m: 1.0
+      - nadh_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR083W
+  - !!omap
+    - id: PSP_L
+    - name: Phosphoserine phosphatase (L-serine)
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - pi_c: 1.0
+      - pser__L_c: -1.0
+      - ser__L_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR208W
+  - !!omap
+    - id: PSERT
+    - name: Phosphoserine transaminase
+    - metabolites: !!omap
+      - 3php_c: -1.0
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - pser__L_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR184W
+  - !!omap
+    - id: PGCD
+    - name: Phosphoglycerate dehydrogenase
+    - metabolites: !!omap
+      - 3pg_c: -1.0
+      - 3php_c: 1.0
+      - h_c: 1.0
+      - nad_c: -1.0
+      - nadh_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER081W or YIL074C
+  - !!omap
+    - id: HSK
+    - name: Homoserine kinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - h_c: 1.0
+      - hom__L_c: -1.0
+      - phom_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR025W
+  - !!omap
+    - id: HSDyi
+    - name: Homoserine dehydrogenase (NADPH)
+    - metabolites: !!omap
+      - aspsa_c: -1.0
+      - h_c: -1.0
+      - hom__L_c: 1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR139C
+  - !!omap
+    - id: GHMT2r
+    - name: Glycine hydroxymethyltransferase, reversible
+    - metabolites: !!omap
+      - gly_c: 1.0
+      - h2o_c: 1.0
+      - mlthf_c: 1.0
+      - ser__L_c: -1.0
+      - thf_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR058C
+  - !!omap
+    - id: CYSTS
+    - name: Cystathionine beta synthase
+    - metabolites: !!omap
+      - cyst__L_c: 1.0
+      - h2o_c: 1.0
+      - hcys__L_c: -1.0
+      - ser__L_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR155W
+  - !!omap
+    - id: TPI
+    - name: Triose-phosphate isomerase
+    - metabolites: !!omap
+      - dhap_c: -1.0
+      - g3p_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR050C
+  - !!omap
+    - id: PYK
+    - name: Pyruvate kinase
+    - metabolites: !!omap
+      - adp_c: -1.0
+      - atp_c: 1.0
+      - h_c: -1.0
+      - pep_c: -1.0
+      - pyr_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL038W or YOR347C
+  - !!omap
+    - id: PGM
+    - name: Phosphoglycerate mutase
+    - metabolites: !!omap
+      - 2pg_c: 1.0
+      - 3pg_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 0
+    - gene_reaction_rule: YKL152C or YOL056W or YDL021W
+  - !!omap
+    - id: PGK
+    - name: Phosphoglycerate kinase
+    - metabolites: !!omap
+      - 13dpg_c: -1.0
+      - 3pg_c: 1.0
+      - adp_c: -1.0
+      - atp_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 0
+    - gene_reaction_rule: YCR012W
+  - !!omap
+    - id: PGI
+    - name: Glucose-6-phosphate isomerase
+    - metabolites: !!omap
+      - f6p_c: 1.0
+      - g6p_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR196C
+  - !!omap
+    - id: PFK
+    - name: Phosphofructokinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - f6p_c: -1.0
+      - fdp_c: 1.0
+      - h_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR205C and YGR240C
+  - !!omap
+    - id: PDHm
+    - name: Pyruvate dehydrogenase
+    - metabolites: !!omap
+      - accoa_m: 1.0
+      - co2tot_m: 1.0
+      - coa_m: -1.0
+      - h2o_m: -1.0
+      - nad_m: -1.0
+      - nadh_m: 1.0
+      - pyr_m: -1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL071W and YFL018C and (YBR221C and YER178W)
+  - !!omap
+    - id: HEX1
+    - name: Hexokinase (D-glucose:ATP)
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - g6p_c: 1.0
+      - glc__D_c: -1.0
+      - h_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YFR053C or YCL040W or YGL253W
+  - !!omap
+    - id: GAPD
+    - name: Glyceraldehyde-3-phosphate dehydrogenase
+    - metabolites: !!omap
+      - 13dpg_c: 1.0
+      - g3p_c: -1.0
+      - h_c: 1.0
+      - nad_c: -1.0
+      - nadh_c: 1.0
+      - pi_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL052W or YGR192C or YJR009C
+  - !!omap
+    - id: FBA
+    - name: Fructose-bisphosphate aldolase
+    - metabolites: !!omap
+      - dhap_c: 1.0
+      - fdp_c: -1.0
+      - g3p_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL060C
+  - !!omap
+    - id: ENO
+    - name: Enolase
+    - metabolites: !!omap
+      - 2pg_c: -1.0
+      - h2o_c: 1.0
+      - pep_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR393W or YPL281C or YHR174W or YGR254W or YMR323W
+  - !!omap
+    - id: PRPPS
+    - name: Phosphoribosylpyrophosphate synthetase
+    - metabolites: !!omap
+      - amp_c: 1.0
+      - atp_c: -1.0
+      - h_c: 1.0
+      - prpp_c: 1.0
+      - r5p_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL181W or YER099C or YHL011C or YBL068W or YOL061W
+  - !!omap
+    - id: PRMICIi
+    - name: 1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino)imidazole-4-carboxamide
+        isomerase
+    - metabolites: !!omap
+      - prfp_c: -1.0
+      - prlp_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL020C
+  - !!omap
+    - id: PRATPP
+    - name: Phosphoribosyl-ATP pyrophosphatase
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - ppi_c: 1.0
+      - prbamp_c: 1.0
+      - prbatp_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL030C
+  - !!omap
+    - id: PRAMPC
+    - name: Phosphoribosyl-AMP cyclohydrolase
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - prbamp_c: -1.0
+      - prfp_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL030C
+  - !!omap
+    - id: IGPDH
+    - name: Imidazoleglycerol-phosphate dehydratase
+    - metabolites: !!omap
+      - eig3p_c: -1.0
+      - h2o_c: 1.0
+      - imacp_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR202W
+  - !!omap
+    - id: IG3PS
+    - name: Imidazole-glycerol-3-phosphate synthase
+    - metabolites: !!omap
+      - aicar_c: 1.0
+      - eig3p_c: 1.0
+      - gln__L_c: -1.0
+      - glu__L_c: 1.0
+      - h_c: 1.0
+      - prlp_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR248C
+  - !!omap
+    - id: HSTPT
+    - name: Histidinol-phosphate transaminase
+    - metabolites: !!omap
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - hisp_c: 1.0
+      - imacp_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL116W
+  - !!omap
+    - id: HISTP
+    - name: Histidinol-phosphatase
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - hisp_c: -1.0
+      - histd_c: 1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YFR025C
+  - !!omap
+    - id: HISTD
+    - name: Histidinol dehydrogenase
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - h_c: 3.0
+      - his__L_c: 1.0
+      - histd_c: -1.0
+      - nad_c: -2.0
+      - nadh_c: 2.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL030C
+  - !!omap
+    - id: ATPPRT
+    - name: ATP phosphoribosyltransferase
+    - metabolites: !!omap
+      - atp_c: -1.0
+      - ppi_c: 1.0
+      - prbatp_c: 1.0
+      - prpp_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER055C
+  - !!omap
+    - id: FDH
+    - name: Formate dehydrogenase
+    - metabolites: !!omap
+      - co2tot_c: 1.0
+      - for_c: -1.0
+      - h2o_c: -1.0
+      - nad_c: -1.0
+      - nadh_c: 1.0
+    - lower_bound: 0.001
+    - upper_bound: 1000
+    - gene_reaction_rule: YPL275W or YPL276W or YOR388C
+  - !!omap
+    - id: METS
+    - name: Methionine synthase
+    - metabolites: !!omap
+      - 5mthf_c: -1.0
+      - hcys__L_c: -1.0
+      - met__L_c: 1.0
+      - thf_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER091C
+  - !!omap
+    - id: HSERTA
+    - name: Homoserine O trans acetylase
+    - metabolites: !!omap
+      - accoa_c: -1.0
+      - achms_c: 1.0
+      - coa_c: 1.0
+      - hom__L_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL277W
+  - !!omap
+    - id: CYSTGL
+    - name: Cystathionine g lyase
+    - metabolites: !!omap
+      - 2obut_c: 1.0
+      - cys__L_c: 1.0
+      - cyst__L_c: -1.0
+      - h2o_c: -1.0
+      - nh4_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL012W
+  - !!omap
+    - id: AHSERL2
+    - name: O acetylhomoserine  thiol  lyase
+    - metabolites: !!omap
+      - ac_c: 1.0
+      - achms_c: -1.0
+      - h2s_c: -1.0
+      - h_c: 1.0
+      - hcys__L_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR303W
+  - !!omap
+    - id: ADK1m
+    - name: Adenylate kinase  mitochondrial
+    - metabolites: !!omap
+      - adp_m: 2.0
+      - amp_m: -1.0
+      - atp_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YER170W
+  - !!omap
+    - id: ADK1
+    - name: Adenylate kinase
+    - metabolites: !!omap
+      - adp_c: 2.0
+      - amp_c: -1.0
+      - atp_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR226W
+  - !!omap
+    - id: PPAm
+    - name: Inorganic diphosphatase
+    - metabolites: !!omap
+      - h2o_m: -1.0
+      - h_m: 1.0
+      - pi_m: 2.0
+      - ppi_m: -1.0
+    - lower_bound: 0.001
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR267W
+  - !!omap
+    - id: PPA
+    - name: Inorganic diphosphatase
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - pi_c: 2.0
+      - ppi_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR011C
+  - !!omap
+    - id: NADH2__u6m
+    - name: NADH dehydrogenase  mitochondrial
+    - metabolites: !!omap
+      - h_m: -1.0
+      - nad_m: 1.0
+      - nadh_m: -1.0
+      - q6_m: -1.0
+      - q6h2_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YML120C or YKL192C
+  - !!omap
+    - id: NADH2__u6cm
+    - name: NADH dehydrogenase  cytosolicmitochondrial
+    - metabolites: !!omap
+      - h_c: -1.0
+      - nad_c: 1.0
+      - nadh_c: -1.0
+      - q6_m: -1.0
+      - q6h2_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR145C or YDL085W
+  - !!omap
+    - id: MDHm
+    - name: Malate dehydrogenase  mitochondrial
+    - metabolites: !!omap
+      - h_m: 1.0
+      - mal__L_m: -1.0
+      - nad_m: -1.0
+      - nadh_m: 1.0
+      - oaa_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL085W
+  - !!omap
+    - id: MDH
+    - name: Malate dehydrogenase
+    - metabolites: !!omap
+      - h_c: -1.0
+      - mal__L_c: 1.0
+      - nad_c: 1.0
+      - nadh_c: -1.0
+      - oaa_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL126C
+  - !!omap
+    - id: FUMm
+    - name: Fumarase  mitochondrial
+    - metabolites: !!omap
+      - fum_m: -1.0
+      - h2o_m: -1.0
+      - mal__L_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YPL262W
+  - !!omap
+    - id: FUM
+    - name: Fumarase
+    - metabolites: !!omap
+      - fum_c: -1.0
+      - h2o_c: -1.0
+      - mal__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YPL262W
+  - !!omap
+    - id: CYOR_u6m
+    - name: Ubiquinol 6 cytochrome c reductase
+    - metabolites: !!omap
+      - ficytc_m: -2.0
+      - focytc_m: 2.0
+      - h_m: -1.5
+      - hcyt_c: 1.5
+      - q6_m: 1.0
+      - q6h2_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR001W_A and YJL166W and YGR183C and YBL045C and YFR033C
+        and YEL024W and Q0105 and YDR529C and YOR065W and YPR191W
+  - !!omap
+    - id: CYOOm
+    - name: Cytochrome c oxidase  mitochondrial
+    - metabolites: !!omap
+      - ficytc_m: 4.0
+      - focytc_m: -4.0
+      - h2o_m: 2.0
+      - h_m: -6.0
+      - hcyt_c: 6.0
+      - o2_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: (YGL191W and YDL067C and Q0275 and YLR038C and YGL187C and
+        Q0250 and Q0045 and YMR256C and YNL052W and YHR051W and YLR395C) or (YGL191W
+        and YDL067C and Q0275 and YLR038C and YGL187C and Q0250 and Q0045 and YMR256C
+        and YHR051W and YIL111W and YLR395C)
+  - !!omap
+    - id: ATPS3m
+    - name: ATP synthase  mitochondrial
+    - metabolites: !!omap
+      - adp_m: -1.0
+      - atp_m: 1.0
+      - h2o_m: 1.0
+      - h_m: 3.0
+      - hcyt_c: -3.0
+      - pi_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: (YDL004W and YKL016C and Q0085 and YPL078C and Q0130 and
+        YDR377W and YPL271W and YML081C_A and YLR295C and YBR039W and YJR121W and
+        YDR298C and Q0080 and YDL181W and YBL099W) or (YDL004W and YML081C_A and YLR295C
+        and YJR121W and YOL077W_A and YPR020W and YDR298C and YDR322C_A and YKL016C
+        and Q0085 and YPL271W and YDR377W and Q0130 and YPL078C and YBR039W and YDL181W
+        and Q0080 and YBL099W)
+  - !!omap
+    - id: TKT2
+    - name: Transketolase
+    - metabolites: !!omap
+      - e4p_c: -1.0
+      - f6p_c: 1.0
+      - g3p_c: 1.0
+      - xu5p__D_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YPR074C or YBR117C
+  - !!omap
+    - id: TKT1
+    - name: Transketolase
+    - metabolites: !!omap
+      - g3p_c: 1.0
+      - r5p_c: -1.0
+      - s7p_c: 1.0
+      - xu5p__D_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR117C or YPR074C
+  - !!omap
+    - id: TALA
+    - name: Transaldolase
+    - metabolites: !!omap
+      - e4p_c: 1.0
+      - f6p_c: 1.0
+      - g3p_c: -1.0
+      - s7p_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR354C or YGR043C
+  - !!omap
+    - id: RPI
+    - name: Ribose-5-phosphate isomerase
+    - metabolites: !!omap
+      - r5p_c: 1.0
+      - ru5p__D_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR095C
+  - !!omap
+    - id: RPE
+    - name: Ribulose 5-phosphate 3-epimerase
+    - metabolites: !!omap
+      - ru5p__D_c: -1.0
+      - xu5p__D_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL121C
+  - !!omap
+    - id: PGL
+    - name: 6-phosphogluconolactonase
+    - metabolites: !!omap
+      - 6pgc_c: 1.0
+      - 6pgl_c: -1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR073W_A or YNR034W or YGR248W or YHR163W
+  - !!omap
+    - id: GND
+    - name: Phosphogluconate dehydrogenase
+    - metabolites: !!omap
+      - 6pgc_c: -1.0
+      - co2tot_c: 1.0
+      - h2o_c: -1.0
+      - nadp_c: -1.0
+      - nadph_c: 1.0
+      - ru5p__D_c: 1.0
+    - lower_bound: 0.3
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR256W or YHR183W
+  - !!omap
+    - id: G6PDH2
+    - name: Glucose 6-phosphate dehydrogenase
+    - metabolites: !!omap
+      - 6pgl_c: 1.0
+      - g6p_c: -1.0
+      - h_c: 1.0
+      - nadp_c: -1.0
+      - nadph_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL241C
+  - !!omap
+    - id: PYRDC
+    - name: Pyruvate decarboxylase
+    - metabolites: !!omap
+      - acald_c: 1.0
+      - co2tot_c: 1.0
+      - h2o_c: -1.0
+      - h_c: -1.0
+      - pyr_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR134W or YGR087C or YLR044C
+  - !!omap
+    - id: ALCD2x
+    - name: Alcohol dehydrogenase (ethanol)
+    - metabolites: !!omap
+      - acald_c: 1.0
+      - etoh_c: -1.0
+      - h_c: 1.0
+      - nad_c: -1.0
+      - nadh_c: 1.0
+    - lower_bound: 0.05
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL168W or YBR145W or YMR303C or YOL086C or YGL256W
+  - !!omap
+    - id: ACSm
+    - name: Acetyl CoA synthetase
+    - metabolites: !!omap
+      - ac_m: -1.0
+      - accoa_m: 1.0
+      - amp_m: 1.0
+      - atp_m: -1.0
+      - coa_m: -1.0
+      - ppi_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL054C
+  - !!omap
+    - id: ACS
+    - name: Acetyl-CoA synthetase
+    - metabolites: !!omap
+      - ac_c: -1.0
+      - accoa_c: 1.0
+      - amp_c: 1.0
+      - atp_c: -1.0
+      - coa_c: -1.0
+      - ppi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR153C
+  - !!omap
+    - id: ACOAH
+    - name: Acetyl-CoA hydrolase
+    - metabolites: !!omap
+      - ac_c: 1.0
+      - accoa_c: -1.0
+      - coa_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBL015W
+  - !!omap
+    - id: THRS
+    - name: Threonine synthase
+    - metabolites: !!omap
+      - h2o_c: -1.0
+      - phom_c: -1.0
+      - pi_c: 1.0
+      - thr__L_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR053W
+  - !!omap
+    - id: THRD_Lm
+    - name: L threonine deaminase  mitochondrial
+    - metabolites: !!omap
+      - 2obut_m: 1.0
+      - nh4_m: 1.0
+      - thr__L_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER086W
+  - !!omap
+    - id: THRA
+    - name: Threonine aldolase
+    - metabolites: !!omap
+      - acald_c: 1.0
+      - gly_c: 1.0
+      - thr__L_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YEL046C
+  - !!omap
+    - id: SACCD2
+    - name: 'Saccharopine dehydrogenase  NAD  L lysine forming '
+    - metabolites: !!omap
+      - akg_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - lys__L_c: 1.0
+      - nad_c: -1.0
+      - nadh_c: 1.0
+      - saccrp__L_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIR034C
+  - !!omap
+    - id: SACCD1
+    - name: 'Saccharopine dehydrogenase  NADP  L glutamate forming '
+    - metabolites: !!omap
+      - L2aadp6sa_c: -1.0
+      - glu__L_c: -1.0
+      - h2o_c: 1.0
+      - h_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - saccrp__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNR050C
+  - !!omap
+    - id: OXAGm
+    - name: Non enzymatic reaction
+    - metabolites: !!omap
+      - 2oxoadp_m: 1.0
+      - co2tot_m: 1.0
+      - h2o_m: -1.0
+      - h_m: -1.0
+      - oxag_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: MCITDm
+    - name: 2 methylcitrate dehydratase  mitochondrial
+    - metabolites: !!omap
+      - b124tc_m: 1.0
+      - h2o_m: 1.0
+      - hcit_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: HICITDm
+    - name: Homoisocitrate dehydrogenase
+    - metabolites: !!omap
+      - h_m: 1.0
+      - hicit_m: -1.0
+      - nad_m: -1.0
+      - nadh_m: 1.0
+      - oxag_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL094C
+  - !!omap
+    - id: HACNHm
+    - name: Homoacontinate hydratase  mitochondrial
+    - metabolites: !!omap
+      - b124tc_m: -1.0
+      - h2o_m: -1.0
+      - hicit_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR234W
+  - !!omap
+    - id: AATA
+    - name: 2 aminoadipate transaminase
+    - metabolites: !!omap
+      - 2oxoadp_c: -1.0
+      - L2aadp_c: 1.0
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: AASAD1
+    - name: 'L aminoadipate semialdehyde dehydrogenase  NADPH '
+    - metabolites: !!omap
+      - L2aadp6sa_c: 1.0
+      - L2aadp_c: -1.0
+      - amp_c: 1.0
+      - atp_c: -1.0
+      - h_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - ppi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR115C and YGL154C
+  - !!omap
+    - id: TYRTA
+    - name: Tyrosine transaminase
+    - metabolites: !!omap
+      - 34hpp_c: -1.0
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - tyr__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR027C
+  - !!omap
+    - id: TRPS1
+    - name: Tryptophan synthase (indoleglycerol phosphate)
+    - metabolites: !!omap
+      - 3ig3p_c: -1.0
+      - g3p_c: 1.0
+      - h2o_c: 1.0
+      - ser__L_c: -1.0
+      - trp__L_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL026C
+  - !!omap
+    - id: SHKK
+    - name: Shikimate kinase
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - h_c: 1.0
+      - skm5p_c: 1.0
+      - skm_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR127W
+  - !!omap
+    - id: SHK3D
+    - name: Shikimate dehydrogenase
+    - metabolites: !!omap
+      - 3dhsk_c: -1.0
+      - h_c: -1.0
+      - nadp_c: 1.0
+      - nadph_c: -1.0
+      - skm_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR127W
+  - !!omap
+    - id: PSCVTi
+    - name: 3-phosphoshikimate 1-carboxyvinyltransferase
+    - metabolites: !!omap
+      - 3psme_c: 1.0
+      - pep_c: -1.0
+      - pi_c: 1.0
+      - skm5p_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR127W
+  - !!omap
+    - id: PRAIi
+    - name: Phosphoribosylanthranilate isomerase (irreversible)
+    - metabolites: !!omap
+      - 2cpr5p_c: 1.0
+      - pran_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR007W
+  - !!omap
+    - id: PPNDH
+    - name: Prephenate dehydratase
+    - metabolites: !!omap
+      - co2tot_c: 1.0
+      - h_c: -1.0
+      - phpyr_c: 1.0
+      - pphn_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL316C
+  - !!omap
+    - id: PPND2
+    - name: 'Prephenate dehydrogenase  NADP '
+    - metabolites: !!omap
+      - 34hpp_c: 1.0
+      - co2tot_c: 1.0
+      - h2o_c: -1.0
+      - nadp_c: -1.0
+      - nadph_c: 1.0
+      - pphn_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR166C
+  - !!omap
+    - id: PHETA1
+    - name: Phenylalanine transaminase
+    - metabolites: !!omap
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - phe__L_c: 1.0
+      - phpyr_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR137W
+  - !!omap
+    - id: IGPS
+    - name: Indole-3-glycerol-phosphate synthase
+    - metabolites: !!omap
+      - 2cpr5p_c: -1.0
+      - 3ig3p_c: 1.0
+      - co2tot_c: 1.0
+      - h_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL211C
+  - !!omap
+    - id: DHQTi
+    - name: 3-dehydroquinate dehydratase, irreversible
+    - metabolites: !!omap
+      - 3dhq_c: -1.0
+      - 3dhsk_c: 1.0
+      - h2o_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR127W
+  - !!omap
+    - id: DHQS
+    - name: 3-dehydroquinate synthase
+    - metabolites: !!omap
+      - 2dda7p_c: -1.0
+      - 3dhq_c: 1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR127W
+  - !!omap
+    - id: DDPA
+    - name: 3-deoxy-D-arabino-heptulosonate 7-phosphate synthetase
+    - metabolites: !!omap
+      - 2dda7p_c: 1.0
+      - e4p_c: -1.0
+      - h2o_c: -1.0
+      - pep_c: -1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR249C or YDR035W
+  - !!omap
+    - id: CHORS
+    - name: Chorismate synthase
+    - metabolites: !!omap
+      - 3psme_c: -1.0
+      - chor_c: 1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL148W
+  - !!omap
+    - id: CHORM
+    - name: Chorismate mutase
+    - metabolites: !!omap
+      - chor_c: -1.0
+      - pphn_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YPR060C
+  - !!omap
+    - id: ANPRT
+    - name: Anthranilate phosphoribosyltransferase
+    - metabolites: !!omap
+      - anth_c: -1.0
+      - ppi_c: 1.0
+      - pran_c: 1.0
+      - prpp_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR354W
+  - !!omap
+    - id: ALDD2ym
+    - name: Aldehyde dehydrogenase  acetylaldehyde  NADP   mitochondrial
+    - metabolites: !!omap
+      - ac_m: 1.0
+      - acald_m: -1.0
+      - h2o_m: -1.0
+      - h_m: 2.0
+      - nadp_m: -1.0
+      - nadph_m: 1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR374W
+  - !!omap
+    - id: ALDD2y
+    - name: Aldehyde dehydrogenase (acetaldehyde, NADP)
+    - metabolites: !!omap
+      - ac_c: 1.0
+      - acald_c: -1.0
+      - h2o_c: -1.0
+      - h_c: 2.0
+      - nadp_c: -1.0
+      - nadph_c: 1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YPL061W
+  - !!omap
+    - id: ALDD2xm
+    - name: Aldehyde dehydrogenase  acetylaldehyde  NAD   mitochondrial
+    - metabolites: !!omap
+      - ac_m: 1.0
+      - acald_m: -1.0
+      - h2o_m: -1.0
+      - h_m: 2.0
+      - nad_m: -1.0
+      - nadh_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR374W
+  - !!omap
+    - id: VALTA
+    - name: Valine transaminase
+    - metabolites: !!omap
+      - 3mob_c: -1.0
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - val__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR148W
+  - !!omap
+    - id: OMCDC
+    - name: 2-Oxo-4-methyl-3-carboxypentanoate decarboxylation
+    - metabolites: !!omap
+      - 3c4mop_c: -1.0
+      - 4mop_c: 1.0
+      - co2tot_c: 1.0
+      - h2o_c: -1.0
+      - h_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR148W
+  - !!omap
+    - id: LEUTA
+    - name: Leucine transaminase
+    - metabolites: !!omap
+      - 4mop_c: -1.0
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - leu__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR148W
+  - !!omap
+    - id: KARA2im
+    - name: Ketol acid reductoisomerase  2 Aceto 2 hydroxybutanoate   mitochondrial
+    - metabolites: !!omap
+      - 23dhmp_m: 1.0
+      - 2ahbut_m: -1.0
+      - h_m: -1.0
+      - nadp_m: 1.0
+      - nadph_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR355C
+  - !!omap
+    - id: KARA1im
+    - name: Acetohydroxy acid isomeroreductase  mitochondrial
+    - metabolites: !!omap
+      - 23dhmb_m: 1.0
+      - alac__S_m: -1.0
+      - h_m: -1.0
+      - nadp_m: 1.0
+      - nadph_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR355C
+  - !!omap
+    - id: IPPS
+    - name: 2-isopropylmalate synthase
+    - metabolites: !!omap
+      - 3c3hmp_c: 1.0
+      - 3mob_c: -1.0
+      - accoa_c: -1.0
+      - coa_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR108W or YNL104C
+  - !!omap
+    - id: IPPMIb
+    - name: 2-isopropylmalate hydratase
+    - metabolites: !!omap
+      - 2ippm_c: 1.0
+      - 3c3hmp_c: -1.0
+      - h2o_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL009C
+  - !!omap
+    - id: IPPMIa
+    - name: 3-isopropylmalate dehydratase
+    - metabolites: !!omap
+      - 2ippm_c: -1.0
+      - 3c2hmp_c: 1.0
+      - h2o_c: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL009C
+  - !!omap
+    - id: IPMD
+    - name: 3-isopropylmalate dehydrogenase
+    - metabolites: !!omap
+      - 3c2hmp_c: -1.0
+      - 3c4mop_c: 1.0
+      - h_c: 1.0
+      - nad_c: -1.0
+      - nadh_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL018W
+  - !!omap
+    - id: ILETA
+    - name: Isoleucine transaminase
+    - metabolites: !!omap
+      - 3mop_c: -1.0
+      - akg_c: 1.0
+      - glu__L_c: -1.0
+      - ile__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR148W
+  - !!omap
+    - id: DHAD2m
+    - name: Dihydroxy acid dehydratase  2 3 dihydroxy 3 methylpentanoate   mitochondrial
+    - metabolites: !!omap
+      - 23dhmp_m: -1.0
+      - 3mop_m: 1.0
+      - h2o_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR016C
+  - !!omap
+    - id: DHAD1m
+    - name: Dihydroxy acid dehydratase  2 3 dihydroxy 3 methylbutanoate   mitochondrial
+    - metabolites: !!omap
+      - 23dhmb_m: -1.0
+      - 3mob_m: 1.0
+      - h2o_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR016C
+  - !!omap
+    - id: ACLSm
+    - name: Acetolactate synthase  mitochondrial
+    - metabolites: !!omap
+      - alac__S_m: 1.0
+      - co2tot_m: 1.0
+      - h2o_m: -1.0
+      - h_m: -1.0
+      - pyr_m: -2.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL009C and YMR108W
+  - !!omap
+    - id: ACHBSm
+    - name: 2 aceto 2 hydroxybutanoate synthase  mitochondrial
+    - metabolites: !!omap
+      - 2ahbut_m: 1.0
+      - 2obut_m: -1.0
+      - co2tot_m: 1.0
+      - h2o_m: -1.0
+      - h_m: -1.0
+      - pyr_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL009C and YMR108W
+  - !!omap
+    - id: GLUSxm
+    - name: 'Glutamate synthase  NADH2 '
+    - metabolites: !!omap
+      - akg_m: -1.0
+      - gln__L_m: -1.0
+      - glu__L_m: 2.0
+      - h_m: -1.0
+      - nad_m: 1.0
+      - nadh_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL171C
+  - !!omap
+    - id: AGTm
+    - name: 'Alanine glyoxylate aminotransferase  irreversible '
+    - metabolites: !!omap
+      - ala__L_m: 1.0
+      - glx_m: 1.0
+      - gly_m: -1.0
+      - pyr_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFL030W
+  - !!omap
+    - id: HCITS
+    - name: Homocitrate synthase
+    - metabolites: !!omap
+      - accoa_c: -1.0
+      - akg_c: -1.0
+      - coa_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - hcit_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: MALS
+    - name: Malate synthase
+    - metabolites: !!omap
+      - accoa_c: -1.0
+      - coa_c: 1.0
+      - glx_c: -1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - mal__L_c: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIR031C or YNL117W
+  - !!omap
+    - id: GLUDym
+    - name: Glutamate dehydrogenase (NADP)
+    - metabolites: !!omap
+      - akg_m: -1.0
+      - glu__L_m: 1.0
+      - h2o_m: 1.0
+      - h_m: -1.0
+      - nadp_m: 1.0
+      - nadph_m: -1.0
+      - nh4_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL062W or YOR375C
+  - !!omap
+    - id: CSc
+    - name: Citrate synthase
+    - metabolites: !!omap
+      - accoa_c: -1.0
+      - cit_c: 1.0
+      - coa_c: 1.0
+      - h2o_c: -1.0
+      - h_c: 1.0
+      - oaa_c: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YNR001C or YPR001W
+  - !!omap
+    - id: SUCCt2r
+    - name: Succinate transport via proton symport
+    - metabolites: !!omap
+      - h_c: -1.0
+      - h_e: 1.0
+      - succ_c: -1.0
+      - succ_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: SO4ti
+    - name: Sulfate irreversible uniport
+    - metabolites: !!omap
+      - so4_c: 1.0
+      - so4_e: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR294W or YLR092W or YGR125W
+  - !!omap
+    - id: PYRt2
+    - name: Pyruvate transport in via proton symport
+    - metabolites: !!omap
+      - pyr_c: -1.0
+      - pyr_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL217W
+  - !!omap
+    - id: PIt2r
+    - name: Phosphate reversible transport via symport
+    - metabolites: !!omap
+      - h_c: 1.0
+      - h_e: -1.0
+      - pi_c: 1.0
+      - pi_e: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR098C or YCR037C or YBR296C or YML123C or YNR013C or YJL198W
+  - !!omap
+    - id: O2t
+    - name: 'O2 transport  diffusion '
+    - metabolites: !!omap
+      - o2_c: 1.0
+      - o2_e: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: NH4t
+    - name: Ammonia reversible transport
+    - metabolites: !!omap
+      - nh4_c: 1.0
+      - nh4_e: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL142W or YPR138C or YGR121C
+  - !!omap
+    - id: H2Ot
+    - name: H2O transport via diffusion
+    - metabolites: !!omap
+      - h2o_c: 1.0
+      - h2o_e: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: GLYCt
+    - name: Glycerol transport via channel
+    - metabolites: !!omap
+      - glyc_c: -1.0
+      - glyc_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLL043W
+  - !!omap
+    - id: GLCt1
+    - name: 'Glucose transport  uniport '
+    - metabolites: !!omap
+      - glc__D_c: 1.0
+      - glc__D_e: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR011W or YDL245C or YJL219W or YLR081W or YHR092C or YJL214W
+        or YHR096C or YEL069C or YOL156W or YFL011W or YDR345C or YDR343C or YDR342C
+        or YJR158W or YDR536W or YNR072W or YHR094C
+  - !!omap
+    - id: ETOHt
+    - name: Ethanol reversible transport
+    - metabolites: !!omap
+      - etoh_c: -1.0
+      - etoh_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: CO2t
+    - name: CO2 transporter via diffusion
+    - metabolites: !!omap
+      - co2tot_c: -1.0
+      - co2tot_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ATPS
+    - name: ATPase  cytosolic
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - h2o_c: -1.0
+      - h_e: 1.0
+      - pi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: (YPL036W and YCR024C_A and YEL017C_A) or (YGL008C and YCR024C_A
+        and YEL017C_A)
+  - !!omap
+    - id: ACt2r
+    - name: Acetate reversible transport via proton symport
+    - metabolites: !!omap
+      - ac_c: -1.0
+      - ac_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR032W
+  - !!omap
+    - id: THRt2m
+    - name: Threonine mitochondrial transport via proton symport
+    - metabolites: !!omap
+      - thr__L_c: -1.0
+      - thr__L_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: SUCFUMtm
+    - name: Succinate fumarate transport  mitochondrial
+    - metabolites: !!omap
+      - fum_c: 1.0
+      - fum_m: -1.0
+      - succ_c: -1.0
+      - succ_m: 1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR095W
+  - !!omap
+    - id: SUCCtm
+    - name: Succinate transport  mitochondrial
+    - metabolites: !!omap
+      - pi_c: 1.0
+      - pi_m: -1.0
+      - succ_c: -1.0
+      - succ_m: 1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR348C
+  - !!omap
+    - id: PYRt2m
+    - name: Pyruvate mitochondrial transport via proton symport
+    - metabolites: !!omap
+      - h_c: -1.0
+      - h_m: 1.0
+      - pyr_c: -1.0
+      - pyr_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: PIt2m
+    - name: Phosphate transporter  mitochondrial
+    - metabolites: !!omap
+      - h_c: -1.0
+      - h_m: 1.0
+      - pi_c: -1.0
+      - pi_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR077C
+  - !!omap
+    - id: ORNt3m
+    - name: Ornithine mitochondrial transport via proton antiport
+    - metabolites: !!omap
+      - orn_c: 1.0
+      - orn_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR130C
+  - !!omap
+    - id: OAAt2m
+    - name: Oxaloacetate transport  mitochondrial
+    - metabolites: !!omap
+      - h_c: 2.0
+      - h_m: -2.0
+      - oaa_c: 1.0
+      - oaa_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL120W
+  - !!omap
+    - id: O2tm
+    - name: 'O2 transport  diffusion '
+    - metabolites: !!omap
+      - o2_c: -1.0
+      - o2_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: NH4tm
+    - name: NH3 mitochondrial transport
+    - metabolites: !!omap
+      - nh4_c: -1.0
+      - nh4_m: 1.0
+    - lower_bound: 0.005
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: MALtm
+    - name: Malate transport  mitochondrial
+    - metabolites: !!omap
+      - mal__L_c: -1.0
+      - mal__L_m: 1.0
+      - pi_c: 1.0
+      - pi_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR348C
+  - !!omap
+    - id: H2Otm
+    - name: H2O transport  mitochondrial
+    - metabolites: !!omap
+      - h2o_c: 1.0
+      - h2o_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: GLYt2m
+    - name: Glycine mitochondrial transport via proton symport
+    - metabolites: !!omap
+      - gly_c: -1.0
+      - gly_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: GLUt2m
+    - name: Amino acid transporter (glu-L), mitochondrial
+    - metabolites: !!omap
+      - glu__L_c: 1.0
+      - glu__L_m: -1.0
+      - h_c: 1.0
+      - h_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ETOHtm
+    - name: 'Ethanol transport to mitochondria  diffusion '
+    - metabolites: !!omap
+      - etoh_c: 1.0
+      - etoh_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: CO2tm
+    - name: CO2 transport  diffusion   mitochondrial
+    - metabolites: !!omap
+      - co2tot_c: 1.0
+      - co2tot_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: CITtcm
+    - name: Citrate transport  mitochondrial
+    - metabolites: !!omap
+      - cit_c: -1.0
+      - cit_m: 1.0
+      - icit_c: 1.0
+      - icit_m: -1.0
+    - lower_bound: 0.01
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR291C
+  - !!omap
+    - id: CITtam
+    - name: Citrate transport  mitochondrial
+    - metabolites: !!omap
+      - cit_c: -1.0
+      - cit_m: 1.0
+      - mal__L_c: 1.0
+      - mal__L_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR291C
+  - !!omap
+    - id: ATPtm__H
+    - name: ATPtm-H
+    - metabolites: !!omap
+      - adp_c: -1.0
+      - adp_m: 1.0
+      - atp_c: 1.0
+      - atp_m: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ACtm
+    - name: Acetate transport  mitochondrial
+    - metabolites: !!omap
+      - ac_c: 1.0
+      - ac_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: 3MOPtm
+    - name: 3 Methyl 2 oxopentanoate transport  diffusion  mitochondrial
+    - metabolites: !!omap
+      - 3mop_c: 1.0
+      - 3mop_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: 3MOBtm
+    - name: 3 methyl 2 oxobutanoate transport  diffusion  mitochondrial
+    - metabolites: !!omap
+      - 3mob_c: 1.0
+      - 3mob_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: 2OXOADPtim
+    - name: 2 oxoadipate transport out of mitochondria via diffusion
+    - metabolites: !!omap
+      - 2oxoadp_c: 1.0
+      - 2oxoadp_m: -1.0
+      - akg_c: -1.0
+      - akg_m: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: GLNt2m
+    - name: L-Glutamine exchange
+    - metabolites: !!omap
+      - gln__L_c: -1.0
+      - gln__L_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: 2OBUTtm
+    - name: 2OBUTtm
+    - metabolites: !!omap
+      - 2obut_c: -1.0
+      - 2obut_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ALAt2m
+    - name: L-Alanine exchange
+    - metabolites: !!omap
+      - ala__L_c: 1.0
+      - ala__L_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: HCITtm
+    - name: HCITtm
+    - metabolites: !!omap
+      - hcit_c: -1.0
+      - hcit_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: GLXtm
+    - name: Glyoxylate transport  peroxisomal
+    - metabolites: !!omap
+      - glx_c: 1.0
+      - glx_m: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ACALDtm
+    - name: Acetaldehyde reversible transport
+    - metabolites: !!omap
+      - acald_c: -1.0
+      - acald_m: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_co2_e
+    - name: CO2 exchange
+    - metabolites: !!omap
+      - co2tot_e: -1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_glc__D_e
+    - name: D-Glucose exchange
+    - metabolites: !!omap
+      - glc__D_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_h_e
+    - name: H+ exchange
+    - metabolites: !!omap
+      - h_e: -1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_h2o_e
+    - name: H2O exchange
+    - metabolites: !!omap
+      - h2o_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_nh4_e
+    - name: Ammonia exchange
+    - metabolites: !!omap
+      - nh4_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_o2_e
+    - name: O2 exchange
+    - metabolites: !!omap
+      - o2_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_pi_e
+    - name: Phosphate exchange
+    - metabolites: !!omap
+      - pi_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: EX_so4_e
+    - name: Sulfate exchange
+    - metabolites: !!omap
+      - so4_e: 1.0
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+    - annotation: !!omap
+      - SBO: SBO:0000627
+  - !!omap
+    - id: aicarSYN
+    - name: aicarSYN
+    - metabolites: !!omap
+      - 10fthf_c: -1.0
+      - adp_c: 4.0
+      - aicar_c: 1.0
+      - amp_c: 1.0
+      - asp__L_c: -1.0
+      - atp_c: -5.0
+      - co2tot_c: -1.0
+      - fum_c: 1.0
+      - gln__L_c: -2.0
+      - glu__L_c: 2.0
+      - gly_c: -1.0
+      - h2o_c: -1.0
+      - h_c: 8.0
+      - pi_c: 4.0
+      - ppi_c: 1.0
+      - r5p_c: -1.0
+      - thf_c: 1.0
+    - lower_bound: 0.0001
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: ampSYN
+    - name: ampSYN
+    - metabolites: !!omap
+      - 10fthf_c: -1.0
+      - adp_c: 1.0
+      - aicar_c: -1.0
+      - amp_c: 1.0
+      - asp__L_c: -1.0
+      - atp_c: -1.0
+      - fum_c: 1.0
+      - h2o_c: 1.0
+      - h_c: 2.0
+      - pi_c: 1.0
+      - thf_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: 13BDglcnSYN
+    - name: 13BDglcnSYN
+    - metabolites: !!omap
+      - 13BDglcn_c: 1.0
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - g6p_c: -1.0
+      - ppi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: mannanSYN
+    - name: mannanSYN
+    - metabolites: !!omap
+      - adp_c: 1.0
+      - atp_c: -1.0
+      - f6p_c: -1.0
+      - mannan_c: 1.0
+      - ppi_c: 1.0
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_adp_c
+    - name: ADP C10H12N5O10P2 exchange
+    - metabolites: !!omap
+      - adp_c: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_cys__L_c
+    - name: L-Cysteine exchange
+    - metabolites: !!omap
+      - cys__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_mal__L_c
+    - name: L-Malate exchange
+    - metabolites: !!omap
+      - mal__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_trp__L_c
+    - name: L-Tryptophan exchange
+    - metabolites: !!omap
+      - trp__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_met__L_c
+    - name: L-Methionine exchange
+    - metabolites: !!omap
+      - met__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_his__L_c
+    - name: L-Histidine exchange
+    - metabolites: !!omap
+      - his__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_asn__L_c
+    - name: L-Asparagine exchange
+    - metabolites: !!omap
+      - asn__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_tyr__L_c
+    - name: L-Tyrosine exchange
+    - metabolites: !!omap
+      - tyr__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_gln__L_c
+    - name: L-Glutamine exchange
+    - metabolites: !!omap
+      - gln__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_phe__L_c
+    - name: L-Phenylalanine exchange
+    - metabolites: !!omap
+      - phe__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_pro__L_c
+    - name: L-Proline exchange
+    - metabolites: !!omap
+      - pro__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_ile__L_c
+    - name: L-Isoleucine exchange
+    - metabolites: !!omap
+      - ile__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_thr__L_c
+    - name: L-Threonine exchange
+    - metabolites: !!omap
+      - thr__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_ser__L_c
+    - name: L-Serine exchange
+    - metabolites: !!omap
+      - ser__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_lys__L_c
+    - name: L-Lysine exchange
+    - metabolites: !!omap
+      - lys__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_arg__L_c
+    - name: L-Arginine exchange
+    - metabolites: !!omap
+      - arg__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_val__L_c
+    - name: L-Valine exchange
+    - metabolites: !!omap
+      - val__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_leu__L_c
+    - name: L-Leucine exchange
+    - metabolites: !!omap
+      - leu__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_gly_c
+    - name: Glycine exchange
+    - metabolites: !!omap
+      - gly_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_asp__L_c
+    - name: L-Aspartate exchange
+    - metabolites: !!omap
+      - asp__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_glu__L_c
+    - name: L-Glutamate exchange
+    - metabolites: !!omap
+      - glu__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_mannan_c
+    - name: Mannan C6H10O5 exchange
+    - metabolites: !!omap
+      - mannan_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_ala__L_c
+    - name: L-Alanine exchange
+    - metabolites: !!omap
+      - ala__L_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_acald_c
+    - name: Acetaldehyde exchange
+    - metabolites: !!omap
+      - acald_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_13BDglcn_c
+    - name: 1 3 beta D Glucan C6H10O5 exchange
+    - metabolites: !!omap
+      - 13BDglcn_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_atp_c
+    - name: ATP C10H12N5O13P3 exchange
+    - metabolites: !!omap
+      - atp_c: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_pyr_e
+    - name: Pyruvate exchange
+    - metabolites: !!omap
+      - pyr_e: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_glyc_e
+    - name: Glycerol exchange
+    - metabolites: !!omap
+      - glyc_e: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_succ_e
+    - name: Succinate exchange
+    - metabolites: !!omap
+      - succ_e: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_ac_e
+    - name: Acetate exchange
+    - metabolites: !!omap
+      - ac_e: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+  - !!omap
+    - id: EX_etoh_e
+    - name: Ethanol exchange
+    - metabolites: !!omap
+      - etoh_e: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: ''
+- genes:
+  - !!omap
+    - id: YDL245C
+    - name: HXT15
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL245C
+  - !!omap
+    - id: YJL052W
+    - name: TDH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL052W
+  - !!omap
+    - id: YOL156W
+    - name: HXT11
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL156W
+  - !!omap
+    - id: YGL009C
+    - name: LEU1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL009C
+  - !!omap
+    - id: YKL060C
+    - name: FBA1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL060C
+  - !!omap
+    - id: YGR155W
+    - name: CYS4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR155W
+  - !!omap
+    - id: YPR138C
+    - name: MEP3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR138C
+  - !!omap
+    - id: YDR377W
+    - name: ATP17
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR377W
+  - !!omap
+    - id: Q0275
+    - name: COX3
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0275
+  - !!omap
+    - id: Q0105
+    - name: COB
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0105
+  - !!omap
+    - id: YJR077C
+    - name: MIR1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR077C
+  - !!omap
+    - id: YHR051W
+    - name: COX6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR051W
+  - !!omap
+    - id: YGR124W
+    - name: ASN2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR124W
+  - !!omap
+    - id: YCL030C
+    - name: HIS4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCL030C
+  - !!omap
+    - id: YLR377C
+    - name: FBP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR377C
+  - !!omap
+    - id: YAL062W
+    - name: GDH3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YAL062W
+  - !!omap
+    - id: YPL061W
+    - name: ALD6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL061W
+  - !!omap
+    - id: YLR044C
+    - name: PDC1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR044C
+  - !!omap
+    - id: YLR092W
+    - name: SUL2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR092W
+  - !!omap
+    - id: YLR295C
+    - name: ATP14
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR295C
+  - !!omap
+    - id: YBL045C
+    - name: COR1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBL045C
+  - !!omap
+    - id: YKL120W
+    - name: OAC1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL120W
+  - !!omap
+    - id: YHR018C
+    - name: ARG4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR018C
+  - !!omap
+    - id: YNR072W
+    - name: HXT17
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNR072W
+  - !!omap
+    - id: YIL020C
+    - name: HIS6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL020C
+  - !!omap
+    - id: YLL041C
+    - name: SDH2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLL041C
+  - !!omap
+    - id: YOR142W
+    - name: LSC1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR142W
+  - !!omap
+    - id: YER091C
+    - name: MET6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER091C
+  - !!omap
+    - id: YDR234W
+    - name: LYS4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR234W
+  - !!omap
+    - id: YIL125W
+    - name: KGD1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL125W
+  - !!omap
+    - id: YDR342C
+    - name: HXT7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR342C
+  - !!omap
+    - id: YKL001C
+    - name: MET14
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL001C
+  - !!omap
+    - id: YDR536W
+    - name: STL1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR536W
+  - !!omap
+    - id: YJL219W
+    - name: HXT9
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL219W
+  - !!omap
+    - id: YBR115C
+    - name: LYS2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR115C
+  - !!omap
+    - id: YOL077W_A
+    - name: ATP19
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL077W-A
+  - !!omap
+    - id: YGL191W
+    - name: COX13
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL191W
+  - !!omap
+    - id: YIL053W
+    - name: GPP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL053W
+  - !!omap
+    - id: YFL011W
+    - name: HXT10
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFL011W
+  - !!omap
+    - id: YBL068W
+    - name: PRS4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBL068W
+  - !!omap
+    - id: YPR167C
+    - name: MET16
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR167C
+  - !!omap
+    - id: YER086W
+    - name: ILV1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER086W
+  - !!omap
+    - id: YHR094C
+    - name: HXT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR094C
+  - !!omap
+    - id: YER090W
+    - name: TRP2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER090W
+  - !!omap
+    - id: YJR139C
+    - name: HOM6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR139C
+  - !!omap
+    - id: YML123C
+    - name: PHO84
+    - notes: !!omap
+      - original_bigg_ids:
+        - YML123C
+  - !!omap
+    - id: YDR354W
+    - name: TRP4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR354W
+  - !!omap
+    - id: YHL011C
+    - name: PRS3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHL011C
+  - !!omap
+    - id: YPL036W
+    - name: PMA2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL036W
+  - !!omap
+    - id: YBR196C
+    - name: PGI1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR196C
+  - !!omap
+    - id: YFR033C
+    - name: QCR6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFR033C
+  - !!omap
+    - id: YGR244C
+    - name: LSC2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR244C
+  - !!omap
+    - id: YER062C
+    - name: GPP2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER062C
+  - !!omap
+    - id: YBL099W
+    - name: ATP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBL099W
+  - !!omap
+    - id: YGR248W
+    - name: SOL4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR248W
+  - !!omap
+    - id: YOR108W
+    - name: LEU9
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR108W
+  - !!omap
+    - id: YOR130C
+    - name: ORT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR130C
+  - !!omap
+    - id: YKL181W
+    - name: PRS1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL181W
+  - !!omap
+    - id: YJL214W
+    - name: HXT8
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL214W
+  - !!omap
+    - id: YMR303C
+    - name: ADH2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR303C
+  - !!omap
+    - id: YCR037C
+    - name: PHO87
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR037C
+  - !!omap
+    - id: YLL043W
+    - name: FPS1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLL043W
+  - !!omap
+    - id: YMR118C
+    - name: SHH3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR118C
+  - !!omap
+    - id: YER170W
+    - name: ADK2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER170W
+  - !!omap
+    - id: YBR249C
+    - name: ARO4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR249C
+  - !!omap
+    - id: YDL067C
+    - name: COX9
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL067C
+  - !!omap
+    - id: YDR158W
+    - name: HOM2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR158W
+  - !!omap
+    - id: YLR058C
+    - name: SHM2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR058C
+  - !!omap
+    - id: YJL088W
+    - name: ARG3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL088W
+  - !!omap
+    - id: YFR053C
+    - name: HXK1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFR053C
+  - !!omap
+    - id: YKL085W
+    - name: MDH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL085W
+  - !!omap
+    - id: YPR191W
+    - name: QCR2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR191W
+  - !!omap
+    - id: YFR030W
+    - name: MET10
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFR030W
+  - !!omap
+    - id: YCL040W
+    - name: GLK1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCL040W
+  - !!omap
+    - id: YGR183C
+    - name: QCR9
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR183C
+  - !!omap
+    - id: YOL056W
+    - name: GPM3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL056W
+  - !!omap
+    - id: YCR073W_A
+    - name: SOL2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR073W-A
+  - !!omap
+    - id: YHR163W
+    - name: SOL3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR163W
+  - !!omap
+    - id: Q0080
+    - name: ATP8
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0080
+  - !!omap
+    - id: YNR050C
+    - name: LYS9
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNR050C
+  - !!omap
+    - id: YJL198W
+    - name: PHO90
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL198W
+  - !!omap
+    - id: YMR062C
+    - name: ARG7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR062C
+  - !!omap
+    - id: YHR092C
+    - name: HXT4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR092C
+  - !!omap
+    - id: YPR145W
+    - name: ASN1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR145W
+  - !!omap
+    - id: YDR322C_A
+    - name: TIM11
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR322C-A
+  - !!omap
+    - id: YLR038C
+    - name: COX12
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR038C
+  - !!omap
+    - id: YJR016C
+    - name: ILV3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR016C
+  - !!omap
+    - id: YNL104C
+    - name: LEU4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL104C
+  - !!omap
+    - id: YGL008C
+    - name: PMA1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL008C
+  - !!omap
+    - id: YFL030W
+    - name: AGX1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFL030W
+  - !!omap
+    - id: YBR291C
+    - name: CTP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR291C
+  - !!omap
+    - id: YDR226W
+    - name: ADK1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR226W
+  - !!omap
+    - id: YLR027C
+    - name: AAT2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR027C
+  - !!omap
+    - id: YOR303W
+    - name: CPA1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR303W
+  - !!omap
+    - id: YFL018C
+    - name: LPD1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFL018C
+  - !!omap
+    - id: YHL032C
+    - name: GUT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHL032C
+  - !!omap
+    - id: YJR109C
+    - name: CPA2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR109C
+  - !!omap
+    - id: YER081W
+    - name: SER3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER081W
+  - !!omap
+    - id: YGR204W
+    - name: ADE3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR204W
+  - !!omap
+    - id: YER178W
+    - name: PDA1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER178W
+  - !!omap
+    - id: YDL085W
+    - name: NDE2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL085W
+  - !!omap
+    - id: YMR267W
+    - name: PPA2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR267W
+  - !!omap
+    - id: YKL016C
+    - name: ATP7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL016C
+  - !!omap
+    - id: YNR034W
+    - name: SOL1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNR034W
+  - !!omap
+    - id: YGL253W
+    - name: HXK2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL253W
+  - !!omap
+    - id: Q0130
+    - name: OLI1
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0130
+  - !!omap
+    - id: YOL126C
+    - name: MDH2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL126C
+  - !!omap
+    - id: YLR395C
+    - name: COX8
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR395C
+  - !!omap
+    - id: YPR001W
+    - name: CIT3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR001W
+  - !!omap
+    - id: YCL050C
+    - name: APA1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCL050C
+  - !!omap
+    - id: YJL045W
+    - name: ''
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL045W
+  - !!omap
+    - id: YPR060C
+    - name: ARO7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR060C
+  - !!omap
+    - id: Q0085
+    - name: ATP6
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0085
+  - !!omap
+    - id: YAL038W
+    - name: CDC19
+    - notes: !!omap
+      - original_bigg_ids:
+        - YAL038W
+  - !!omap
+    - id: YLR304C
+    - name: ACO1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR304C
+  - !!omap
+    - id: YHR025W
+    - name: THR1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR025W
+  - !!omap
+    - id: YOR323C
+    - name: PRO2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR323C
+  - !!omap
+    - id: YNL117W
+    - name: MLS1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL117W
+  - !!omap
+    - id: YMR323W
+    - name: ERR3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR323W
+  - !!omap
+    - id: YPL271W
+    - name: ATP15
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL271W
+  - !!omap
+    - id: YBR039W
+    - name: ATP3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR039W
+  - !!omap
+    - id: YBR294W
+    - name: SUL1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR294W
+  - !!omap
+    - id: YDR345C
+    - name: HXT3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR345C
+  - !!omap
+    - id: YCR098C
+    - name: GIT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR098C
+  - !!omap
+    - id: YML081C_A
+    - name: ATP18
+    - notes: !!omap
+      - original_bigg_ids:
+        - YML081C-A
+  - !!omap
+    - id: YKL152C
+    - name: GPM1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL152C
+  - !!omap
+    - id: YGL154C
+    - name: LYS5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL154C
+  - !!omap
+    - id: YOL064C
+    - name: MET22
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL064C
+  - !!omap
+    - id: YMR083W
+    - name: ADH3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR083W
+  - !!omap
+    - id: YNL277W
+    - name: MET2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL277W
+  - !!omap
+    - id: YMR256C
+    - name: COX7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR256C
+  - !!omap
+    - id: YGR240C
+    - name: PFK1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR240C
+  - !!omap
+    - id: YLR355C
+    - name: ILV5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR355C
+  - !!omap
+    - id: YLR164W
+    - name: SHH4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR164W
+  - !!omap
+    - id: YOR374W
+    - name: ALD4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR374W
+  - !!omap
+    - id: YNR001C
+    - name: CIT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNR001C
+  - !!omap
+    - id: YOR202W
+    - name: HIS3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR202W
+  - !!omap
+    - id: YER055C
+    - name: HIS1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER055C
+  - !!omap
+    - id: YOL058W
+    - name: ARG1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL058W
+  - !!omap
+    - id: YNL052W
+    - name: COX5A
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL052W
+  - !!omap
+    - id: YPL078C
+    - name: ATP4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL078C
+  - !!omap
+    - id: YLR089C
+    - name: ALT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR089C
+  - !!omap
+    - id: YPL281C
+    - name: ERR2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL281C
+  - !!omap
+    - id: YNL142W
+    - name: MEP2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL142W
+  - !!omap
+    - id: YGL187C
+    - name: COX4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL187C
+  - !!omap
+    - id: YMR011W
+    - name: HXT2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR011W
+  - !!omap
+    - id: YDL171C
+    - name: GLT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL171C
+  - !!omap
+    - id: YKL217W
+    - name: JEN1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL217W
+  - !!omap
+    - id: YPL262W
+    - name: FUM1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL262W
+  - !!omap
+    - id: YDR007W
+    - name: TRP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR007W
+  - !!omap
+    - id: YML096W
+    - name: ''
+    - notes: !!omap
+      - original_bigg_ids:
+        - YML096W
+  - !!omap
+    - id: YHR174W
+    - name: ENO2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR174W
+  - !!omap
+    - id: YDR529C
+    - name: QCR7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR529C
+  - !!omap
+    - id: Q0045
+    - name: COX1
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0045
+  - !!omap
+    - id: YBR117C
+    - name: TKL2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR117C
+  - !!omap
+    - id: YGR043C
+    - name: NQM1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR043C
+  - !!omap
+    - id: YOR347C
+    - name: PYK2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR347C
+  - !!omap
+    - id: YJL200C
+    - name: ACO2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL200C
+  - !!omap
+    - id: YMR108W
+    - name: ILV2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR108W
+  - !!omap
+    - id: YOR388C
+    - name: FDH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR388C
+  - !!omap
+    - id: YFR025C
+    - name: HIS2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YFR025C
+  - !!omap
+    - id: YDL181W
+    - name: INH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL181W
+  - !!omap
+    - id: YBR145W
+    - name: ADH5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR145W
+  - !!omap
+    - id: YBR296C
+    - name: PHO89
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR296C
+  - !!omap
+    - id: YPR020W
+    - name: ATP20
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR020W
+  - !!omap
+    - id: YJR137C
+    - name: MET5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR137C
+  - !!omap
+    - id: YGR254W
+    - name: ENO1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR254W
+  - !!omap
+    - id: YKL192C
+    - name: ACP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL192C
+  - !!omap
+    - id: YGL125W
+    - name: MET13
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL125W
+  - !!omap
+    - id: YOR184W
+    - name: SER1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR184W
+  - !!omap
+    - id: YBR166C
+    - name: TYR1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR166C
+  - !!omap
+    - id: YMR145C
+    - name: NDE1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR145C
+  - !!omap
+    - id: YML120C
+    - name: NDI1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YML120C
+  - !!omap
+    - id: YLR081W
+    - name: GAL2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR081W
+  - !!omap
+    - id: YEL069C
+    - name: HXT13
+    - notes: !!omap
+      - original_bigg_ids:
+        - YEL069C
+  - !!omap
+    - id: YEL017C_A
+    - name: PMP2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YEL017C-A
+  - !!omap
+    - id: YER023W
+    - name: PRO3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER023W
+  - !!omap
+    - id: YEL024W
+    - name: RIP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YEL024W
+  - !!omap
+    - id: YDL004W
+    - name: ATP16
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL004W
+  - !!omap
+    - id: YGR125W
+    - name: ''
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR125W
+  - !!omap
+    - id: YIR031C
+    - name: DAL7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIR031C
+  - !!omap
+    - id: YLR303W
+    - name: MET17
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR303W
+  - !!omap
+    - id: YGR256W
+    - name: GND2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR256W
+  - !!omap
+    - id: YHR096C
+    - name: HXT5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR096C
+  - !!omap
+    - id: YOR065W
+    - name: CYT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR065W
+  - !!omap
+    - id: YDR178W
+    - name: SDH4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR178W
+  - !!omap
+    - id: YKL029C
+    - name: MAE1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL029C
+  - !!omap
+    - id: YDL168W
+    - name: SFA1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL168W
+  - !!omap
+    - id: YJL121C
+    - name: RPE1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL121C
+  - !!omap
+    - id: YKL141W
+    - name: SDH3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL141W
+  - !!omap
+    - id: YBR011C
+    - name: IPP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR011C
+  - !!omap
+    - id: YPL276W
+    - name: ''
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL276W
+  - !!omap
+    - id: YPR074C
+    - name: TKL1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR074C
+  - !!omap
+    - id: YDR035W
+    - name: ARO3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR035W
+  - !!omap
+    - id: YKL211C
+    - name: TRP3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL211C
+  - !!omap
+    - id: YCR012W
+    - name: PGK1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR012W
+  - !!omap
+    - id: YIR034C
+    - name: LYS1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIR034C
+  - !!omap
+    - id: YCR032W
+    - name: BPH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR032W
+  - !!omap
+    - id: YHR001W_A
+    - name: QCR10
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR001W-A
+  - !!omap
+    - id: YNL037C
+    - name: IDH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL037C
+  - !!omap
+    - id: YNL316C
+    - name: PHA2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL316C
+  - !!omap
+    - id: YIL094C
+    - name: LYS12
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL094C
+  - !!omap
+    - id: YPL023C
+    - name: MET12
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL023C
+  - !!omap
+    - id: YLR354C
+    - name: TAL1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR354C
+  - !!omap
+    - id: YJR095W
+    - name: SFC1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR095W
+  - !!omap
+    - id: YER065C
+    - name: ICL1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER065C
+  - !!omap
+    - id: YPL275W
+    - name: ''
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPL275W
+  - !!omap
+    - id: YDR127W
+    - name: ARO1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR127W
+  - !!omap
+    - id: YBR221C
+    - name: PDB1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR221C
+  - !!omap
+    - id: YOR136W
+    - name: IDH2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR136W
+  - !!omap
+    - id: YIL116W
+    - name: HIS5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL116W
+  - !!omap
+    - id: YDR300C
+    - name: PRO1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR300C
+  - !!omap
+    - id: YOR095C
+    - name: RKI1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR095C
+  - !!omap
+    - id: YGL062W
+    - name: PYC1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL062W
+  - !!omap
+    - id: YLR153C
+    - name: ACS2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR153C
+  - !!omap
+    - id: YER052C
+    - name: HOM3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER052C
+  - !!omap
+    - id: YGR192C
+    - name: TDH3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR192C
+  - !!omap
+    - id: YDR298C
+    - name: ATP5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR298C
+  - !!omap
+    - id: YKR097W
+    - name: PCK1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKR097W
+  - !!omap
+    - id: YBR218C
+    - name: PYC2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR218C
+  - !!omap
+    - id: YGR121C
+    - name: MEP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR121C
+  - !!omap
+    - id: YGR087C
+    - name: PDC6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR087C
+  - !!omap
+    - id: YCL018W
+    - name: LEU2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCL018W
+  - !!omap
+    - id: YJR158W
+    - name: HXT16
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR158W
+  - !!omap
+    - id: YCR024C_A
+    - name: PMP1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR024C-A
+  - !!omap
+    - id: YNR013C
+    - name: PHO91
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNR013C
+  - !!omap
+    - id: YDR050C
+    - name: TPI1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR050C
+  - !!omap
+    - id: YIL111W
+    - name: COX5B
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL111W
+  - !!omap
+    - id: YPR035W
+    - name: GLN1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YPR035W
+  - !!omap
+    - id: YHR137W
+    - name: ARO9
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR137W
+  - !!omap
+    - id: YJR148W
+    - name: BAT2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR148W
+  - !!omap
+    - id: YIL074C
+    - name: SER33
+    - notes: !!omap
+      - original_bigg_ids:
+        - YIL074C
+  - !!omap
+    - id: YMR205C
+    - name: PFK2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YMR205C
+  - !!omap
+    - id: YDR343C
+    - name: HXT6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR343C
+  - !!omap
+    - id: YOL061W
+    - name: PRS5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL061W
+  - !!omap
+    - id: YNL071W
+    - name: LAT1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL071W
+  - !!omap
+    - id: YEL046C
+    - name: GLY1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YEL046C
+  - !!omap
+    - id: YGL026C
+    - name: TRP5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL026C
+  - !!omap
+    - id: YBL015W
+    - name: ACH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBL015W
+  - !!omap
+    - id: YOR375C
+    - name: GDH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR375C
+  - !!omap
+    - id: YGL256W
+    - name: ADH4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL256W
+  - !!omap
+    - id: YGL148W
+    - name: ARO2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGL148W
+  - !!omap
+    - id: YDR111C
+    - name: ALT2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR111C
+  - !!omap
+    - id: YBR248C
+    - name: HIS7
+    - notes: !!omap
+      - original_bigg_ids:
+        - YBR248C
+  - !!omap
+    - id: YNL241C
+    - name: ZWF1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YNL241C
+  - !!omap
+    - id: YER069W
+    - name: ARG5,6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER069W
+  - !!omap
+    - id: YOL140W
+    - name: ARG8
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL140W
+  - !!omap
+    - id: Q0250
+    - name: COX2
+    - notes: !!omap
+      - original_bigg_ids:
+        - Q0250
+  - !!omap
+    - id: YJL166W
+    - name: QCR8
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJL166W
+  - !!omap
+    - id: YJR121W
+    - name: ATP2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR121W
+  - !!omap
+    - id: YER099C
+    - name: PRS2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YER099C
+  - !!omap
+    - id: YDR148C
+    - name: KGD2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDR148C
+  - !!omap
+    - id: YDL021W
+    - name: GPM2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL021W
+  - !!omap
+    - id: YJR009C
+    - name: TDH2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YJR009C
+  - !!omap
+    - id: YOL086C
+    - name: ADH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOL086C
+  - !!omap
+    - id: YAL054C
+    - name: ACS1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YAL054C
+  - !!omap
+    - id: YCR053W
+    - name: THR4
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCR053W
+  - !!omap
+    - id: YCL009C
+    - name: ILV6
+    - notes: !!omap
+      - original_bigg_ids:
+        - YCL009C
+  - !!omap
+    - id: YLR348C
+    - name: DIC1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR348C
+  - !!omap
+    - id: YKL148C
+    - name: SDH1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YKL148C
+  - !!omap
+    - id: YAL012W
+    - name: CYS3
+    - notes: !!omap
+      - original_bigg_ids:
+        - YAL012W
+  - !!omap
+    - id: YOR393W
+    - name: ERR1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YOR393W
+  - !!omap
+    - id: YHR183W
+    - name: GND1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YHR183W
+  - !!omap
+    - id: YGR208W
+    - name: SER2
+    - notes: !!omap
+      - original_bigg_ids:
+        - YGR208W
+  - !!omap
+    - id: YLR134W
+    - name: PDC5
+    - notes: !!omap
+      - original_bigg_ids:
+        - YLR134W
+  - !!omap
+    - id: YDL022W
+    - name: GPD1
+    - notes: !!omap
+      - original_bigg_ids:
+        - YDL022W
+- id: ''
+- compartments: !!omap
+  - c: Cytoplasm
+  - e: Extracellular
+  - m: Mitochondrion
+- version: '1'
