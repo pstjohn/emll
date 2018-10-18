@@ -92,61 +92,56 @@ Ex *= 0.1 + 0.8 * np.random.rand(*Ex.shape)
 
 ll = emll.LinLogLeastNorm(N, Ex, Ey, v_star.values, driver='gelsy')
 
-if __name__ == "__main__":
+np.random.seed(1)
+
+
+# Define the probability model
+from emll.util import initialize_elasticity
+
+with pm.Model() as pymc_model:
+
+    # Priors on elasticity values       
+    Ex_t = pm.Deterministic('Ex', initialize_elasticity(
+        ll.N,  b=0.01, sd=1, alpha=None,
+        m_compartments=m_compartments,
+        r_compartments=r_compartments
+    ))
+
+    Ey_t = T.as_tensor_variable(Ey)
+
+    e_measured = pm.Normal('log_e_measured', mu=np.log(en), sd=0.2,
+                           shape=(n_exp, len(e_inds)))
+    e_unmeasured = pm.Laplace('log_e_unmeasured', mu=0, b=0.1,
+                              shape=(n_exp, len(e_laplace_inds)))
+    log_en_t = T.concatenate(
+        [e_measured, e_unmeasured,
+         T.zeros((n_exp, len(e_zero_inds)))], axis=1)[:, e_indexer]
+
+    pm.Deterministic('log_en_t', log_en_t)
+
+    # Priors on external concentrations
+    yn_t = pm.Normal('yn_t', mu=0, sd=10, shape=(n_exp, ll.ny),
+                     testval=0.1 * np.random.randn(n_exp, ll.ny))
+
+
+    chi_ss, vn_ss = ll.steady_state_theano(Ex_t, Ey_t, T.exp(log_en_t), yn_t)
+    pm.Deterministic('chi_ss', chi_ss)
+    pm.Deterministic('vn_ss', vn_ss)
+
+    log_vn_ss = T.log(T.clip(vn_ss[:, v_inds], 1E-8, 1E8))
+    log_vn_ss = T.clip(log_vn_ss, -1.5, 1.5)
     
-    np.random.seed(1)
+    chi_clip = T.clip(chi_ss[:, x_inds], -1.5, 1.5)
 
-    from emll.util import initialize_elasticity
+    chi_obs = pm.Normal('chi_obs', mu=chi_clip, sd=0.2,
+                        observed=xn.clip(lower=-1.5, upper=1.5))
+    log_vn_obs = pm.Normal('vn_obs', mu=log_vn_ss, sd=0.1,
+                           observed=np.log(vn).clip(lower=-1.5, upper=1.5))
 
-    with pm.Model() as pymc_model:
 
-        # Priors on elasticity values       
-        Ex_t = pm.Deterministic('Ex', initialize_elasticity(
-            ll.N,  b=0.01, sd=1, alpha=None,
-            m_compartments=m_compartments,
-            r_compartments=r_compartments
-        ))
-
-        Ey_t = T.as_tensor_variable(Ey)
-
-        e_measured = pm.Normal('log_e_measured', mu=np.log(en), sd=0.2,
-                               shape=(n_exp, len(e_inds)))
-        e_unmeasured = pm.Laplace('log_e_unmeasured', mu=0, b=0.1,
-                                  shape=(n_exp, len(e_laplace_inds)))
-        log_en_t = T.concatenate(
-            [e_measured, e_unmeasured,
-             T.zeros((n_exp, len(e_zero_inds)))], axis=1)[:, e_indexer]
-
-        pm.Deterministic('log_en_t', log_en_t)
-
-        # Priors on external concentrations
-        yn_t = pm.Normal('yn_t', mu=0, sd=10, shape=(n_exp, ll.ny),
-                         testval=0.1 * np.random.randn(n_exp, ll.ny))
-
-        # approx_prior = pm.ADVI()
-        # hist_prior = approx_prior.fit(
-        #     n=15000,
-        #     obj_optimizer=pm.adagrad_window(learning_rate=0.01),
-        #     total_grad_norm_constraint=1E3
-        # )
-        # trace_prior = hist_prior.sample(500)
-
+if __name__ == "__main__":
 
     with pymc_model:
-
-        chi_ss, vn_ss = ll.steady_state_theano(Ex_t, Ey_t, T.exp(log_en_t), yn_t)
-        pm.Deterministic('chi_ss', chi_ss)
-        pm.Deterministic('vn_ss', vn_ss)
-
-        log_vn_ss = T.log(T.clip(vn_ss[:, v_inds], 1E-8, 1E8))
-        log_vn_ss = T.clip(log_vn_ss, -1.5, 1.5)
-        
-        chi_clip = T.clip(chi_ss[:, x_inds], -1.5, 1.5)
-
-        chi_obs = pm.Normal('chi_obs', mu=chi_clip, sd=0.2,
-                            observed=xn.clip(lower=-1.5, upper=1.5))
-        log_vn_obs = pm.Normal('vn_obs', mu=log_vn_ss, sd=0.1,
-                               observed=np.log(vn).clip(lower=-1.5, upper=1.5))
 
         approx = pm.ADVI()
         hist = approx.fit(
@@ -155,15 +150,11 @@ if __name__ == "__main__":
             total_grad_norm_constraint=100
         )
 
-        trace = hist.sample(500)
-        ppc = pm.sample_ppc(trace)
+        # trace = hist.sample(500)
+        # ppc = pm.sample_ppc(trace)
 
 
+    import gzip
     import pickle
-    with open('hackett_advi.p', 'wb') as f:
-        pickle.dump({
-            'approx': approx,
-            'hist': hist,
-            'trace': trace,
-            'ppc': ppc,
-        }, f)
+    with gzip.open('data/hackett_advi.pgz', 'wb') as f:
+        pickle.dump(approx, f)
