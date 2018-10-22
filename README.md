@@ -1,9 +1,15 @@
-# Ensemble Modeling with Linear-Logarithmic Kinetics
+# Ensemble Modeling with Linear-Logarithmic Kinetics (emll)
 
-Some very rough, in-progress work on using linlog kinetics (Wu et al., *Eur. J. Biochem.* **271**, 3348–3359 (2004)) with cobrapy models.
+This repository hosts code for the in-progress manuscript *Bayesian inference of metabolic kinetics from genome-scale multiomics data* by 
+Peter C. St. John, Jonathan Strutz, Linda J. Broadbelt, Keith E.J. Tyo, and Yannick J. Bomble.
 
-Test models are in `test_models/`. I've been using `pytest` to make sure that any code changes don't break the basic ideas of the linlog model. It essentially runs the different test models and makes sure the steady state solutions calculated via different methods match up where they should.
+General code for solving for the steady-state metabolite and flux values as a function of elasticity parameters, enzyme expression, and external metabolite concentrations is found in `emll/linlog_model.py`. Theano code to perform the regularized linear regression (and integrate this operation into pymc3 models) is found in `emll/theano_utils.py`.
 
-`linlog_model.py` contains the main code for doing most of the calculations. I also wrote some code to do the same calculations in theano and [casadi](http://casadi.org). (you should be able to `conda install -c conda-forge casadi`, otherwise yell at the [feedstock maintainer](http://github.com/pstjohn))
+The `notebooks` directory contains the main code used to generate figures in the manuscript. `wu2004.ipynb` contains a simple model of an *in vitro* pathway, used to compare NUTS and ADVI inference methods. `contador.ipynb` compares the given methodology to an earlier application of metabolic ensemble modeling. `hackett.ipynb` demonstrates how the method can scale to near genome-scale models and omics datasets.
 
-I'm not including any of the `pymc3` inference code: that's in a really bad state at this point. That's first on my list of things to work on in August though. 
+A duplicate of the python enviroment I used to perform the calculations should be creatable using anaconda
+```
+$ conda env create -f environment.yml
+$ source activate idp_new
+```
+It uses the intelpython distribution for some faster blas routines, at least on the processors I developed this method on.
