@@ -1,7 +1,6 @@
 # Ensemble Modeling with Linear-Logarithmic Kinetics (emll)
 
-This repository hosts code for the in-progress manuscript *Bayesian inference of metabolic kinetics from genome-scale multiomics data* by 
-Peter C. St. John, Jonathan Strutz, Linda J. Broadbelt, Keith E.J. Tyo, and Yannick J. Bomble.
+This repository hosts code for the in-progress manuscript [*Bayesian inference of metabolic kinetics from genome-scale multiomics data* by Peter C. St. John, Jonathan Strutz, Linda J. Broadbelt, Keith E.J. Tyo, and Yannick J. Bomble](https://doi.org/10.1101/450163).
 
 General code for solving for the steady-state metabolite and flux values as a function of elasticity parameters, enzyme expression, and external metabolite concentrations is found in `emll/linlog_model.py`. Theano code to perform the regularized linear regression (and integrate this operation into pymc3 models) is found in `emll/theano_utils.py`.
 
