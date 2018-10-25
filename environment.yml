@@ -1,6 +1,5 @@
 name: idp_new
 channels:
-  - intel
   - defaults
 dependencies:
   - matplotlib=2.1.0
@@ -13,10 +12,11 @@ dependencies:
   - numpy=1.14.3
   - pandas=0.23.0
   - python=3.6
-  - intelpython3_core
   - scikit-learn=0.19.1
   - scipy=1.1.0
   - setuptools
+  - cython
+  - mkl-service
   - pip:
     - cobra==0.12.1
     - pymc3==3.5
