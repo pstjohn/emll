@@ -1,0 +1,3 @@
+include emll/test_models/*.json
+include emll/test_models/BIOMD0000000064.xml
+include emll/test_models/jol2012_vstar.p
