@@ -157,4 +157,6 @@ if __name__ == "__main__":
     import gzip
     import pickle
     with gzip.open('data/hackett_advi.pgz', 'wb') as f:
-        pickle.dump(approx, f)
+        pickle.dump({'approx': approx,
+         'hist': hist,
+         'trace': trace}, f)
